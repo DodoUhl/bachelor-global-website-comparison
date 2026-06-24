@@ -1,7 +1,7 @@
 # bachelor-global-website-comparison
 
-Bachelorarbeit <br>
-Universität Kassel<br>
+Bachelorarbeit  
+Universität Kassel  
 Fachbereich Elektrotechnik/Informatik
 
 Thema:
