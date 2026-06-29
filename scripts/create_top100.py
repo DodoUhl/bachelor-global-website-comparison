@@ -1,14 +1,21 @@
 import pandas as pd
 import requests
 import tldextract
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, XMLParsedAsHTMLWarning
 from langdetect import detect
+import warnings
+import os
 
+warnings.filterwarnings(
+    "ignore",
+    category=XMLParsedAsHTMLWarning
+)
 
 # Dateien
 COUNTRIES_FILE = "../countries/country_selection.csv"
 CRUX_FILE = "../crux/202605.csv"
 OUTPUT_FILE = "../websites/top100_websites.csv"
+OUTPUT_DIR = "../websites"
 
 # Anzahl der Webseiten pro Land
 TOP_N = 100
@@ -54,51 +61,71 @@ def normalize_language(language):
     
     return language.split("-")[0]
 
+# Speichern der Ergebnisse pro Kontinent
+def save_continent_csv(continent, rows):
+    if not rows:
+        return
+
+    filename = continent.lower().replace(" ", "_")
+    path = os.path.join(OUTPUT_DIR, f"top100_websites_{filename}.csv")
+
+    df = pd.DataFrame(rows)
+    df = df[["continent", "country", "website"]]
+    df.to_csv(path, index=False)
+
+    print(f"Saved continent CSV: {path}")
+
+
 countries = pd.read_csv(COUNTRIES_FILE)
 crux = pd.read_csv(CRUX_FILE)
 
 results = []
 
 # Iteriere über alle Länder
-for _, country_row in countries.iterrows():
-    continent = country_row["continent"]
-    country = country_row["country"]
-    cctld = str(country_row["cctld"]).lower()
+for continent, continent_countries in countries.groupby("continent"):
+    print(f"\nProcessing continent: {continent} ({len(continent_countries)} countries)")
+    continent_results = []
+    for _, country_row in continent_countries.iterrows():
+        country = country_row["country"]
+        cctld = str(country_row["cctld"]).lower()
 
-    languages = [lang.strip().lower() for lang in str(country_row["languages"]).split(",")]
+        languages = [lang.strip().lower() for lang in str(country_row["languages"]).split(",")]
 
-    print(f"\nProcessing {country}")
+        print(f"\nProcessing {country}")
 
-    # 1. Alle Webseiten mit passender ccTLD
-    candidates = crux[crux["origin"].apply(get_cctld) == cctld].copy()
+        # 1. Alle Webseiten mit passender ccTLD
+        candidates = crux[crux["origin"].apply(get_cctld) == cctld].copy()
 
-    print(f"  ccTLD candidates: {len(candidates)}")
+        print(f"  ccTLD candidates: {len(candidates)}")
 
-    # 2. Top 100 nach CrUX-Rank
-    candidates = candidates.sort_values("rank")
+        # 2. Top 100 nach CrUX-Rank
+        candidates = candidates.sort_values("rank")
 
-    # 3. Sprache prüfen
-    valid_websites = []
-    for _, row in candidates.iterrows():
-        origin = row["origin"]
-        rank = row["rank"]
+        # 3. Sprache prüfen
+        valid_websites = []
+        for _, row in candidates.iterrows():
+            origin = row["origin"]
+            rank = row["rank"]
 
-        language = normalize_language(detect_language(origin))
+            language = normalize_language(detect_language(origin))
 
-        if language in languages:
-            valid_websites.append({
-                "continent": continent,
-                "country": country,
-                "website": origin,
-                "rank": rank
-            })
+            if language in languages:
+                valid_websites.append({
+                    "continent": continent,
+                    "country": country,
+                    "website": origin,
+                    "rank": rank
+                })
 
-        if len(valid_websites) >= TOP_N:
-            break
+            if len(valid_websites) >= TOP_N:
+                break
 
-    print(f"  valid language matches: {len(valid_websites)}")
+        print(f"  valid language matches: {len(valid_websites)}")
 
-    results.extend(valid_websites)
+        continent_results.extend(valid_websites)
+        results.extend(valid_websites)
+    # Nach jedem Kontinent speichern
+    save_continent_csv(continent, continent_results)
 
 output = pd.DataFrame(results)
 
