@@ -1,0 +1,61 @@
+continent,country,cctld,expected_language,total_websites,detected_websites,failed_websites,language_matches,percent_of_all,percent_of_detected
+Europe,Germany,.de,de,17963,17152,811,15317,85.27,89.3
+Europe,France,.fr,fr,13428,12271,1157,10624,79.12,86.58
+Europe,United Kingdom,.uk,en,431,385,46,345,80.05,89.61
+Europe,Italy,.it,it,14107,12607,1500,10338,73.28,82.0
+Europe,Spain,.es,es,7993,7026,967,5775,72.25,82.19
+Europe,Netherlands,.nl,nl,8399,8026,373,6700,79.77,83.48
+Europe,Poland,.pl,pl,11427,10793,634,9415,82.39,87.23
+Europe,Sweden,.se,sv,3664,3414,250,2804,76.53,82.13
+Europe,Belgium,.be,"nl,fr,de",4114,3830,284,0,0.0,0.0
+Europe,Austria,.at,de,2363,2243,120,1907,80.7,85.02
+Asia,Japan,.jp,ja,16343,13828,2515,12260,75.02,88.66
+Asia,China,.cn,zh,664,483,181,292,43.98,60.46
+Asia,India,.in,"hi,en",13709,11608,2101,0,0.0,0.0
+Asia,South Korea,.kr,ko,1112,888,224,769,69.15,86.6
+Asia,Singapore,.sg,"en,zh,ms,ta",295,256,39,0,0.0,0.0
+Asia,Thailand,.th,th,36,30,6,14,38.89,46.67
+Asia,United Arab Emirates,.ae,"ar,en",641,558,83,0,0.0,0.0
+Asia,Malaysia,.my,"ms,en",798,670,128,0,0.0,0.0
+Asia,Philippines,.ph,"tl,en",898,730,168,0,0.0,0.0
+Asia,Israel,.il,"he,ar,en",0,0,0,0,0.0,0.0
+Africa,South Africa,.za,"en,af,zu,xh",0,0,0,0,0.0,0.0
+Africa,Nigeria,.ng,en,320,277,43,267,83.44,96.39
+Africa,Egypt,.eg,ar,92,65,27,22,23.91,33.85
+Africa,Kenya,.ke,"en,sw",51,45,6,0,0.0,0.0
+Africa,Morocco,.ma,"ar,fr",776,610,166,0,0.0,0.0
+Africa,Ghana,.gh,en,1,1,0,1,100.0,100.0
+Africa,Tanzania,.tz,"sw,en",3,2,1,0,0.0,0.0
+Africa,Uganda,.ug,"en,sw",53,48,5,0,0.0,0.0
+Africa,Senegal,.sn,fr,107,82,25,64,59.81,78.05
+Africa,Tunisia,.tn,"ar,fr",487,375,112,0,0.0,0.0
+North America,United States,.us,en,1265,1090,175,894,70.67,82.02
+North America,Canada,.ca,"en,fr",5075,4464,611,0,0.0,0.0
+North America,Mexico,.mx,es,2781,2268,513,1692,60.84,74.6
+North America,Guatemala,.gt,es,82,75,7,58,70.73,77.33
+North America,Costa Rica,.cr,es,126,111,15,87,69.05,78.38
+North America,Panama,.pa,es,22,21,1,14,63.64,66.67
+North America,Dominican Republic,.do,es,92,78,14,36,39.13,46.15
+North America,Honduras,.hn,es,100,87,13,63,63.0,72.41
+North America,El Salvador,.sv,es,42,38,4,27,64.29,71.05
+North America,Nicaragua,.ni,es,3,2,1,1,33.33,50.0
+South America,Brazil,.br,pt,1285,929,356,791,61.56,85.15
+South America,Argentina,.ar,es,325,284,41,241,74.15,84.86
+South America,Chile,.cl,es,4764,3945,819,3082,64.69,78.12
+South America,Peru,.pe,es,947,823,124,642,67.79,78.01
+South America,Colombia,.co,es,6159,5327,832,730,11.85,13.7
+South America,Venezuela,.ve,es,13,7,6,3,23.08,42.86
+South America,Bolivia,.bo,es,95,64,31,48,50.53,75.0
+South America,Ecuador,.ec,es,227,185,42,139,61.23,75.14
+South America,Paraguay,.py,es,17,11,6,10,58.82,90.91
+South America,Uruguay,.uy,es,125,111,14,93,74.4,83.78
+Oceania,Australia,.au,en,46,45,1,44,95.65,97.78
+Oceania,New Zealand,.nz,"en,mi",111,101,10,0,0.0,0.0
+Oceania,Samoa,.ws,"sm,en",229,189,40,0,0.0,0.0
+Oceania,Tonga,.to,"to,en",704,615,89,0,0.0,0.0
+Oceania,Fiji,.fj,"en,fj,hi",0,0,0,0,0.0,0.0
+Oceania,Niue,.nu,"en,niu",273,254,19,0,0.0,0.0
+Oceania,Papua New Guinea,.pg,en,0,0,0,0,0.0,0.0
+Oceania,Vanuatu,.vu,"bi,en,fr",15,12,3,0,0.0,0.0
+Oceania,Kiribati,.ki,"en,gil",0,0,0,0,0.0,0.0
+Oceania,Solomon Islands,.sb,en,3,2,1,1,33.33,50.0
