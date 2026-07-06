@@ -28,7 +28,7 @@ CRUX_FILES = [
     "../crux/202505.csv",
     "../crux/202504.csv",
 ]
-TRANCO_FILE = "../tranco/tranco_GQ2WK.csv"
+TRANCO_FILE = "../tranco/tranco_GQ2WK.csv.gz"
 
 # Anzahl der Webseiten pro Land
 TOP_N = 100
@@ -160,7 +160,7 @@ for _, country_row in countries.iterrows():
 
         print(f"  checking {tranco_file}")
 
-        tranco = pd.read_csv(tranco_file, header=None, names=["rank", "domain"])
+        tranco = pd.read_csv(tranco_file, compression="gzip", header=None, names=["rank", "domain"])
         tranco["domain"] = "https://" + tranco["domain"]
 
         candidates = tranco[
