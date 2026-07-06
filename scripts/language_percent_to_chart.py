@@ -4,15 +4,13 @@ from pathlib import Path
 
 INPUT_FILE = "../websites/language_percentage_by_country.csv"
 OUTPUT_FILE = "../charts/language_percentage_chart.png"
-
-# Welche Prozent-Spalte soll geplottet werden?
-# Empfehlung: percent_of_detected
 PERCENT_COLUMN = "percent_of_detected"
 
 
 def main():
     df = pd.read_csv(INPUT_FILE)
     df = df.dropna(subset=[PERCENT_COLUMN])
+    df = df[df["detected_websites"] > 30]
     df = df[df[PERCENT_COLUMN] > 0] 
     df = df.sort_values(PERCENT_COLUMN, ascending=True)
     df["label"] = (df["country"] + " (" + df["detected_websites"].astype(int).astype(str) + ")")

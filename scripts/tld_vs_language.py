@@ -21,7 +21,9 @@ TIMEOUT = 6
 
 def get_cctld(origin):
     ext = tldextract.extract(origin)
-    return "." + ext.suffix.lower() if ext.suffix else ""
+    if not ext.suffix:
+        return ""
+    return "." + ext.suffix.split(".")[-1].lower()
 
 
 def normalize_language(lang):
@@ -118,7 +120,7 @@ def update_language_cache(origins):
 
 
 def main():
-    countries = pd.read_csv(COUNTRIES_FILE)
+    countries = pd.read_csv(COUNTRIES_FILE, sep=None, engine="python")
     crux = pd.read_csv(CRUX_FILE)
 
     countries["cctld"] = countries["cctld"].str.lower().str.strip()
