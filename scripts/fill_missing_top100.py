@@ -10,14 +10,25 @@ warnings.filterwarnings("ignore", category=XMLParsedAsHTMLWarning)
 
 COUNTRIES_FILE = "../countries/country_selection.csv"
 EXISTING_FILE = "../websites/top100_websites.csv"
-OUTPUT_FILE = "../websites/top100_websites_filled.csv"
+OUTPUT_FILE = "../websites/top100_websites.csv"
 
 CRUX_FILES = [
+    "../crux/202605.csv",
     "../crux/202604.csv",
     "../crux/202603.csv",
     "../crux/202602.csv",
     "../crux/202601.csv",
+    "../crux/202512.csv",
+    "../crux/202511.csv",
+    "../crux/202510.csv",
+    "../crux/202509.csv",
+    "../crux/202508.csv",
+    "../crux/202507.csv",
+    "../crux/202506.csv",
+    "../crux/202505.csv",
+    "../crux/202504.csv",
 ]
+TRANCO_FILE = "../tranco/tranco_GQ2WK.csv"
 
 # Anzahl der Webseiten pro Land
 TOP_N = 100
@@ -25,7 +36,9 @@ TOP_N = 100
 # TLD extrahieren
 def get_cctld(origin):
     ext = tldextract.extract(origin)
-    return "." + ext.suffix.lower() if ext.suffix else ""
+    if not ext.suffix:
+        return ""
+    return "." + ext.suffix.split(".")[-1].lower()
 
 # Sprache erkennen
 def detect_language(origin):
@@ -42,11 +55,13 @@ def detect_language(origin):
 
         # 1. Prüfen, ob die Sprache im HTML-Tag angegeben ist
         if html and html.get("lang"):
+            print(f"  detected language from HTML tag: {html['lang']}")
             return html["lang"].split("-")[0].lower()
     
         # 2. Prüfen, ob genügend Text vorhanden ist, um die Sprache zu erkennen
         text = soup.get_text(" ", strip=True)
         if len(text) > 200:
+            print(f"  detected language from text: {detect(text)}")
             return detect(text)
 
     except Exception:
@@ -64,7 +79,7 @@ def normalize_language(language):
     return language.split("-")[0]
 
 
-countries = pd.read_csv(COUNTRIES_FILE)
+countries = pd.read_csv(COUNTRIES_FILE, sep=None, engine="python")
 existing = pd.read_csv(EXISTING_FILE)
 
 results = existing.to_dict("records")
@@ -74,6 +89,7 @@ global_existing_websites = set(existing["website"])
 for _, country_row in countries.iterrows():
     continent = country_row["continent"]
     country = country_row["country"]
+    print(f"\nProcessing {country} ({continent})")
     cctld = str(country_row["cctld"]).lower()
 
     languages = [
@@ -118,11 +134,58 @@ for _, country_row in countries.iterrows():
             if origin in global_existing_websites:
                 continue
 
-            language = normalize_language(detect_language(origin))
+            # Außer in Ozeanien Sprache prüfen
+            if continent != "Oceania":
+                language = normalize_language(detect_language(origin))
+                if language not in languages:
+                    continue
 
-            if language not in languages:
-                print(f"    skipping {origin} due to language mismatch: {language} not in {languages}")
+            item = {
+                "continent": continent,
+                "country": country,
+                "website": origin,
+            }
+
+            results.append(item)
+            country_added.append(item)
+            global_existing_websites.add(origin)
+
+            needed -= 1
+
+        print(f"    added so far for {country}: {len(country_added)}")
+
+    for tranco_file in [TRANCO_FILE]:
+        if needed <= 0:
+            break
+
+        print(f"  checking {tranco_file}")
+
+        tranco = pd.read_csv(tranco_file, header=None, names=["rank", "domain"])
+        tranco["domain"] = "https://" + tranco["domain"]
+
+        candidates = tranco[
+            tranco["domain"].apply(get_cctld) == cctld
+        ].copy()
+
+        candidates = candidates.sort_values("rank")
+
+        print(f"    ccTLD candidates: {len(candidates)}")
+
+        for _, row in candidates.iterrows():
+            if needed <= 0:
+                break
+
+            origin = row["domain"]
+
+            if origin in global_existing_websites:
                 continue
+
+            # Außer in Ozeanien Sprache prüfen
+            if continent != "Oceania":
+                language = normalize_language(detect_language(origin))
+
+                if language not in languages:
+                    continue
 
             item = {
                 "continent": continent,

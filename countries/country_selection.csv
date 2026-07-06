@@ -1,61 +1,61 @@
-continent,country,cctld,languages
-Europe,Germany,.de,de
-Europe,France,.fr,fr
-Europe,United Kingdom,.uk,en
-Europe,Italy,.it,it
-Europe,Spain,.es,es
-Europe,Netherlands,.nl,nl
-Europe,Poland,.pl,pl
-Europe,Sweden,.se,sv
-Europe,Belgium,.be,"nl,fr,de"
-Europe,Austria,.at,de
-Asia,Japan,.jp,ja
-Asia,China,.cn,zh
-Asia,India,.in,"hi,en"
-Asia,South Korea,.kr,ko
-Asia,Singapore,.sg,"en,zh,ms,ta"
-Asia,Thailand,.th,th
-Asia,United Arab Emirates,.ae,"ar,en"
-Asia,Malaysia,.my,"ms,en"
-Asia,Philippines,.ph,"tl,en"
-Asia,Israel,.il,"he,ar,en"
-Africa,South Africa,.za,"en,af,zu,xh"
-Africa,Nigeria,.ng,en
-Africa,Egypt,.eg,ar
-Africa,Kenya,.ke,"en,sw"
-Africa,Morocco,.ma,"ar,fr"
-Africa,Ghana,.gh,en
-Africa,Tanzania,.tz,"sw,en"
-Africa,Uganda,.ug,"en,sw"
-Africa,Senegal,.sn,fr
-Africa,Tunisia,.tn,"ar,fr"
-North America,United States,.us,en
-North America,Canada,.ca,"en,fr"
-North America,Mexico,.mx,es
-North America,Guatemala,.gt,es
-North America,Costa Rica,.cr,es
-North America,Panama,.pa,es
-North America,Dominican Republic,.do,es
-North America,Honduras,.hn,es
-North America,El Salvador,.sv,es
-North America,Nicaragua,.ni,es
-South America,Brazil,.br,pt
-South America,Argentina,.ar,es
-South America,Chile,.cl,es
-South America,Peru,.pe,es
-South America,Colombia,.co,es
-South America,Venezuela,.ve,es
-South America,Bolivia,.bo,es
-South America,Ecuador,.ec,es
-South America,Paraguay,.py,es
-South America,Uruguay,.uy,es
-Oceania,Australia,.au,en
-Oceania,New Zealand,.nz,"en,mi"
-Oceania,Samoa,.ws,"sm,en"
-Oceania,Tonga,.to,"to,en"
-Oceania,Fiji,.fj,"en,fj,hi"
-Oceania,Niue,.nu,"en,niu"
-Oceania,Papua New Guinea,.pg,en
-Oceania,Vanuatu,.vu,"bi,en,fr"
-Oceania,Kiribati,.ki,"en,gil"
-Oceania,Solomon Islands,.sb,en
+continent;country;cctld;languages
+Europe;Germany;.de;de
+Europe;France;.fr;fr
+Europe;United Kingdom;.uk;en
+Europe;Italy;.it;it
+Europe;Spain;.es;es
+Europe;Netherlands;.nl;nl
+Europe;Poland;.pl;pl
+Europe;Sweden;.se;sv
+Europe;Belgium;.be;nl,fr,de
+Europe;Austria;.at;de
+Asia;Japan;.jp;ja
+Asia;China;.cn;zh
+Asia;India;.in;hi,en
+Asia;South Korea;.kr;ko
+Asia;Singapore;.sg;en,zh,ms,ta
+Asia;Thailand;.th;th
+Asia;United Arab Emirates;.ae;ar,en
+Asia;Malaysia;.my;ms,en
+Asia;Philippines;.ph;tl,en
+Asia;Israel;.il;he,ar,en
+Africa;South Africa;.za;en,af,zu,xh
+Africa;Nigeria;.ng;en
+Africa;Egypt;.eg;ar,eg
+Africa;Kenya;.ke;en,sw
+Africa;Morocco;.ma;ar,fr
+Africa;Ghana;.gh;en
+Africa;Tanzania;.tz;sw,en
+Africa;Uganda;.ug;en,sw
+Africa;Senegal;.sn;fr
+Africa;Tunisia;.tn;ar,fr
+North America;United States;.us;en
+North America;Canada;.ca;en,fr
+North America;Mexico;.mx;es
+North America;Guatemala;.gt;es
+North America;Costa Rica;.cr;es
+North America;Panama;.pa;es
+North America;Dominican Republic;.do;es
+North America;Honduras;.hn;es
+North America;El Salvador;.sv;es
+North America;Nicaragua;.ni;es
+South America;Brazil;.br;pt
+South America;Argentina;.ar;es
+South America;Chile;.cl;es
+South America;Peru;.pe;es
+South America;Colombia;.co;es
+South America;Venezuela;.ve;es
+South America;Bolivia;.bo;es
+South America;Ecuador;.ec;es
+South America;Paraguay;.py;es
+South America;Uruguay;.uy;es
+Oceania;Australia;.au;en
+Oceania;New Zealand;.nz;en,mi
+Oceania;Samoa;.ws;sm,en
+Oceania;Tonga;.to;to,en
+Oceania;Fiji;.fj;en,fj,hi
+Oceania;Niue;.nu;en,niu
+Oceania;Papua New Guinea;.pg;en
+Oceania;Vanuatu;.vu;bi,en,fr
+Oceania;French Polynesia;.pf;en,fr,ty
+Oceania;New Caledonia;.nc;en, fr
