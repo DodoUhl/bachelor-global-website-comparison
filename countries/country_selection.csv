@@ -21,7 +21,7 @@ Asia;Philippines;.ph;tl,en
 Asia;Israel;.il;he,ar,en
 Africa;South Africa;.za;en,af,zu,xh
 Africa;Nigeria;.ng;en
-Africa;Egypt;.eg;ar,eg
+Africa;Egypt;.eg;ar
 Africa;Kenya;.ke;en,sw
 Africa;Morocco;.ma;ar,fr
 Africa;Ghana;.gh;en
@@ -54,8 +54,8 @@ Oceania;New Zealand;.nz;en,mi
 Oceania;Samoa;.ws;sm,en
 Oceania;Tonga;.to;to,en
 Oceania;Fiji;.fj;en,fj,hi
-Oceania;Niue;.nu;en,niu
 Oceania;Papua New Guinea;.pg;en
-Oceania;Vanuatu;.vu;bi,en,fr
-Oceania;French Polynesia;.pf;en,fr,ty
-Oceania;New Caledonia;.nc;en, fr
+Oceania;French Polynesia;.pf;fr,ty
+Oceania;Micronesia;.fm;en
+Oceania;Palau;.pw;en,pau
+Oceania;New Caledonia;.nc;fr
