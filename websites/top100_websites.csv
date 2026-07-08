@@ -79,7 +79,6 @@ Europe,Germany,https://www.bunte.de
 Europe,Germany,https://www.auto-motor-und-sport.de
 Europe,Germany,https://www.doctolib.de
 Europe,Germany,https://www.vodafone.de
-Europe,Germany,https://morenutrition.de
 Europe,Germany,https://www.tz.de
 Europe,Germany,https://m.sport.bild.de
 Europe,Germany,https://www.abendblatt.de
@@ -99,6 +98,7 @@ Europe,Germany,https://www.adac.de
 Europe,Germany,https://www.netzwelt.de
 Europe,Germany,https://www.telekom.de
 Europe,Germany,https://www.poco.de
+Europe,Germany,https://www.kreiszeitung.de
 Europe,France,https://www.lefigaro.fr
 Europe,France,https://www.ouest-france.fr
 Europe,France,https://www.lequipe.fr
@@ -137,6 +137,7 @@ Europe,France,https://www.allocine.fr
 Europe,France,https://www.creditmutuel.fr
 Europe,France,https://www.laredoute.fr
 Europe,France,https://www.cic.fr
+Europe,France,https://www.zalando.fr
 Europe,France,https://oidc.franceconnect.gouv.fr
 Europe,France,https://www.lindependant.fr
 Europe,France,https://www.rtl.fr
@@ -198,7 +199,6 @@ Europe,France,https://www.lassuranceretraite.fr
 Europe,France,https://www.cuisineactuelle.fr
 Europe,France,https://www.journaldesfemmes.fr
 Europe,France,https://www.veepee.fr
-Europe,France,https://www.larepubliquedespyrenees.fr
 Europe,United Kingdom,https://www.rightmove.co.uk
 Europe,United Kingdom,https://www.ebay.co.uk
 Europe,United Kingdom,https://www.gov.uk
@@ -449,6 +449,7 @@ Europe,Spain,https://sede.dgt.gob.es
 Europe,Spain,https://www.cope.es
 Europe,Spain,https://www.ebay.es
 Europe,Spain,https://www.orange.es
+Europe,Spain,https://sede.seg-social.gob.es
 Europe,Spain,https://www9.agenciatributaria.gob.es
 Europe,Spain,https://www.edreams.es
 Europe,Spain,https://www.lne.es
@@ -470,6 +471,7 @@ Europe,Spain,https://www.radio-espana.es
 Europe,Spain,https://www.zaragoza.es
 Europe,Spain,https://www.dgt.es
 Europe,Spain,https://www.turismosocial.es
+Europe,Spain,https://www.memora.es
 Europe,Spain,https://www.correos.es
 Europe,Spain,http://www.xvideos.es
 Europe,Spain,https://www.educacion.gob.es
@@ -485,7 +487,6 @@ Europe,Spain,https://www.telemadrid.es
 Europe,Spain,https://www.tiendasmgi.es
 Europe,Spain,https://www.aena.es
 Europe,Spain,https://sede.policia.gob.es
-Europe,Spain,https://www.adidas.es
 Europe,Spain,https://www.diariodemallorca.es
 Europe,Spain,https://www.jokerbet.es
 Europe,Spain,https://www.hoy.es
@@ -498,7 +499,6 @@ Europe,Spain,https://www.carwow.es
 Europe,Spain,https://www.autoscout24.es
 Europe,Spain,https://moodle.uco.es
 Europe,Spain,https://sso.us.es
-Europe,Spain,https://www.locanto.es
 Europe,Netherlands,https://www.marktplaats.nl
 Europe,Netherlands,https://www.voetbalzone.nl
 Europe,Netherlands,https://www.funda.nl
@@ -568,7 +568,6 @@ Europe,Netherlands,https://www.schadeautos.nl
 Europe,Netherlands,https://www.bright.nl
 Europe,Netherlands,https://www.intratuin.nl
 Europe,Netherlands,https://www.folderz.nl
-Europe,Netherlands,https://zelesta.nl
 Europe,Netherlands,https://www.wordfeudwoorden.nl
 Europe,Netherlands,https://www.petsplace.nl
 Europe,Netherlands,https://www.ondeugend-daten.nl
@@ -582,7 +581,6 @@ Europe,Netherlands,https://www.vakantieveilingen.nl
 Europe,Netherlands,https://jysk.nl
 Europe,Netherlands,https://www.novamora.nl
 Europe,Netherlands,https://www.tafeldiploma.nl
-Europe,Netherlands,https://www.adidas.nl
 Europe,Netherlands,https://www.flashscore.nl
 Europe,Netherlands,https://www.l1nieuws.nl
 Europe,Netherlands,https://visdeal.nl
@@ -599,6 +597,8 @@ Europe,Netherlands,https://bankieren.rabobank.nl
 Europe,Netherlands,https://www.lucardi.nl
 Europe,Netherlands,https://www.odido.nl
 Europe,Netherlands,https://racing.nl
+Europe,Netherlands,https://www.futurumshop.nl
+Europe,Netherlands,https://www.rdw.nl
 Europe,Poland,https://wiadomosci.wp.pl
 Europe,Poland,https://poczta.wp.pl
 Europe,Poland,https://www.mediaexpert.pl
@@ -639,7 +639,6 @@ Europe,Poland,https://www.sport.pl
 Europe,Poland,https://www.vinted.pl
 Europe,Poland,https://www.flashscore.pl
 Europe,Poland,https://www.money.pl
-Europe,Poland,https://www.zalando.pl
 Europe,Poland,https://www.gov.pl
 Europe,Poland,https://www.interia.pl
 Europe,Poland,https://www.wnp.pl
@@ -699,6 +698,7 @@ Europe,Poland,https://www.plotek.pl
 Europe,Poland,https://edukacja.dziennik.pl
 Europe,Poland,https://jysk.pl
 Europe,Poland,https://gazetawroclawska.pl
+Europe,Poland,https://www.castorama.pl
 Europe,Sweden,https://www.aftonbladet.se
 Europe,Sweden,https://www.blocket.se
 Europe,Sweden,https://www.hitta.se
@@ -708,7 +708,6 @@ Europe,Sweden,https://www.expressen.se
 Europe,Sweden,https://www.dn.se
 Europe,Sweden,https://www.di.se
 Europe,Sweden,https://spela.svenskaspel.se
-Europe,Sweden,https://www.biltema.se
 Europe,Sweden,https://arbetsformedlingen.se
 Europe,Sweden,https://www.svd.se
 Europe,Sweden,https://www.ica.se
@@ -750,7 +749,6 @@ Europe,Sweden,https://www.op.se
 Europe,Sweden,https://www.bauhaus.se
 Europe,Sweden,https://www.nwt.se
 Europe,Sweden,https://rpapi.signport.se
-Europe,Sweden,https://www.apotekhjartat.se
 Europe,Sweden,https://www.migrationsverket.se
 Europe,Sweden,https://hockeysverige.se
 Europe,Sweden,https://www.byggmax.se
@@ -799,6 +797,8 @@ Europe,Sweden,https://www.hd.se
 Europe,Sweden,https://www.unt.se
 Europe,Sweden,https://www.tele2.se
 Europe,Sweden,https://www.lidl.se
+Europe,Sweden,https://www.forsakringskassan.se
+Europe,Sweden,https://km.se
 Europe,Belgium,https://www.dhnet.be
 Europe,Belgium,https://www.buienradar.be
 Europe,Belgium,https://sporza.be
@@ -818,6 +818,7 @@ Europe,Belgium,https://uv.ulb.ac.be
 Europe,Belgium,https://toledo.kuleuven.be
 Europe,Belgium,https://businessam.be
 Europe,Belgium,https://www.meteobelgique.be
+Europe,Belgium,https://www.belgiantrain.be
 Europe,Belgium,https://www.dela.be
 Europe,Belgium,https://www.dreamland.be
 Europe,Belgium,https://www.lachainemeteo.be
@@ -898,7 +899,6 @@ Europe,Belgium,https://www.krefel.be
 Europe,Belgium,https://www.letec.be
 Europe,Belgium,https://voetbal24.be
 Europe,Belgium,https://www.dreambaby.be
-Europe,Belgium,https://www.123inkt.be
 Europe,Austria,https://www.willhaben.at
 Europe,Austria,https://www.bergfex.at
 Europe,Austria,https://www.win2day.at
@@ -947,7 +947,6 @@ Europe,Austria,https://teletext.orf.at
 Europe,Austria,https://www.post.at
 Europe,Austria,https://erotik.laendleanzeiger.at
 Europe,Austria,https://www.flashscore.at
-Europe,Austria,https://www.hofer.at
 Europe,Austria,https://www.immobilienscout24.at
 Europe,Austria,https://www.oebb.at
 Europe,Austria,https://wetter.orf.at
@@ -999,6 +998,7 @@ Europe,Austria,https://www.wko.at
 Europe,Austria,https://www.zgonc.at
 Europe,Austria,https://www.trauerhilfe-beer.at
 Europe,Austria,https://www.matura.gv.at
+Europe,Austria,https://www.tui.at
 Asia,Japan,https://dmarket.docomo.ne.jp
 Asia,Japan,https://gamewith.jp
 Asia,Japan,https://trilltrill.jp
@@ -1084,7 +1084,6 @@ Asia,Japan,https://my.healmate.jp
 Asia,Japan,https://order-rp.rms.rakuten.co.jp
 Asia,Japan,https://fantia.jp
 Asia,Japan,http://spc.sp.mbga.jp
-Asia,Japan,https://pcmax.jp
 Asia,Japan,https://travel.rakuten.co.jp
 Asia,Japan,https://qvc.jp
 Asia,Japan,https://www.navima.jp
@@ -1099,6 +1098,7 @@ Asia,Japan,https://ponta-sp.dropgame.jp
 Asia,Japan,https://mama.smt.docomo.ne.jp
 Asia,Japan,https://point.recruit.co.jp
 Asia,Japan,https://research-panel.jp
+Asia,Japan,https://grapee.jp
 Asia,China,https://bigmodel.cn
 Asia,China,https://accounts.feishu.cn
 Asia,China,https://coach.haoyueke.cn
@@ -1116,9 +1116,9 @@ Asia,China,https://www.mcmod.cn
 Asia,China,https://m.yuyantv.cn
 Asia,China,https://www.sina.cn
 Asia,China,https://www.letpub.com.cn
-Asia,China,https://www.itdog.cn
 Asia,China,https://2fa.cn
 Asia,China,https://project.feishu.cn
+Asia,China,https://www.dm5.cn
 Asia,China,https://www.wjx.cn
 Asia,China,https://bio.visaforchina.cn
 Asia,China,https://juejin.cn
@@ -1132,7 +1132,6 @@ Asia,China,https://www.tgb.cn
 Asia,China,https://www.cninfo.com.cn
 Asia,China,https://m.gushiwen.cn
 Asia,China,https://tju.at0086.cn
-Asia,China,https://a.4399.cn
 Asia,China,https://www.52pojie.cn
 Asia,China,https://etax.guangdong.chinatax.gov.cn:8443
 Asia,China,https://lexue.bit.edu.cn
@@ -1179,6 +1178,7 @@ Asia,China,https://s.apifox.cn
 Asia,China,https://ngdc.cncb.ac.cn
 Asia,China,https://webvpn.tsinghua.edu.cn
 Asia,China,https://letpub.com.cn
+Asia,China,https://www.tesla.cn
 Asia,China,https://xspt.ustc.edu.cn
 Asia,China,https://www.fonts.net.cn
 Asia,China,https://uniapp.dcloud.net.cn
@@ -1217,7 +1217,6 @@ Asia,India,https://lotterysambadresult.in
 Asia,India,https://www.mca.gov.in
 Asia,India,https://mahadbt.maharashtra.gov.in
 Asia,India,https://assamadmission.samarth.ac.in
-Asia,India,https://parivahan.gov.in
 Asia,India,https://unifiedportal-emp.epfindia.gov.in
 Asia,India,https://mkedit.in
 Asia,India,https://dear-lottery.in
@@ -1230,16 +1229,15 @@ Asia,India,https://game.playarenax.in
 Asia,India,https://betswiz.in
 Asia,India,https://www.decathlon.in
 Asia,India,https://dpbosss.net.in
-Asia,India,https://recruitment.rajasthan.gov.in
 Asia,India,https://www.reliancedigital.in
 Asia,India,https://www.sheinindia.in
 Asia,India,https://www.tripadvisor.in
 Asia,India,https://www.skyscanner.co.in
-Asia,India,https://rajshaladarpan.rajasthan.gov.in
 Asia,India,https://groww.in
 Asia,India,https://mahafyjcadmissions.in
 Asia,India,https://voters.eci.gov.in
 Asia,India,https://www.bajajfinserv.in
+Asia,India,https://www.allahabadhighcourt.in
 Asia,India,https://iretail.pnb.bank.in
 Asia,India,https://muugadmission.samarth.edu.in
 Asia,India,https://ignou.samarth.edu.in
@@ -1274,7 +1272,6 @@ Asia,India,https://www.apollopharmacy.in
 Asia,India,https://www.callbomberz.in
 Asia,India,https://www.shopsy.in
 Asia,India,https://www.desipussy.in
-Asia,India,https://deodap.in
 Asia,India,https://jansunwai.up.nic.in
 Asia,India,https://www.govtschemes.in
 Asia,India,https://cmhelpline.mp.gov.in
@@ -1289,6 +1286,7 @@ Asia,India,https://www.learncbse.in
 Asia,India,https://www.tanishq.co.in
 Asia,India,https://storytv.co.in
 Asia,India,https://mmua.in
+Asia,India,https://eportal.incometax.gov.in
 Asia,India,https://www.indiapost.gov.in
 Asia,India,https://food.wb.gov.in
 Asia,India,https://ssc.gov.in
@@ -1299,6 +1297,8 @@ Asia,India,https://www.district.in
 Asia,India,https://www.indianrail.gov.in
 Asia,India,https://kolkataff.in
 Asia,India,https://levi.in
+Asia,India,https://www.hdfc.bank.in
+Asia,India,https://sbi.bank.in
 Asia,South Korea,https://www.inven.co.kr
 Asia,South Korea,https://m.inven.co.kr
 Asia,South Korea,https://www.hani.co.kr
@@ -1350,7 +1350,6 @@ Asia,South Korea,https://www.harpersbazaar.co.kr
 Asia,South Korea,https://sports.khan.co.kr
 Asia,South Korea,https://m.gmarket.co.kr
 Asia,South Korea,https://m.alphasquare.co.kr
-Asia,South Korea,https://thepetcare.kr
 Asia,South Korea,https://www.avsubs.co.kr
 Asia,South Korea,https://ecampus.sejong.ac.kr
 Asia,South Korea,https://www.auction1.co.kr
@@ -1399,6 +1398,7 @@ Asia,South Korea,https://www.data.go.kr
 Asia,South Korea,https://www.29cm.co.kr
 Asia,South Korea,https://login.11st.co.kr
 Asia,South Korea,https://www.gqkorea.co.kr
+Asia,South Korea,https://www.riss.kr
 Asia,Singapore,https://www.mewatch.sg
 Asia,Singapore,https://www.singaporepools.com.sg
 Asia,Singapore,https://mothership.sg
@@ -1457,6 +1457,7 @@ Asia,Singapore,https://forms.moe.edu.sg
 Asia,Singapore,https://shaw.sg
 Asia,Singapore,https://www.corppass.gov.sg
 Asia,Singapore,https://www.foodpanda.sg
+Asia,Singapore,https://www.onepa.gov.sg
 Asia,Singapore,https://www.interactivebrokers.com.sg
 Asia,Singapore,https://www.fastjobs.sg
 Asia,Singapore,https://www.ebay.com.sg
@@ -1468,7 +1469,6 @@ Asia,Singapore,https://www.8days.sg
 Asia,Singapore,https://www.lta.gov.sg
 Asia,Singapore,https://www.income.com.sg
 Asia,Singapore,https://www.moneysmart.sg
-Asia,Singapore,https://online.challenger.sg
 Asia,Singapore,https://filmhouse.sg
 Asia,Singapore,https://www.vivocity.com.sg
 Asia,Singapore,https://skillsfuture.gobusiness.gov.sg
@@ -1480,7 +1480,6 @@ Asia,Singapore,https://courses.learncollab.com.sg
 Asia,Singapore,https://www.tpgateway.gov.sg
 Asia,Singapore,https://citytours.sg
 Asia,Singapore,https://www.homeanddecor.com.sg
-Asia,Singapore,https://aikchinhin.sg
 Asia,Singapore,https://www.intil.com.sg
 Asia,Singapore,https://www.crocs.com.sg
 Asia,Singapore,https://tgs.moe.gov.sg
@@ -1499,6 +1498,7 @@ Asia,Singapore,https://eservice.sps.gov.sg
 Asia,Singapore,https://www.manulife.com.sg
 Asia,Singapore,https://giga.com.sg
 Asia,Singapore,https://www.bebare.com.sg
+Asia,Singapore,https://simba.sg
 Asia,Thailand,https://www.thairath.co.th
 Asia,Thailand,https://www.ais.th
 Asia,Thailand,https://www.set.or.th
@@ -1553,7 +1553,6 @@ Asia,Thailand,https://www.supersports.co.th
 Asia,Thailand,https://www.yamaha-motor.co.th
 Asia,Thailand,https://dmail2.minebea.co.th
 Asia,Thailand,https://brandsworld.co.th
-Asia,Thailand,https://trainingcenter.hss.moph.go.th
 Asia,Thailand,https://www.thaipbs.or.th
 Asia,Thailand,https://www.rama.mahidol.ac.th
 Asia,Thailand,https://www.scb.co.th
@@ -1563,6 +1562,7 @@ Asia,Thailand,https://regis.opec.go.th
 Asia,Thailand,https://regis3.opec.go.th
 Asia,Thailand,https://globalhouse.co.th
 Asia,Thailand,https://www.kstsystem.co.th
+Asia,Thailand,https://www.gogoprint.co.th
 Asia,Thailand,https://www.aeon.co.th
 Asia,Thailand,https://agent.glo.or.th
 Asia,Thailand,https://registrar.ku.ac.th
@@ -1631,11 +1631,9 @@ Asia,United Arab Emirates,https://www.cleartrip.ae
 Asia,United Arab Emirates,https://www.du.ae
 Asia,United Arab Emirates,https://www.mofa.gov.ae
 Asia,United Arab Emirates,https://www.next.ae
-Asia,United Arab Emirates,https://www.mariab.ae
 Asia,United Arab Emirates,https://app.rdc.gov.ae
 Asia,United Arab Emirates,https://www.desertcart.ae
 Asia,United Arab Emirates,https://www.nike.ae
-Asia,United Arab Emirates,https://istyle.ae
 Asia,United Arab Emirates,https://www.dubaipolice.gov.ae
 Asia,United Arab Emirates,https://gatepass.sharjahports.gov.ae
 Asia,United Arab Emirates,https://jobs.adnoc.ae
@@ -1646,7 +1644,6 @@ Asia,United Arab Emirates,https://www.cars24.ae
 Asia,United Arab Emirates,https://assaf.ae
 Asia,United Arab Emirates,https://www.arabwheels.ae
 Asia,United Arab Emirates,https://translate.google.ae
-Asia,United Arab Emirates,https://columbia.ae
 Asia,United Arab Emirates,https://smarttrip.ae
 Asia,United Arab Emirates,https://dubaicareers.ae
 Asia,United Arab Emirates,https://payit.ae
@@ -1696,9 +1693,12 @@ Asia,United Arab Emirates,https://propertymonitor.ae
 Asia,United Arab Emirates,https://www.dfm.ae
 Asia,United Arab Emirates,https://vle.hbmsu.ac.ae
 Asia,United Arab Emirates,https://www.sharjahairport.ae
-Asia,United Arab Emirates,https://decathlon.ae
 Asia,United Arab Emirates,https://careers.edgegroup.ae
 Asia,United Arab Emirates,https://www.paisabazaar.ae
+Asia,United Arab Emirates,https://www.mdx.ac.ae
+Asia,United Arab Emirates,https://www.alqasimia.ac.ae
+Asia,United Arab Emirates,https://cdservices.moi.gov.ae
+Asia,United Arab Emirates,https://marketwatch.dfm.ae
 Asia,Malaysia,https://ufuture.uitm.edu.my
 Asia,Malaysia,https://tv4.nontondrama.my
 Asia,Malaysia,https://hrmis2.eghrmis.gov.my
@@ -1712,7 +1712,6 @@ Asia,Malaysia,https://www.nst.com.my
 Asia,Malaysia,https://d2.delima.edu.my
 Asia,Malaysia,https://www.bharian.com.my
 Asia,Malaysia,https://vle.unikl.edu.my
-Asia,Malaysia,https://upu.mohe.gov.my
 Asia,Malaysia,https://www.cimb.bizchannel.com.my
 Asia,Malaysia,https://ef.hasil.gov.my
 Asia,Malaysia,https://naasongs.my
@@ -1756,12 +1755,14 @@ Asia,Malaysia,https://ambilan.mypolycc.edu.my
 Asia,Malaysia,https://mediconnect.aia.com.my
 Asia,Malaysia,https://syukur.sabah.gov.my
 Asia,Malaysia,https://myguru.upsi.edu.my
+Asia,Malaysia,https://www.cinema.com.my
 Asia,Malaysia,https://www.cimbclicks.com.my
 Asia,Malaysia,https://putrablastdk.upm.edu.my
 Asia,Malaysia,https://www.mitsubishi-motors.com.my
 Asia,Malaysia,https://www.tracking.my
 Asia,Malaysia,https://ecampus.umk.edu.my
 Asia,Malaysia,https://emerit.uitm.edu.my
+Asia,Malaysia,https://elearning.usm.my
 Asia,Malaysia,https://s.shopee.com.my
 Asia,Malaysia,https://cx.remedi.my
 Asia,Malaysia,https://www.merimen.com.my
@@ -1798,7 +1799,6 @@ Asia,Malaysia,https://stamps.hasil.gov.my
 Asia,Malaysia,https://www.mstar.com.my
 Asia,Malaysia,https://www.ebay.com.my
 Asia,Malaysia,https://www.ticket2u.com.my
-Asia,Malaysia,https://www.budi95.gov.my
 Asia,Philippines,https://lp.ptgaming.ph
 Asia,Philippines,https://moviebox.ph
 Asia,Philippines,https://www.casinoplus.com.ph
@@ -1832,7 +1832,6 @@ Asia,Philippines,https://www.csc.gov.ph
 Asia,Philippines,https://bigbunny.ph
 Asia,Philippines,https://ecommerce.datablitz.com.ph
 Asia,Philippines,https://pages.lazada.com.ph
-Asia,Philippines,https://simreg.globe.com.ph
 Asia,Philippines,https://onlineservices.dmw.gov.ph
 Asia,Philippines,https://psahelpline.ph
 Asia,Philippines,https://blocked.sbmd.cicc.gov.ph
@@ -1887,6 +1886,7 @@ Asia,Philippines,https://www.tableplus.ph
 Asia,Philippines,https://www.hannonline.ph
 Asia,Philippines,https://winzir.ph
 Asia,Philippines,https://u.ncash.ph
+Asia,Philippines,https://ccj.lms.pccr.edu.ph
 Asia,Philippines,https://notices.philgeps.gov.ph
 Asia,Philippines,https://qceservices.quezoncity.gov.ph
 Asia,Philippines,https://pinayflixtv.ph
@@ -1935,7 +1935,6 @@ Asia,Israel,https://www.e-vrit.co.il
 Asia,Israel,https://www.midrag.co.il
 Asia,Israel,https://www.bizportal.co.il
 Asia,Israel,https://www.payngo.co.il
-Asia,Israel,https://login.gov.il
 Asia,Israel,https://www.bug.co.il
 Asia,Israel,https://www.homecenter.co.il
 Asia,Israel,https://calendar.2net.co.il
@@ -1987,7 +1986,6 @@ Asia,Israel,https://nerlazadik.co.il
 Asia,Israel,https://finance.walla.co.il
 Asia,Israel,https://app.iplan.co.il
 Asia,Israel,https://tora-forum.co.il
-Asia,Israel,https://www.golbary.co.il
 Asia,Israel,https://www.jerusalem.muni.il
 Asia,Israel,https://www.maxstock.co.il
 Asia,Israel,https://hamal.co.il
@@ -1999,6 +1997,8 @@ Asia,Israel,https://www.israir.co.il
 Asia,Israel,https://www.htzone.co.il
 Asia,Israel,https://www.nevo.co.il
 Asia,Israel,https://www.agora.co.il
+Asia,Israel,https://www.rcity.co.il
+Asia,Israel,https://www.lolasex.co.il
 Africa,South Africa,https://uifonline.labour.gov.za
 Africa,South Africa,https://www.sunbet.co.za
 Africa,South Africa,https://accounting.sageone.co.za
@@ -2016,7 +2016,6 @@ Africa,South Africa,https://www.thefuse.co.za
 Africa,South Africa,https://easybet.co.za
 Africa,South Africa,https://www.citizen.co.za
 Africa,South Africa,https://www.luckyfish.co.za
-Africa,South Africa,https://www.ackermans.co.za
 Africa,South Africa,https://www.supabets.co.za
 Africa,South Africa,https://www.unisa.ac.za
 Africa,South Africa,https://clicks.co.za
@@ -2052,7 +2051,6 @@ Africa,South Africa,https://www.builders.co.za
 Africa,South Africa,https://leroymerlin.co.za
 Africa,South Africa,https://www.fnb.co.za
 Africa,South Africa,https://johannesburg.adsafrica.co.za
-Africa,South Africa,https://revibe.co.za
 Africa,South Africa,https://www.sportsmanswarehouse.co.za
 Africa,South Africa,https://after12mag.co.za
 Africa,South Africa,https://www.checkers.co.za
@@ -2066,7 +2064,6 @@ Africa,South Africa,https://www.game.co.za
 Africa,South Africa,https://mooc.unisa.ac.za
 Africa,South Africa,https://www.worldsportsbetting.co.za
 Africa,South Africa,https://clickup.up.ac.za
-Africa,South Africa,https://learn.unizulu.ac.za
 Africa,South Africa,https://topauto.co.za
 Africa,South Africa,https://www.cao.ac.za
 Africa,South Africa,https://tekkietown.co.za
@@ -2087,10 +2084,8 @@ Africa,South Africa,https://secure.csd.gov.za
 Africa,South Africa,https://pretoria.adsafrica.co.za
 Africa,South Africa,https://www.yellowsubtrading.co.za
 Africa,South Africa,https://www.zarbet.co.za
-Africa,South Africa,https://www.legit.co.za
 Africa,South Africa,https://www.flysafair.co.za
 Africa,South Africa,https://online.elections.org.za
-Africa,South Africa,https://www.edgars.co.za
 Africa,South Africa,https://www.vodacom.co.za
 Africa,South Africa,https://www.radio-south-africa.co.za
 Africa,South Africa,https://student.uwc.ac.za
@@ -2099,6 +2094,11 @@ Africa,South Africa,https://numashop.co.za
 Africa,South Africa,https://www.okfurniture.co.za
 Africa,South Africa,https://www.education.gov.za
 Africa,South Africa,https://socscilearn.sun.ac.za
+Africa,South Africa,https://registration.uj.ac.za
+Africa,South Africa,https://www.carfind.co.za
+Africa,South Africa,https://casprd.nwu.ac.za
+Africa,South Africa,https://decofurnsa.co.za
+Africa,South Africa,https://enterprisests.standardbank.co.za
 Africa,Nigeria,https://efacility.jamb.gov.ng
 Africa,Nigeria,https://elearn.nou.edu.ng
 Africa,Nigeria,https://www.flashscore.com.ng
@@ -2117,9 +2117,7 @@ Africa,Nigeria,https://www.thecable.ng
 Africa,Nigeria,https://thenkiri.com.ng
 Africa,Nigeria,https://portal.unicross.crossriverstate.gov.ng
 Africa,Nigeria,https://www.businesslist.com.ng
-Africa,Nigeria,https://fzmovies.ng
 Africa,Nigeria,https://thenetnaija.com.ng
-Africa,Nigeria,https://businessday.ng
 Africa,Nigeria,https://portal.njfp.ng
 Africa,Nigeria,https://22bet.ng
 Africa,Nigeria,https://icrp.cac.gov.ng
@@ -2156,7 +2154,6 @@ Africa,Nigeria,https://esmat.ned.gov.ng
 Africa,Nigeria,https://portal.kogistatepolytechnic.edu.ng
 Africa,Nigeria,https://go.mtn.ng
 Africa,Nigeria,https://dssp.frsc.gov.ng
-Africa,Nigeria,https://thenetnaija.ng
 Africa,Nigeria,https://propertypro.ng
 Africa,Nigeria,https://studentservices.lasu.edu.ng
 Africa,Nigeria,https://www.njfp.ng
@@ -2188,8 +2185,6 @@ Africa,Nigeria,https://harkoki.com.ng
 Africa,Nigeria,https://ennysounds9ja.com.ng
 Africa,Nigeria,https://disk.ng
 Africa,Nigeria,https://www.pulsesports.ng
-Africa,Nigeria,https://www.jankado.com.ng
-Africa,Nigeria,https://www.movie-box.com.ng
 Africa,Nigeria,https://scoutier.com.ng
 Africa,Nigeria,https://eportal.lautech.edu.ng
 Africa,Nigeria,https://azscore.ng
@@ -2199,6 +2194,11 @@ Africa,Nigeria,https://miva.edu.ng
 Africa,Nigeria,https://eportal.paau.edu.ng
 Africa,Nigeria,https://ebill.com.ng
 Africa,Nigeria,https://maxispace.net.ng
+Africa,Nigeria,https://ong.ng
+Africa,Nigeria,https://everify.neco.gov.ng
+Africa,Nigeria,https://www.travelstart.com.ng
+Africa,Nigeria,https://app.sanlamallianz.com.ng
+Africa,Nigeria,https://portal.mdcn.gov.ng
 Africa,Egypt,https://eduserv.cairo.gov.eg
 Africa,Egypt,https://ums.asu.edu.eg
 Africa,Egypt,https://te.eg
@@ -2225,9 +2225,9 @@ Africa,Egypt,https://eshop.vodafone.com.eg
 Africa,Egypt,https://www.zanussi.com.eg
 Africa,Egypt,https://www.nafeza.gov.eg
 Africa,Egypt,https://emis.gov.eg
+Africa,Egypt,https://activ.eg
 Africa,Egypt,https://pgs.mans.edu.eg
 Africa,Egypt,https://student.oi.edu.eg
-Africa,Egypt,https://www.mcsd.com.eg
 Africa,Egypt,http://www.ndedco.gov.eg
 Africa,Egypt,https://myu.mci.edu.eg
 Africa,Egypt,https://esterad.com.eg
@@ -2241,6 +2241,7 @@ Africa,Egypt,https://www.esa.gov.eg
 Africa,Egypt,https://aleqaria.com.eg
 Africa,Egypt,https://www.tra.gov.eg
 Africa,Egypt,https://www.lms-bsnu.bsu.edu.eg
+Africa,Egypt,https://eservices.eehc.gov.eg
 Africa,Egypt,https://altaafi.com.eg
 Africa,Egypt,https://fra.gov.eg
 Africa,Egypt,https://www.arabicacademy.gov.eg
@@ -2248,6 +2249,7 @@ Africa,Egypt,https://sdedc.gov.eg
 Africa,Egypt,https://www.minia.edu.eg
 Africa,Egypt,https://www.blackcircles.com.eg
 Africa,Egypt,https://www.telephony.gov.eg
+Africa,Egypt,https://www.moss.gov.eg
 Africa,Egypt,https://trans.hajj.gov.eg
 Africa,Egypt,https://military.bsu.edu.eg
 Africa,Egypt,https://www.mcww.com.eg
@@ -2273,7 +2275,6 @@ Africa,Egypt,https://sc.upa.gov.eg
 Africa,Egypt,https://military.bu.edu.eg
 Africa,Egypt,https://epay.minia.edu.eg
 Africa,Egypt,https://www.mfa.gov.eg
-Africa,Egypt,https://e-books.hnu.edu.eg
 Africa,Egypt,https://student.metmans.edu.eg
 Africa,Egypt,https://autospare.com.eg
 Africa,Egypt,https://www.hcww.com.eg
@@ -2290,7 +2291,6 @@ Africa,Egypt,https://www.mcdelivery.eg
 Africa,Egypt,http://www.pat.edu.eg
 Africa,Egypt,https://sellerflex.amazon.eg
 Africa,Egypt,https://www.watheeqa.com.eg
-Africa,Egypt,http://ektoari.foc.cu.edu.eg
 Africa,Egypt,https://payment.efinance.com.eg
 Africa,Egypt,https://cpa.gov.eg
 Africa,Egypt,https://lands.nuca.gov.eg
@@ -2301,9 +2301,7 @@ Africa,Egypt,http://www.monofeya.gov.eg
 Africa,Egypt,http://www.oboormarket.org.eg
 Africa,Kenya,https://www.gamemania.co.ke
 Africa,Kenya,https://tpad2.tsc.go.ke
-Africa,Kenya,https://portal.hef.co.ke
 Africa,Kenya,https://accounts.ecitizen.go.ke
-Africa,Kenya,https://itax.kra.go.ke
 Africa,Kenya,https://eassessment5.knec.ac.ke
 Africa,Kenya,https://virtualcampus.kcau.ac.ke
 Africa,Kenya,https://www.standardmedia.co.ke
@@ -2311,7 +2309,6 @@ Africa,Kenya,https://betfalme.ke
 Africa,Kenya,https://www.jumia.co.ke
 Africa,Kenya,https://msha.ke
 Africa,Kenya,https://teachersonline.tsc.go.ke
-Africa,Kenya,https://uhr.kenya.go.ke
 Africa,Kenya,https://myaccount.safaricom.co.ke
 Africa,Kenya,https://www.the-star.co.ke
 Africa,Kenya,https://dci.ecitizen.go.ke
@@ -2323,6 +2320,7 @@ Africa,Kenya,https://tpay.tsc.go.ke
 Africa,Kenya,https://www.psckjobs.go.ke
 Africa,Kenya,https://www.tuko.co.ke
 Africa,Kenya,https://tsconline.tsc.go.ke
+Africa,Kenya,https://portal.ku.ac.ke
 Africa,Kenya,https://www.kenyans.co.ke
 Africa,Kenya,https://serviceportal.ntsa.go.ke
 Africa,Kenya,https://maliwin.co.ke
@@ -2341,10 +2339,8 @@ Africa,Kenya,https://www.brightermonday.co.ke
 Africa,Kenya,https://bridge.jiranismart.me.ke
 Africa,Kenya,https://metickets.krc.co.ke
 Africa,Kenya,https://m.mozzartbet.co.ke
-Africa,Kenya,https://publicservice.kenya.go.ke
 Africa,Kenya,https://winpesa.ke
 Africa,Kenya,https://jiji.co.ke
-Africa,Kenya,http://www.ghris.go.ke
 Africa,Kenya,https://www.flashscore.co.ke
 Africa,Kenya,https://ksssa.go.ke
 Africa,Kenya,https://portal.tvetcdacc.go.ke
@@ -2353,12 +2349,10 @@ Africa,Kenya,https://fns.immigration.go.ke
 Africa,Kenya,https://helaearn.co.ke
 Africa,Kenya,https://accounts.provider.sha.go.ke
 Africa,Kenya,https://studentsts.ku.ac.ke
-Africa,Kenya,http://publicservice.kenya.go.ke
 Africa,Kenya,https://brs.ecitizen.go.ke
 Africa,Kenya,https://ecitizen.kra.go.ke
 Africa,Kenya,https://elearning.health.go.ke
 Africa,Kenya,https://admissions.kmtc.ac.ke
-Africa,Kenya,http://uhr.kenya.go.ke
 Africa,Kenya,https://pay.kaps.co.ke
 Africa,Kenya,https://teacherske.co.ke
 Africa,Kenya,https://portal.jkuat.ac.ke
@@ -2394,11 +2388,17 @@ Africa,Kenya,https://edereva.aakenya.co.ke
 Africa,Kenya,https://www.corporatestaffing.co.ke
 Africa,Kenya,https://daviva.ke
 Africa,Kenya,https://cloud.cbcapp.co.ke
-Africa,Kenya,https://www.tronic.co.ke
 Africa,Kenya,https://sajili.zetech.ac.ke
 Africa,Kenya,https://gretsa.mzizi.co.ke
 Africa,Kenya,https://eventsaccreditation.go.ke
 Africa,Kenya,https://www.zimele.co.ke
+Africa,Kenya,https://ielearning.ueab.ac.ke
+Africa,Kenya,https://m.bantubet.co.ke
+Africa,Kenya,https://yellowbet.ke
+Africa,Kenya,https://mail.govmail.ke
+Africa,Kenya,https://amccopropertiesltd.co.ke
+Africa,Kenya,https://earnflowagencies.co.ke
+Africa,Kenya,https://portal.mawegopoly.ac.ke
 Africa,Morocco,https://www.marchespublics.gov.ma
 Africa,Morocco,https://www.fatourati.ma
 Africa,Morocco,https://www.bmcedirect.ma
@@ -2407,13 +2407,13 @@ Africa,Morocco,https://idprovider.men.gov.ma
 Africa,Morocco,https://radio.co.ma
 Africa,Morocco,https://www.coteetsport.ma
 Africa,Morocco,https://www.moteur.ma
+Africa,Morocco,https://www.tax.gov.ma
 Africa,Morocco,https://www.orange.ma
 Africa,Morocco,https://fr.le360.ma
 Africa,Morocco,https://www.mubawab.ma
 Africa,Morocco,https://www.ancfcc.gov.ma
 Africa,Morocco,https://payment.cmi.co.ma
 Africa,Morocco,https://www.emploi-public.ma
-Africa,Morocco,https://espace-client.orange.ma
 Africa,Morocco,https://www.moncallcenter.ma
 Africa,Morocco,https://moutamadris.ma
 Africa,Morocco,https://www.decathlon.ma
@@ -2427,11 +2427,13 @@ Africa,Morocco,https://snrtlive.ma
 Africa,Morocco,https://dev-point1.01.ma
 Africa,Morocco,https://agenz.ma
 Africa,Morocco,https://espacenotaire.ancfcc.gov.ma
+Africa,Morocco,https://www.myway.ac.ma
 Africa,Morocco,https://inwi.ma
 Africa,Morocco,https://www.umniabank.ma
 Africa,Morocco,https://medicament.ma
 Africa,Morocco,https://is.tax.gov.ma
 Africa,Morocco,https://www.bricoma.ma
+Africa,Morocco,https://ir.tax.gov.ma
 Africa,Morocco,https://casierjudiciaire.justice.gov.ma
 Africa,Morocco,https://www.alomrane.gov.ma
 Africa,Morocco,https://www.yves-rocher.ma
@@ -2456,7 +2458,10 @@ Africa,Morocco,https://fournisseurs.gid.gov.ma
 Africa,Morocco,https://www.playup.ma
 Africa,Morocco,https://micromagma.ma
 Africa,Morocco,https://journals.imist.ma
+Africa,Morocco,https://kiabi.ma
 Africa,Morocco,https://ifma.anlca.gov.ma
+Africa,Morocco,https://santiago.ma
+Africa,Morocco,https://riha.ma
 Africa,Morocco,https://www.pandorashop.ma
 Africa,Morocco,https://priere.ma
 Africa,Morocco,https://www.playweez.ma
@@ -2467,12 +2472,14 @@ Africa,Morocco,https://espace-entreprise.orange.ma
 Africa,Morocco,https://convocation.fssm.uca.ma
 Africa,Morocco,https://www.bricodeco.ma
 Africa,Morocco,https://parachezvous.ma
+Africa,Morocco,https://tax.gov.ma
 Africa,Morocco,https://www.ofppt.ma
 Africa,Morocco,https://cpu.tax.gov.ma
 Africa,Morocco,http://www.greffe.courdecassation.ma
 Africa,Morocco,https://occasion.kifal.ma
 Africa,Morocco,https://www.cpge.ac.ma
 Africa,Morocco,https://www.fm6education.ma
+Africa,Morocco,https://www.mymarket.ma
 Africa,Morocco,https://renew.ma
 Africa,Morocco,https://www.allobat.ma
 Africa,Morocco,https://www.gomobile.ma
@@ -2492,13 +2499,6 @@ Africa,Morocco,https://jysk.ma
 Africa,Morocco,https://gu.portnet.ma
 Africa,Morocco,https://www.farmasi-ma.ma
 Africa,Morocco,https://irpart.tax.gov.ma
-Africa,Morocco,https://www.info-cimr.ma
-Africa,Morocco,https://www.cihnet.co.ma
-Africa,Morocco,https://resflsh.uca.ma
-Africa,Morocco,https://www.orchestra.ma
-Africa,Morocco,https://www.bringo.ma
-Africa,Morocco,https://aujourdhui.ma
-Africa,Morocco,https://babouti.ma
 Africa,Ghana,https://jiji.com.gh
 Africa,Ghana,https://www.flashscore.com.gh
 Africa,Ghana,https://pridespins.com.gh
@@ -2580,7 +2580,6 @@ Africa,Ghana,https://icampus.atu.edu.gh
 Africa,Ghana,https://nmi.nmc.gov.gh:9090
 Africa,Ghana,https://app.tatu.edu.gh
 Africa,Ghana,https://odibets.com.gh
-Africa,Ghana,https://register.healthtraining.gov.gh
 Africa,Ghana,https://eportal.pentvars.edu.gh
 Africa,Ghana,https://gcuc.edu.gh
 Africa,Ghana,https://ilearn.ntc.gov.gh
@@ -2599,6 +2598,7 @@ Africa,Ghana,https://sis.uenr.edu.gh
 Africa,Ghana,https://stu.edu.gh
 Africa,Ghana,https://online.dvla.gov.gh
 Africa,Ghana,https://staff.ecg.com.gh
+Africa,Ghana,https://sts.ug.edu.gh
 Africa,Tanzania,https://sportpesa.co.tz
 Africa,Tanzania,https://onlinesys.necta.go.tz
 Africa,Tanzania,https://erita.rita.go.tz
@@ -2630,7 +2630,6 @@ Africa,Tanzania,https://mnyivindimf.co.tz
 Africa,Tanzania,https://premierbetzone.co.tz
 Africa,Tanzania,https://vunjabeibet.co.tz
 Africa,Tanzania,https://selfservice.nhif.or.tz
-Africa,Tanzania,https://aris3.udsm.ac.tz
 Africa,Tanzania,https://www.kingbet.co.tz
 Africa,Tanzania,https://www.busbora.co.tz
 Africa,Tanzania,https://www.thecitizen.co.tz
@@ -2647,6 +2646,7 @@ Africa,Tanzania,https://busbora.co.tz
 Africa,Tanzania,https://vms.vodacom.co.tz
 Africa,Tanzania,https://etdonline.immigration.go.tz
 Africa,Tanzania,https://dailynews.co.tz
+Africa,Tanzania,https://srs.irdp.ac.tz
 Africa,Tanzania,https://vts.latra.go.tz
 Africa,Tanzania,https://mutimetable.mzumbe.ac.tz
 Africa,Tanzania,https://ligikuu.co.tz
@@ -2690,15 +2690,15 @@ Africa,Tanzania,https://www.pigabet.co.tz
 Africa,Tanzania,https://tilishosafari.co.tz
 Africa,Tanzania,https://learninghubtz.co.tz
 Africa,Tanzania,https://mimis.tpf.go.tz
-Africa,Tanzania,https://www.rita.go.tz
 Africa,Tanzania,https://portal.zanajira.go.tz
-Africa,Tanzania,https://www.tronic.co.tz
 Africa,Tanzania,https://eservices.immigration.go.tz
 Africa,Tanzania,https://crdbbank.co.tz
 Africa,Tanzania,https://bezaleli.tag.or.tz
 Africa,Tanzania,https://gimis.gpsa.go.tz
 Africa,Tanzania,https://ajira.pccb.go.tz
 Africa,Tanzania,https://www.tra.go.tz
+Africa,Tanzania,https://www.necta.go.tz
+Africa,Tanzania,https://ccmp.gcla.go.tz
 Africa,Uganda,https://mobile.fortebet.ug
 Africa,Uganda,https://www.djerycom.ug
 Africa,Uganda,https://www.howwe.ug
@@ -2735,7 +2735,6 @@ Africa,Uganda,https://esc.go.ug
 Africa,Uganda,https://cheetah.softisp.ug
 Africa,Uganda,https://apply.mak.ac.ug
 Africa,Uganda,https://online.absa.co.ug
-Africa,Uganda,https://mail.ura.go.ug
 Africa,Uganda,https://vacancies.psc.go.ug
 Africa,Uganda,https://eims.uvtab.go.ug
 Africa,Uganda,https://apply.gu.ac.ug
@@ -2760,6 +2759,7 @@ Africa,Uganda,https://elearning.kab.ac.ug
 Africa,Uganda,https://examinations.uneb.ac.ug
 Africa,Uganda,https://kyu.ac.ug
 Africa,Uganda,https://www.education.go.ug
+Africa,Uganda,https://www.independent.co.ug
 Africa,Uganda,https://vle.bsu.ac.ug
 Africa,Uganda,https://ecampus.uict.ac.ug
 Africa,Uganda,https://vle.must.ac.ug
@@ -2767,6 +2767,7 @@ Africa,Uganda,https://www.uedcl.co.ug
 Africa,Uganda,https://eemis.mglsd.go.ug
 Africa,Uganda,https://www.registration.unmc.ug
 Africa,Uganda,https://kiu.ac.ug
+Africa,Uganda,https://news.mak.ac.ug
 Africa,Uganda,https://www.ubuy.ug
 Africa,Uganda,https://fis.pdmis.go.ug
 Africa,Uganda,https://dotshule.ug
@@ -2798,7 +2799,6 @@ Africa,Uganda,https://myportal.busitema.ac.ug
 Africa,Uganda,https://myportal.gu.ac.ug
 Africa,Uganda,https://ntv.co.ug
 Africa,Uganda,https://obrs.ursb.go.ug
-Africa,Uganda,https://22bet.ug
 Africa,Senegal,https://e-evaluations.unchk.sn
 Africa,Senegal,https://www.zeturf.sn
 Africa,Senegal,https://formation.force-n.sn
@@ -2835,7 +2835,6 @@ Africa,Senegal,https://senprof.education.sn
 Africa,Senegal,https://www.leclub.sn
 Africa,Senegal,https://www.vie-publique.sn
 Africa,Senegal,https://orange.sn
-Africa,Senegal,https://portailcrousss2.crous-ussein.sn
 Africa,Senegal,https://promo.sn
 Africa,Senegal,https://force-n.sn
 Africa,Senegal,https://senprof2.education.sn
@@ -2843,13 +2842,13 @@ Africa,Senegal,https://primature.sn
 Africa,Senegal,https://www.cbaonet.sn
 Africa,Senegal,https://eogn.gendarmerie.sn
 Africa,Senegal,http://foad.ugb.sn
+Africa,Senegal,https://masterofficedeco.sn
 Africa,Senegal,https://samabac.sn
 Africa,Senegal,https://dsports.sn
 Africa,Senegal,https://www.cesag.sn
 Africa,Senegal,https://dddr.demdikk.sn
 Africa,Senegal,https://admission.unchk.sn
 Africa,Senegal,https://formation.education.sn
-Africa,Senegal,https://lequotidien.sn
 Africa,Senegal,https://www.auchan.sn
 Africa,Senegal,https://sigof.onfp.sn
 Africa,Senegal,https://concours.ucad.sn
@@ -2887,6 +2886,7 @@ Africa,Tunisia,https://www.slouage-mbey.tn
 Africa,Tunisia,https://translate.google.com.tn
 Africa,Tunisia,https://mabrouk.tn
 Africa,Tunisia,https://autopart.tn
+Africa,Tunisia,https://defense.tn
 Africa,Tunisia,https://promo.youscribe.tn
 Africa,Tunisia,https://www.webank.com.tn
 Africa,Tunisia,https://www.exist.com.tn
@@ -2901,10 +2901,8 @@ Africa,Tunisia,https://edusoutien.education.tn
 Africa,Tunisia,https://www.tadris.tn
 Africa,Tunisia,https://orange.tn
 Africa,Tunisia,https://seli.tn
-Africa,Tunisia,https://www.sqes.tn
 Africa,Tunisia,https://www.atct.tn
 Africa,Tunisia,https://my.bigbossexpress.tn
-Africa,Tunisia,https://www.polaris.tn
 Africa,Tunisia,https://www.optioncarriere.tn
 Africa,Tunisia,https://fsjegj.rnu.tn
 Africa,Tunisia,https://mail2.gct.com.tn
@@ -2926,6 +2924,7 @@ Africa,Tunisia,https://www.assabahnews.tn
 Africa,Tunisia,https://parapharmacieplus.tn
 Africa,Tunisia,https://crk.tn
 Africa,Tunisia,https://www.mitunisie.tn
+Africa,Tunisia,https://gympro.tn
 Africa,Tunisia,https://lesportif.com.tn
 Africa,Tunisia,https://megapc.tn
 Africa,Tunisia,https://my.adex.tn
@@ -2934,7 +2933,6 @@ Africa,Tunisia,https://baniola.tn
 Africa,Tunisia,https://promo.cashmayoufech.tn
 Africa,Tunisia,https://parapharmacie.tn
 Africa,Tunisia,https://promo.oukla.tn
-Africa,Tunisia,https://www.biatnet.com.tn
 Africa,Tunisia,https://www.tunisiatv.tn
 Africa,Tunisia,https://www.orange.tn
 Africa,Tunisia,https://uso2026.uvt.tn
@@ -2959,6 +2957,7 @@ Africa,Tunisia,https://www.meteo.tn
 Africa,Tunisia,http://www.ent3.cnte.tn
 Africa,Tunisia,https://www.yvesrocher.tn
 Africa,Tunisia,https://www.hummel.tn
+Africa,Tunisia,https://beautystore.tn
 North America,United States,https://zoom.us
 North America,United States,https://danbooru.donmai.us
 North America,United States,https://rule34.us
@@ -2979,7 +2978,6 @@ North America,United States,https://qualitylogs.us
 North America,United States,https://tiger365.us
 North America,United States,https://direct.sos.state.tx.us
 North America,United States,https://mdocweb.state.mi.us
-North America,United States,https://www.disturbia.us
 North America,United States,https://www.publicrecordsdata.us
 North America,United States,https://myprize.us
 North America,United States,https://auth.band.us
@@ -3033,7 +3031,6 @@ North America,United States,https://casesearch.courts.state.md.us
 North America,United States,https://daily-horoscope.us
 North America,United States,https://madely.us
 North America,United States,https://stockinvest.us
-North America,United States,https://burga.us
 North America,United States,https://adfoc.us
 North America,United States,https://coinz.us
 North America,United States,https://wiki.smutosaur.us
@@ -3048,9 +3045,7 @@ North America,United States,https://admin.r777.us
 North America,United States,https://mycpa.cpa.state.tx.us
 North America,United States,https://student.spotsylvania.k12.va.us
 North America,United States,https://www.sos.state.tx.us
-North America,United States,https://www.muji.us
 North America,United States,https://7cav.us
-North America,United States,https://beautyfrombees.us
 North America,United States,https://www.casino.us
 North America,United States,https://www.bcpao.us
 North America,United States,https://console.icabbi.us
@@ -3059,6 +3054,10 @@ North America,United States,https://console4.icabbi.us
 North America,United States,https://hjchelmets.us
 North America,United States,https://www.fullpull.us
 North America,United States,https://rutgers.zoom.us
+North America,United States,https://store.glock.us
+North America,United States,https://coupang.zoom.us
+North America,United States,https://slotzeus88top.us
+North America,United States,https://sea.zoom.us
 North America,Canada,https://conduit.psiphon.ca
 North America,Canada,https://www.rona.ca
 North America,Canada,https://www.canadiantire.ca
@@ -3128,7 +3127,6 @@ North America,Canada,https://fortnine.ca
 North America,Canada,https://www.remax.ca
 North America,Canada,https://hiring.amazon.ca
 North America,Canada,https://www.tangerine.ca
-North America,Canada,https://jdsports.ca
 North America,Canada,https://et.interac.ca
 North America,Canada,https://www.7jours.ca
 North America,Canada,https://www.providerconnect.ca
@@ -3142,7 +3140,6 @@ North America,Canada,https://www.shoppersdrugmart.ca
 North America,Canada,https://www.crocs.ca
 North America,Canada,https://www.ecampuslife.ca
 North America,Canada,https://www.leons.ca
-North America,Canada,https://www.indigo.ca
 North America,Canada,https://www.registrefoncier.gouv.qc.ca
 North America,Canada,https://saaq.gouv.qc.ca
 North America,Canada,https://www.airbnb.ca
@@ -3159,6 +3156,8 @@ North America,Canada,https://www.revenuquebec.ca
 North America,Canada,https://www.tvasports.ca
 North America,Canada,https://www.bell.ca
 North America,Canada,https://courselink.uoguelph.ca
+North America,Canada,https://www.staples.ca
+North America,Canada,https://meteo.gc.ca
 North America,Mexico,https://www.mercadolibre.com.mx
 North America,Mexico,https://www.walmart.com.mx
 North America,Mexico,https://articulo.mercadolibre.com.mx
@@ -3238,6 +3237,7 @@ North America,Mexico,https://www.uaeh.edu.mx
 North America,Mexico,https://sfpya.edomexico.gob.mx
 North America,Mexico,https://www.italika.mx
 North America,Mexico,https://www.clip.mx
+North America,Mexico,https://oficinavirtual.issste.gob.mx
 North America,Mexico,https://autos.mercadolibre.com.mx
 North America,Mexico,https://www.paquetexpress.com.mx
 North America,Mexico,https://programasparaelbienestar.gob.mx
@@ -3250,15 +3250,14 @@ North America,Mexico,https://www.macstoreonline.com.mx
 North America,Mexico,https://vanguardia.com.mx
 North America,Mexico,https://constancias.cndh.org.mx
 North America,Mexico,https://heraldodemexico.com.mx
-North America,Mexico,https://www.newera.mx
 North America,Mexico,https://platacard.mx
 North America,Mexico,https://calendarioescolar.sep.gob.mx
 North America,Mexico,https://www.nsyp.aulapolivirtual.ipn.mx
 North America,Mexico,https://www.hsbc.com.mx
 North America,Mexico,https://movistar.com.mx
 North America,Mexico,https://bajio.dico.com.mx
+North America,Mexico,https://educads.dgces.salud.gob.mx
 North America,Mexico,https://www.codere.mx
-North America,Mexico,https://www.mazda.mx
 North America,Guatemala,https://lahora.gt
 North America,Guatemala,https://paquetes1.miclaro.com.gt
 North America,Guatemala,https://campus.udv.edu.gt
@@ -3299,7 +3298,6 @@ North America,Guatemala,https://www.publinews.gt
 North America,Guatemala,https://static.urural.edu.gt
 North America,Guatemala,https://www.upana.edu.gt
 North America,Guatemala,https://sun.usac.edu.gt
-North America,Guatemala,https://rikeli.com.gt
 North America,Guatemala,https://www.cajaweb.bi.com.gt
 North America,Guatemala,https://www.albacinema.com.gt
 North America,Guatemala,https://cleanmaster.com.gt
@@ -3319,6 +3317,7 @@ North America,Guatemala,https://radd5.virtual.usac.edu.gt
 North America,Guatemala,https://beautydepot.com.gt
 North America,Guatemala,https://registro.usac.edu.gt
 North America,Guatemala,https://banguat.gob.gt
+North America,Guatemala,https://hushpuppies.gt
 North America,Guatemala,https://anfora.com.gt
 North America,Guatemala,https://talento.bi.com.gt
 North America,Guatemala,https://www.banguat.gob.gt
@@ -3406,13 +3405,13 @@ North America,Costa Rica,https://www.espn.co.cr
 North America,Costa Rica,https://www.suzuki.cr
 North America,Costa Rica,https://www.locanto.co.cr
 North America,Costa Rica,https://pgrweb.go.cr
+North America,Costa Rica,https://avatar.utn.ac.cr
 North America,Costa Rica,https://www.tse.go.cr
 North America,Costa Rica,https://educa.uned.ac.cr
 North America,Costa Rica,https://serviciosbecas.ucr.ac.cr
 North America,Costa Rica,https://www.promerica.fi.cr
 North America,Costa Rica,https://www.imn.ac.cr
 North America,Costa Rica,https://campustae.fundatec.ac.cr
-North America,Costa Rica,https://uvirtual.ac.cr
 North America,Costa Rica,https://ecc.ac.cr
 North America,Costa Rica,https://www.ucr.ac.cr
 North America,Costa Rica,https://www.smartfit.cr
@@ -3424,7 +3423,6 @@ North America,Costa Rica,https://pj.poder-judicial.go.cr
 North America,Costa Rica,https://epson.co.cr
 North America,Costa Rica,https://facture.cr
 North America,Costa Rica,https://www.cajadeande.fi.cr
-North America,Costa Rica,https://www.grupomutual.fi.cr
 North America,Costa Rica,https://www.usanmarcos.ac.cr
 North America,Costa Rica,https://tedu.uia.ac.cr
 North America,Costa Rica,https://www.unmejorempleo.co.cr
@@ -3447,7 +3445,6 @@ North America,Costa Rica,https://www.firestone.co.cr
 North America,Costa Rica,https://www.cnfl.go.cr
 North America,Costa Rica,https://serviciosenlinea.sinac.go.cr
 North America,Costa Rica,https://produccion.uned.ac.cr
-North America,Costa Rica,https://metics.ucr.ac.cr
 North America,Costa Rica,https://www.jac.cr
 North America,Costa Rica,https://nexuspj.poder-judicial.go.cr
 North America,Costa Rica,https://www.bebemundo.co.cr
@@ -3459,11 +3456,13 @@ North America,Costa Rica,https://moodle.uh.ac.cr
 North America,Costa Rica,https://paquetes2.miclaro.cr
 North America,Costa Rica,https://campus.upi.ac.cr
 North America,Costa Rica,https://www.conape.go.cr
+North America,Costa Rica,https://laguacaenlinea.cr
+North America,Costa Rica,https://www.airbnb.co.cr
+North America,Panama,https://www.contraloria.gob.pa
 North America,Panama,https://bet.betcha.pa
 North America,Panama,https://www.novey.com.pa
 North America,Panama,https://www.laestrella.com.pa
 North America,Panama,https://elsiglo.com.pa
-North America,Panama,https://www.jamar.com.pa
 North America,Panama,https://dgi-fep.mef.gob.pa
 North America,Panama,https://www.espn.com.pa
 North America,Panama,https://cinepolis.com.pa
@@ -3478,6 +3477,7 @@ North America,Panama,https://movicenter.com.pa
 North America,Panama,https://www.airbnb.com.pa
 North America,Panama,https://www.cajadeahorros.com.pa
 North America,Panama,https://mupa.gob.pa
+North America,Panama,https://bbb.com.pa
 North America,Panama,https://www.inadeh.edu.pa
 North America,Panama,https://www.locanto.com.pa
 North America,Panama,https://go.medcom.com.pa
@@ -3495,16 +3495,13 @@ North America,Panama,https://www.globalbank.com.pa
 North America,Panama,https://sys.usma.ac.pa
 North America,Panama,https://utp.ac.pa
 North America,Panama,https://campussalud.cetes.edu.pa
-North America,Panama,https://siacap.gob.pa
 North America,Panama,https://www.ifarhu.gob.pa
 North America,Panama,https://starplay.pa
 North America,Panama,https://sports.betcha.pa
 North America,Panama,https://crocs.com.pa
 North America,Panama,https://campusvirtual.cetes.edu.pa
-North America,Panama,https://macstore.com.pa
 North America,Panama,https://enif.migracion.gob.pa
 North America,Panama,https://www.starplay.pa
-North America,Panama,https://newbalance.com.pa
 North America,Panama,https://matricula.utp.ac.pa
 North America,Panama,https://dgi.mef.gob.pa
 North America,Panama,https://www.licencia.com.pa
@@ -3517,7 +3514,6 @@ North America,Panama,https://www.critica.com.pa
 North America,Panama,https://unicyt.edu.pa
 North America,Panama,https://www.naturgy.com.pa
 North America,Panama,https://www.mef.gob.pa
-North America,Panama,https://felix.com.pa
 North America,Panama,https://www.landrover.pa
 North America,Panama,https://www.up.ac.pa
 North America,Panama,https://radios.com.pa
@@ -3525,8 +3521,6 @@ North America,Panama,https://www.pedidosya.com.pa
 North America,Panama,https://www.panamaamerica.com.pa
 North America,Panama,https://titan.com.pa
 North America,Panama,https://factura.thefactoryhka.com.pa
-North America,Panama,https://www.unachi.ac.pa
-North America,Panama,https://ena.com.pa
 North America,Panama,https://miambiente.gob.pa
 North America,Panama,https://segurossura.com.pa
 North America,Panama,https://chequeandome.com.pa
@@ -3535,14 +3529,10 @@ North America,Panama,https://compras.tigo.com.pa
 North America,Panama,https://www.betcris.pa
 North America,Panama,https://www.renato.com.pa
 North America,Panama,https://www.lnb.gob.pa
-North America,Panama,https://par2.pa
 North America,Panama,https://www.diaadia.com.pa
 North America,Panama,https://link.globalbank.com.pa
 North America,Panama,https://championmotors.com.pa
-North America,Panama,https://casiostore.kenex.com.pa
-North America,Panama,https://empleospanama.gob.pa
 North America,Panama,https://lasalle.edu.pa
-North America,Panama,https://comasa.com.pa
 North America,Panama,https://ensa.com.pa
 North America,Panama,https://www.itau.com.pa
 North America,Panama,https://my.qlu.pa
@@ -3556,9 +3546,18 @@ North America,Panama,https://www.icasas.com.pa
 North America,Panama,https://colineal.pa
 North America,Panama,https://www.babysits.com.pa
 North America,Panama,https://vidauniversitaria.utp.ac.pa
-North America,Panama,https://hombredelamancha.com.pa
 North America,Panama,https://www.fazwaz.com.pa
 North America,Panama,https://bydauto.pa
+North America,Panama,https://www.codere.pa
+North America,Panama,https://www.argyros.com.pa
+North America,Panama,https://www.meteored.com.pa
+North America,Panama,https://sistema.celpanama.edu.pa
+North America,Panama,https://lpf.com.pa
+North America,Panama,https://ministeriopublico.gob.pa
+North America,Panama,https://diradmision.up.ac.pa
+North America,Panama,https://fepa.digifact.com.pa
+North America,Panama,https://perfumeplanet.com.pa
+North America,Panama,https://www.ifarhuconcurso.gob.pa
 North America,Dominican Republic,https://www.conectate.com.do
 North America,Dominican Republic,https://www.espn.com.do
 North America,Dominican Republic,https://www.dgii.gov.do
@@ -3617,13 +3616,13 @@ North America,Dominican Republic,https://campusvirtual.itla.edu.do
 North America,Dominican Republic,https://eldia.com.do
 North America,Dominican Republic,https://www.panacredito.do
 North America,Dominican Republic,https://epson.com.do
+North America,Dominican Republic,https://prousuario.gob.do
 North America,Dominican Republic,https://www.bancentral.gov.do
 North America,Dominican Republic,https://caribetours.com.do
 North America,Dominican Republic,https://www.pasaportes.gob.do
 North America,Dominican Republic,https://presidencia.gob.do
 North America,Dominican Republic,https://map.gob.do
 North America,Dominican Republic,https://www.betcris.do
-North America,Dominican Republic,https://citas.pasaportes.gob.do
 North America,Dominican Republic,https://www.infodolar.com.do
 North America,Dominican Republic,https://hvc.com.do
 North America,Dominican Republic,https://carros.mercadolibre.com.do
@@ -3646,6 +3645,7 @@ North America,Dominican Republic,https://expedienteeducativo.gob.do
 North America,Dominican Republic,https://paginasamarillas.com.do
 North America,Dominican Republic,https://formulario.familiafeliz.gob.do
 North America,Dominican Republic,https://campusvirtual.unibe.edu.do
+North America,Dominican Republic,https://acceso.prousuario.gob.do
 North America,Dominican Republic,https://educapermanente.itla.edu.do
 North America,Dominican Republic,https://hoy.com.do
 North America,Dominican Republic,https://fu.do
@@ -3658,7 +3658,6 @@ North America,Dominican Republic,https://tuempleord.do
 North America,Dominican Republic,https://inmuebles.mercadolibre.com.do
 North America,Dominican Republic,https://altice.com.do
 North America,Dominican Republic,https://www.presidencia.gob.do
-North America,Dominican Republic,https://mescyt.gob.do
 North America,Honduras,https://www.elheraldo.hn
 North America,Honduras,https://serviciosestudiantiles.unah.edu.hn
 North America,Honduras,https://www.diez.hn
@@ -3695,6 +3694,7 @@ North America,Honduras,https://login.cnbs.gob.hn
 North America,Honduras,https://uth.hn
 North America,Honduras,https://apostemos.hn
 North America,Honduras,https://www.unispot.hn
+North America,Honduras,https://www.rap.hn
 North America,Honduras,https://filialelectronica.hn
 North America,Honduras,https://proceso.hn
 North America,Honduras,https://bipbip.hn
@@ -3710,7 +3710,6 @@ North America,Honduras,https://sisglobal.aduanas.gob.hn
 North America,Honduras,https://noticias247.hn
 North America,Honduras,https://www.metrocinemas.hn
 North America,Honduras,https://activatuchip.claro.com.hn
-North America,Honduras,https://www.liceojesusdenazareth.edu.hn
 North America,Honduras,https://admisiones.unah.edu.hn
 North America,Honduras,https://www.claro.com.hn
 North America,Honduras,https://evirtual-sl.upnfm.edu.hn
@@ -3723,7 +3722,6 @@ North America,Honduras,https://www.betpro.hn
 North America,Honduras,https://www.upnfm.edu.hn
 North America,Honduras,https://ujn.edu.hn
 North America,Honduras,https://ujcv.edu.hn
-North America,Honduras,https://policianacional.gob.hn
 North America,Honduras,https://blogs.unah.edu.hn
 North America,Honduras,https://contratistas.cablecolor.hn
 North America,Honduras,https://e-campus.uth.hn
@@ -3737,7 +3735,6 @@ North America,Honduras,https://didemo.hn
 North America,Honduras,https://inscripciones.infop.hn
 North America,Honduras,https://farmaciasanantonio.hn
 North America,Honduras,https://hospitalcuh.hn
-North America,Honduras,https://thenorthface.hn
 North America,Honduras,https://www.mp.hn
 North America,Honduras,https://aula.udh.edu.hn
 North America,Honduras,https://servicios.policianacional.gob.hn
@@ -3754,11 +3751,13 @@ North America,Honduras,https://institutobaxter.edu.hn
 North America,Honduras,https://www.changan.hn
 North America,Honduras,https://licencias.sanpedrosula.hn
 North America,Honduras,https://www.yelu.hn
-North America,Honduras,https://lovable.com.hn
 North America,Honduras,https://apnfd.cnbs.gob.hn
 North America,Honduras,https://betpro.hn
 North America,Honduras,https://gestiones-sedp.unah.edu.hn
 North America,Honduras,https://miprestamo.banpais.hn
+North America,Honduras,https://unag.edu.hn
+North America,Honduras,https://certificadovial.colegiomedico.hn
+North America,Honduras,https://registro.uph.edu.hn
 North America,El Salvador,https://aprendes.edu.gob.sv
 North America,El Salvador,https://www.mh.gob.sv
 North America,El Salvador,https://evaluaciones.edu.gob.sv
@@ -3781,7 +3780,6 @@ North America,El Salvador,https://estudiantes.ugb.edu.sv
 North America,El Salvador,https://catolica.edu.sv
 North America,El Salvador,https://www.registroacademico.catolica.edu.sv
 North America,El Salvador,https://www.maxidespensa.com.sv
-North America,El Salvador,https://hushpuppies.sv
 North America,El Salvador,https://confirmabag.mag.gob.sv
 North America,El Salvador,https://www.ladespensadedonjuan.com.sv
 North America,El Salvador,https://www.pierrecardin.com.sv
@@ -3807,6 +3805,7 @@ North America,El Salvador,https://diario.elmundo.sv
 North America,El Salvador,https://www.mtps.gob.sv
 North America,El Salvador,https://www.airbnb.com.sv
 North America,El Salvador,https://formaciondocente.edu.sv
+North America,El Salvador,https://www.cnr.gob.sv
 North America,El Salvador,https://www.915.gob.sv
 North America,El Salvador,https://apps.itca.edu.sv
 North America,El Salvador,https://app.isss.gob.sv
@@ -3814,7 +3813,6 @@ North America,El Salvador,https://migracionlaboral.mtps.gob.sv
 North America,El Salvador,https://www.mag.gob.sv
 North America,El Salvador,https://agenciasway.com.sv
 North America,El Salvador,https://www.comprasal.gob.sv
-North America,El Salvador,https://par2.sv
 North America,El Salvador,https://www.ciexelsalvador.gob.sv
 North America,El Salvador,https://www.itca.edu.sv
 North America,El Salvador,https://cssp.gob.sv
@@ -3822,6 +3820,7 @@ North America,El Salvador,https://marykay.sv
 North America,El Salvador,https://solucionesdigitales.promerica.com.sv
 North America,El Salvador,https://www.locanto.com.sv
 North America,El Salvador,https://www.isss.gob.sv
+North America,El Salvador,https://uca.edu.sv
 North America,El Salvador,https://cinepolis.com.sv
 North America,El Salvador,https://www.honda.sv
 North America,El Salvador,https://admin.factura.gob.sv
@@ -3831,7 +3830,6 @@ North America,El Salvador,https://formacion.conapina.gob.sv
 North America,El Salvador,https://www.promerica.com.sv
 North America,El Salvador,https://uvirtual.ujmd.edu.sv
 North America,El Salvador,https://www.udb.edu.sv
-North America,El Salvador,https://bebemundo.com.sv
 North America,El Salvador,https://www.snet.gob.sv
 North America,El Salvador,https://portal.fsv.gob.sv
 North America,El Salvador,https://www.papajohns.com.sv
@@ -3859,6 +3857,7 @@ North America,El Salvador,https://www.migracion.gob.sv
 North America,El Salvador,https://www.tuchance.org.sv
 North America,El Salvador,https://www.bathandbodyworks.sv
 North America,El Salvador,https://www.motocity.com.sv
+North America,El Salvador,https://samuelchristianschool.edu.sv
 North America,Nicaragua,https://ucnvirtual.edu.ni
 North America,Nicaragua,https://nuevaya.com.ni
 North America,Nicaragua,https://uamvirtual.uam.edu.ni
@@ -3879,7 +3878,6 @@ North America,Nicaragua,https://siga.est.ulsa.edu.ni
 North America,Nicaragua,https://portalestudiantes.unanleon.edu.ni
 North America,Nicaragua,https://www.loterianacional.com.ni
 North America,Nicaragua,https://tramites.ineter.gob.ni
-North America,Nicaragua,https://avmedic.unanleon.edu.ni
 North America,Nicaragua,https://campusvirtual.unitec.edu.ni
 North America,Nicaragua,https://www.banpro.com.ni
 North America,Nicaragua,https://www.mined.gob.ni
@@ -3896,7 +3894,6 @@ North America,Nicaragua,https://medco.online.com.ni
 North America,Nicaragua,https://www.pedidosyani.com.ni
 North America,Nicaragua,https://web.mifamilia.gob.ni
 North America,Nicaragua,https://campusvirtual.uraccan.edu.ni
-North America,Nicaragua,https://hushpuppies.ni
 North America,Nicaragua,https://www1.disnorte-dissur.com.ni
 North America,Nicaragua,https://www.hospitalmilitar.com.ni
 North America,Nicaragua,https://www.cargotrans.com.ni
@@ -3905,11 +3902,12 @@ North America,Nicaragua,https://siimem.cndc.org.ni
 North America,Nicaragua,https://ucn.edu.ni
 North America,Nicaragua,https://www.unanleon.edu.ni
 North America,Nicaragua,https://www.eaai.com.ni
+North America,Nicaragua,https://www.bcn.gob.ni
+North America,Nicaragua,http://siac.loyola.edu.ni
 North America,Nicaragua,https://www.canal4.com.ni
 North America,Nicaragua,https://www.lacolonia.com.ni
 South America,Brazil,https://www.sportingbet.bet.br
 South America,Brazil,https://www.cnnbrasil.com.br
-South America,Brazil,https://www.gov.br
 South America,Brazil,https://www.nfse.gov.br
 South America,Brazil,https://www.mercadolivre.com.br
 South America,Brazil,https://sso.acesso.gov.br
@@ -3917,6 +3915,7 @@ South America,Brazil,https://www.letras.mus.br
 South America,Brazil,https://www.uol.com.br
 South America,Brazil,https://esaj.tjsp.jus.br
 South America,Brazil,https://www.jusbrasil.com.br
+South America,Brazil,https://7games.bet.br
 South America,Brazil,https://cursos.alura.com.br
 South America,Brazil,https://xvideo.vlog.br
 South America,Brazil,https://nfe.prefeitura.sp.gov.br
@@ -3963,8 +3962,10 @@ South America,Brazil,https://batepapo.uol.com.br
 South America,Brazil,https://privacy.com.br
 South America,Brazil,https://garotocomlocal.com.br
 South America,Brazil,https://produto.mercadolivre.com.br
+South America,Brazil,https://ridigital.org.br
 South America,Brazil,https://loterias.caixa.gov.br
 South America,Brazil,https://www.terra.com.br
+South America,Brazil,https://www.claro.com.br
 South America,Brazil,https://www.estadao.com.br
 South America,Brazil,https://catracalivre.com.br
 South America,Brazil,https://www.cartacapital.com.br
@@ -4005,8 +4006,6 @@ South America,Brazil,https://www.shopcar.com.br
 South America,Brazil,https://app.ssotica.com.br
 South America,Brazil,https://m.dafiti.com.br
 South America,Brazil,https://www.doctoralia.com.br
-South America,Brazil,https://www.bb.com.br
-South America,Brazil,https://www.infomoney.com.br
 South America,Argentina,https://www.promiedos.com.ar
 South America,Argentina,https://www.lanacion.com.ar
 South America,Argentina,https://www.mercadolibre.com.ar
@@ -4074,7 +4073,6 @@ South America,Argentina,https://app.arbell.com.ar
 South America,Argentina,https://www.adnsur.com.ar
 South America,Argentina,https://miclaro.claro.com.ar
 South America,Argentina,https://www.pronto.com.ar
-South America,Argentina,https://reebok.com.ar
 South America,Argentina,https://www.bplay.bet.ar
 South America,Argentina,https://servicios.rpba.gob.ar
 South America,Argentina,https://www.gba.gob.ar
@@ -4107,6 +4105,7 @@ South America,Argentina,https://www.riverid.com.ar
 South America,Argentina,https://sime.educaciontuc.gov.ar
 South America,Argentina,https://www.turfpremium.com.ar
 South America,Argentina,https://tokintienda.com.ar
+South America,Argentina,https://transferencias.bancogalicia.com.ar
 South America,Chile,https://www.sexosur.cl
 South America,Chile,https://accounts.claveunica.gob.cl
 South America,Chile,https://www.ventanillaunicasocial.gob.cl
@@ -4119,6 +4118,7 @@ South America,Chile,https://www.yapo.cl
 South America,Chile,https://www.locanto.cl
 South America,Chile,https://www.bancofalabella.cl
 South America,Chile,https://www.entel.cl
+South America,Chile,https://www.lider.cl
 South America,Chile,https://www.abc.cl
 South America,Chile,https://www.chiletrabajos.cl
 South America,Chile,https://www4.sii.cl
@@ -4173,14 +4173,12 @@ South America,Chile,https://www.kupos.cl
 South America,Chile,https://aulas.iacc.cl
 South America,Chile,https://www.superzoo.cl
 South America,Chile,https://www.antronio.cl
-South America,Chile,https://silkperfumes.cl
 South America,Chile,https://www.registrodeempresasysociedades.cl
 South America,Chile,https://practicatest.cl
 South America,Chile,https://login.portalempresas.bancochile.cl
 South America,Chile,https://www.buscalibre.cl
 South America,Chile,https://s6.cademonline.cl
 South America,Chile,https://oficinajudicialvirtual.pjud.cl
-South America,Chile,https://www.merrell.cl
 South America,Chile,https://www.drsimi.cl
 South America,Chile,https://www.u-cursos.cl
 South America,Chile,https://www.iochile.cl
@@ -4190,28 +4188,27 @@ South America,Chile,https://www.laestokada.cl
 South America,Chile,https://www.bne.cl
 South America,Chile,https://www.mercadopago.cl
 South America,Chile,https://www.tvn.cl
+South America,Chile,https://limonada.cl
 South America,Chile,https://www.diadelpatrimonio.cl
 South America,Chile,https://www.tgr.cl
 South America,Chile,https://www.adnradio.cl
 South America,Chile,https://www.megatiempo.cl
 South America,Chile,https://cannonhome.cl
-South America,Chile,https://www.tiendacopec.cl
 South America,Chile,https://www.jumbo.cl
 South America,Chile,https://sitiospublicos.bancochile.cl
 South America,Chile,https://www.skechers.cl
 South America,Chile,https://www.scotiabankchile.cl
 South America,Chile,https://www.afc.cl
 South America,Chile,https://miportal.entel.cl
-South America,Chile,https://www.eliteperfumes.cl
 South America,Chile,https://pagofacilwom.cl
 South America,Chile,https://www.integramedica.cl
 South America,Chile,https://www.farmaciasahumada.cl
 South America,Chile,https://www.empleospublicos.cl
+South America,Chile,https://m.cooperativa.cl
+South America,Chile,https://www.doctoralia.cl
 South America,Peru,https://rpp.pe
 South America,Peru,https://elcomercio.pe
-South America,Peru,https://www.gob.pe
 South America,Peru,https://www.flashscore.pe
-South America,Peru,https://e-consultaruc.sunat.gob.pe
 South America,Peru,https://www.plazavea.com.pe
 South America,Peru,https://ww1.sunat.gob.pe
 South America,Peru,https://teleticket.com.pe
@@ -4242,9 +4239,11 @@ South America,Peru,https://www.redbus.pe
 South America,Peru,https://www.upn.edu.pe
 South America,Peru,https://apps.reniec.gob.pe
 South America,Peru,https://pagalo.pe
+South America,Peru,https://aulavirtual2.unap.edu.pe
 South America,Peru,https://radios.com.pe
 South America,Peru,https://www.fonavi-st.gob.pe
 South America,Peru,https://www.coolbox.pe
+South America,Peru,https://www.buscalibre.pe
 South America,Peru,https://www.crisol.com.pe
 South America,Peru,https://pro.shalom.pe
 South America,Peru,https://www.claro.com.pe
@@ -4263,6 +4262,7 @@ South America,Peru,https://e-consulta.sunat.gob.pe
 South America,Peru,https://www.ucv.edu.pe
 South America,Peru,https://www.bumeran.com.pe
 South America,Peru,https://pit-virtual.uni.edu.pe
+South America,Peru,https://intranet.upla.edu.pe
 South America,Peru,https://aulavirtual.upc.edu.pe
 South America,Peru,https://www.rnp.gob.pe
 South America,Peru,https://www.movistar.com.pe
@@ -4299,7 +4299,6 @@ South America,Peru,https://www.tambo.pe
 South America,Peru,https://campusensap.minsa.gob.pe
 South America,Peru,https://app.yape.com.pe
 South America,Peru,https://intranet.unjfsc.edu.pe
-South America,Peru,https://pagopapeletascallao.pe
 South America,Peru,https://stake.pe
 South America,Peru,https://campus.unasam.edu.pe
 South America,Peru,https://www.topitop.pe
@@ -4309,6 +4308,7 @@ South America,Peru,https://aulavirtual.tls.edu.pe
 South America,Peru,https://www.superpet.pe
 South America,Colombia,https://www.espn.com.co
 South America,Colombia,https://www.flashscore.co
+South America,Colombia,https://cdigital.cun.edu.co
 South America,Colombia,https://www.mercadolibre.com.co
 South America,Colombia,https://m.wplay.co
 South America,Colombia,https://loteriasdehoy.co
@@ -4338,9 +4338,7 @@ South America,Colombia,https://www.luckia.co
 South America,Colombia,https://saludtotal.com.co
 South America,Colombia,https://elecciones.caracol.com.co
 South America,Colombia,https://www.medellin.gov.co
-South America,Colombia,https://sede.colpensiones.gov.co
 South America,Colombia,https://loteriadeboyaca.gov.co
-South America,Colombia,https://apps.migracioncolombia.gov.co
 South America,Colombia,https://carros.mercadolibre.com.co
 South America,Colombia,https://clientes.nequi.com.co
 South America,Colombia,https://unidadenlinea.unidadvictimas.gov.co
@@ -4394,7 +4392,7 @@ South America,Colombia,https://www.wplay.co
 South America,Colombia,https://www.avvillas.com.co
 South America,Colombia,https://articulo.tucarro.com.co
 South America,Colombia,https://www.policia.gov.co
-South America,Colombia,https://greenfit.com.co
+South America,Colombia,https://plataforma.facturatech.co
 South America,Colombia,https://www.mercadopago.com.co
 South America,Colombia,https://portal.senasofiaplus.edu.co
 South America,Colombia,https://www.colpensiones.gov.co
@@ -4407,6 +4405,7 @@ South America,Colombia,https://www.redbus.co
 South America,Colombia,https://caprendizaje.sena.edu.co
 South America,Colombia,https://radios.com.co
 South America,Colombia,https://samai.consejodeestado.gov.co
+South America,Colombia,https://publicacionesprocesales.ramajudicial.gov.co
 South America,Venezuela,https://www.espn.com.ve
 South America,Venezuela,https://tesoroenlinea.bt.com.ve
 South America,Venezuela,https://www.flashscore.com.ve
@@ -4424,7 +4423,6 @@ South America,Venezuela,https://www.farmatodo.com.ve
 South America,Venezuela,http://www.ivss.gov.ve
 South America,Venezuela,https://www.saime.gob.ve
 South America,Venezuela,https://multimax.com.ve
-South America,Venezuela,https://ultimasnoticias.com.ve
 South America,Venezuela,https://www.locanto.com.ve
 South America,Venezuela,https://sni.opsu.gob.ve
 South America,Venezuela,https://sigesai.insai.gob.ve
@@ -4448,6 +4446,7 @@ South America,Venezuela,https://niveles.campusvirtualuba.net.ve
 South America,Venezuela,http://sidcai.fonacit.gob.ve
 South America,Venezuela,https://www.ciudadvalencia.com.ve
 South America,Venezuela,https://renacevenezuela.gob.ve
+South America,Venezuela,https://averiastelefonicas.cantv.com.ve
 South America,Venezuela,https://www.goldenbets.com.ve
 South America,Venezuela,https://rupdae.sundde.gob.ve
 South America,Venezuela,http://www.ivss.gob.ve
@@ -4531,7 +4530,6 @@ South America,Bolivia,https://www.locanto.com.bo
 South America,Bolivia,https://cencap.contraloria.gob.bo
 South America,Bolivia,https://saf.usalesiana.edu.bo
 South America,Bolivia,https://estudiantes.uatf.edu.bo
-South America,Bolivia,https://amarket.com.bo
 South America,Bolivia,https://plataforma.umss.edu.bo
 South America,Bolivia,https://moxos.uabjb.edu.bo
 South America,Bolivia,https://siiga.umsa.edu.bo
@@ -4570,8 +4568,6 @@ South America,Bolivia,https://www.bancofie.com.bo
 South America,Bolivia,http://siaa.unsxx.edu.bo
 South America,Bolivia,https://www.yape.com.bo
 South America,Bolivia,https://www.medicamentos.bo
-South America,Bolivia,https://sirenaper.bolivia.bo
-South America,Bolivia,https://virtualsistemas.upea.bo
 South America,Bolivia,https://virtualadministracion.upea.bo
 South America,Bolivia,https://www2.bago.com.bo
 South America,Bolivia,https://moodle.uto.edu.bo
@@ -4589,9 +4585,9 @@ South America,Bolivia,https://superticket.bo
 South America,Bolivia,https://inscripcion.uagrm.edu.bo
 South America,Bolivia,https://tramites.seprec.gob.bo
 South America,Bolivia,https://www.uagrm.edu.bo
-South America,Bolivia,https://padron.uto.edu.bo
 South America,Bolivia,https://www.urgente.bo
 South America,Bolivia,https://clases.unitepc.com.bo
+South America,Bolivia,https://tariquia.uajms.edu.bo
 South America,Bolivia,http://www.scielo.org.bo
 South America,Bolivia,https://sacad.fce.umss.edu.bo
 South America,Bolivia,https://www.tiendaamiga.com.bo
@@ -4604,9 +4600,12 @@ South America,Bolivia,https://www.casaideas.com.bo
 South America,Bolivia,https://www.panamericana.bo
 South America,Bolivia,https://moodle.esam.edu.bo
 South America,Bolivia,https://www.minsalud.gob.bo
-South America,Bolivia,https://ibnorca.edu.bo
 South America,Bolivia,https://virtual.uagrm.edu.bo
 South America,Bolivia,https://moodle.infocalscz.edu.bo
+South America,Bolivia,https://www.ine.gob.bo
+South America,Bolivia,https://cvccp.umsa.bo
+South America,Bolivia,https://autoline.bo
+South America,Bolivia,https://virtual.upsa.edu.bo
 South America,Ecuador,https://pq.biess.fin.ec
 South America,Ecuador,https://uvirtual.uce.edu.ec
 South America,Ecuador,https://eva.upse.edu.ec
@@ -4652,7 +4651,6 @@ South America,Ecuador,https://evirtual.espam.edu.ec
 South America,Ecuador,https://www.kywi.com.ec
 South America,Ecuador,https://ph.biess.fin.ec
 South America,Ecuador,https://www.utm.edu.ec
-South America,Ecuador,https://sai.utb.edu.ec
 South America,Ecuador,https://www.nexum360.com.ec
 South America,Ecuador,https://evapreg.ister.edu.ec
 South America,Ecuador,https://evea.ucacue.edu.ec
@@ -4681,6 +4679,7 @@ South America,Ecuador,https://www.registrounicoedusup.gob.ec
 South America,Ecuador,https://gac.com.ec
 South America,Ecuador,https://eveanivelacion.utmachala.edu.ec
 South America,Ecuador,https://albumesycromos.com.ec
+South America,Ecuador,https://servicli.servientrega.com.ec
 South America,Ecuador,https://aulavirtual.sindicatodechoferessd.org.ec
 South America,Ecuador,https://eidiomas.espam.edu.ec
 South America,Ecuador,https://www.ais.aviacioncivil.gob.ec
@@ -4720,15 +4719,11 @@ South America,Paraguay,https://identidad.mtess.gov.py
 South America,Paraguay,https://simple.claro.com.py
 South America,Paraguay,https://www.talisman.com.py
 South America,Paraguay,https://www.cambioschaco.com.py
-South America,Paraguay,https://regobpat.mtess.gov.py
 South America,Paraguay,https://www.telefuturo.com.py
 South America,Paraguay,https://www.tl.com.py
-South America,Paraguay,https://www.pj.gov.py
-South America,Paraguay,https://www2.bancontinental.com.py
 South America,Paraguay,https://e.uaa.edu.py
 South America,Paraguay,http://www.vue.org.py
 South America,Paraguay,https://www.chacomer.com.py
-South America,Paraguay,https://www.contrataciones.gov.py
 South America,Paraguay,https://ordenes.dncp.gov.py
 South America,Paraguay,https://www.lanacion.com.py
 South America,Paraguay,https://tiomono.com.py
@@ -4736,18 +4731,14 @@ South America,Paraguay,https://www.personal.com.py
 South America,Paraguay,https://69.com.py
 South America,Paraguay,https://www.tuti.com.py
 South America,Paraguay,https://www.senete.com.py
-South America,Paraguay,https://www.pumastore.com.py
 South America,Paraguay,https://portal.americana.edu.py
 South America,Paraguay,https://ecampus.redcalidadeducativa.edu.py
 South America,Paraguay,https://cines.com.py
 South America,Paraguay,https://www.superseis.com.py
-South America,Paraguay,https://www.suenolar.com.py
 South America,Paraguay,https://www.ellector.com.py
-South America,Paraguay,https://servicios.set.gov.py
 South America,Paraguay,https://bus.com.py
 South America,Paraguay,https://www.electropar.com.py
 South America,Paraguay,https://byd.com.py
-South America,Paraguay,https://bolsa.mtess.gov.py
 South America,Paraguay,https://posweb.aquipago.com.py
 South America,Paraguay,https://fadavirtual.una.py
 South America,Paraguay,https://adultosmayores.mds.gov.py
@@ -4791,7 +4782,6 @@ South America,Paraguay,https://ekuatia.set.gov.py
 South America,Paraguay,https://www.centralshop.com.py
 South America,Paraguay,https://www.lamoneda.com.py
 South America,Paraguay,https://www.unicentro.com.py
-South America,Paraguay,https://cursos.sinafocal.gov.py
 South America,Paraguay,https://compumarket.com.py
 South America,Paraguay,https://www.bacn.gov.py
 South America,Paraguay,https://ad.unibe.edu.py
@@ -4806,7 +4796,16 @@ South America,Paraguay,https://megaelectronicos.com.py
 South America,Paraguay,https://www.newbalance.com.py
 South America,Paraguay,https://www.popular.com.py
 South America,Paraguay,https://www.itau.com.py
+South America,Paraguay,https://trinitytech.com.py
 South America,Paraguay,https://unamis.edu.py
+South America,Paraguay,https://maecam.com.py
+South America,Paraguay,https://kenton.com.py
+South America,Paraguay,https://www.electrodiesel.com.py
+South America,Paraguay,https://procesos.dncp.gov.py
+South America,Paraguay,https://www.creditoverde.com.py
+South America,Paraguay,https://www.fortis.com.py
+South America,Paraguay,https://www.bancontinental.com.py
+South America,Paraguay,https://www.olier.com.py
 South America,Uruguay,https://www.elpais.com.uy
 South America,Uruguay,https://www.mercadolibre.com.uy
 South America,Uruguay,https://www.montevideo.com.uy
@@ -4814,7 +4813,10 @@ South America,Uruguay,https://www.elobservador.com.uy
 South America,Uruguay,https://www.montevideo.gub.uy
 South America,Uruguay,https://ladiaria.com.uy
 South America,Uruguay,https://mi.iduruguay.gub.uy
+South America,Uruguay,https://www.gub.uy
 South America,Uruguay,https://loi.com.uy
+South America,Uruguay,https://hipica.maronas.com.uy
+South America,Uruguay,https://eva4.fmed.edu.uy
 South America,Uruguay,https://www.subrayado.com.uy
 South America,Uruguay,https://radios.com.uy
 South America,Uruguay,https://www.inumet.gub.uy
@@ -4824,7 +4826,9 @@ South America,Uruguay,https://www.brou.com.uy
 South America,Uruguay,https://eva.fcea.udelar.edu.uy
 South America,Uruguay,https://www.bps.gub.uy
 South America,Uruguay,https://www.antel.com.uy
+South America,Uruguay,https://tickantel.com.uy
 South America,Uruguay,https://tiendamia.com.uy
+South America,Uruguay,https://ebanking.brou.com.uy
 South America,Uruguay,https://tienda.antel.com.uy
 South America,Uruguay,https://www.meteored.com.uy
 South America,Uruguay,https://www.locanto.com.uy
@@ -4837,7 +4841,6 @@ South America,Uruguay,https://anda.com.uy
 South America,Uruguay,https://www.urubus.com.uy
 South America,Uruguay,https://www.remotes.com.uy
 South America,Uruguay,https://www.stadium.com.uy
-South America,Uruguay,https://bedelias.udelar.edu.uy
 South America,Uruguay,https://www.divino.com.uy
 South America,Uruguay,https://www.e-sistarbanc.com.uy
 South America,Uruguay,https://expedientes.poderjudicial.gub.uy
@@ -4868,16 +4871,14 @@ South America,Uruguay,https://www.buscojobs.com.uy
 South America,Uruguay,https://www.santander.com.uy
 South America,Uruguay,https://www.itaulinkempresa.com.uy
 South America,Uruguay,https://app.credifama.com.uy
-South America,Uruguay,https://www.columbia.com.uy
 South America,Uruguay,https://usuario.handy.uy
+South America,Uruguay,https://rrhh.utu.edu.uy
 South America,Uruguay,https://tienda.claro.com.uy
-South America,Uruguay,https://covercompany.com.uy
 South America,Uruguay,https://www.laismuebles.com.uy
 South America,Uruguay,https://ocablue.uy
 South America,Uruguay,https://mediato.com.uy
 South America,Uruguay,https://www.canvastore.com.uy
 South America,Uruguay,https://www.tenfield.com.uy
-South America,Uruguay,https://www.dolceragazza.com.uy
 South America,Uruguay,http://www.tpm.com.uy
 South America,Uruguay,https://funebres.elpais.com.uy
 South America,Uruguay,https://rusticohogar.com.uy
@@ -4890,6 +4891,7 @@ South America,Uruguay,https://www.hering.com.uy
 South America,Uruguay,https://www.acodike.com.uy
 South America,Uruguay,https://portal.ute.com.uy
 South America,Uruguay,https://www.ucu.edu.uy
+South America,Uruguay,https://www.pccompu.com.uy
 South America,Uruguay,https://lemon.com.uy
 South America,Uruguay,https://institucional.bse.com.uy
 South America,Uruguay,https://www.tigo.com.uy
@@ -4900,16 +4902,12 @@ South America,Uruguay,https://www.minisouruguay.com.uy
 South America,Uruguay,https://mundomascota.uy
 South America,Uruguay,https://tera.uy
 South America,Uruguay,https://www.pedidosya.com.uy
-South America,Uruguay,https://www.catlifestyle.com.uy
 South America,Uruguay,https://www.remax.com.uy
 South America,Uruguay,https://laopera.com.uy
 South America,Uruguay,https://superoutlet.uy
 South America,Uruguay,https://www.telenoche.com.uy
-South America,Uruguay,https://www.movie.com.uy
-South America,Uruguay,https://radiocarve.uy
 Oceania,Australia,https://www.ancestry.com.au
 Oceania,Australia,https://www.news.com.au
-Oceania,Australia,https://www.jbhifi.com.au
 Oceania,Australia,https://www.bunnings.com.au
 Oceania,Australia,https://www.abc.net.au
 Oceania,Australia,https://www.ebay.com.au
@@ -4976,6 +4974,7 @@ Oceania,Australia,https://www.realbabes.com.au
 Oceania,Australia,https://www.perthnow.com.au
 Oceania,Australia,https://m.countryroad.com.au
 Oceania,Australia,https://www.citychic.com.au
+Oceania,Australia,https://online.transport.wa.gov.au
 Oceania,Australia,https://www.kenogo.com.au
 Oceania,Australia,https://echo360.net.au
 Oceania,Australia,https://www.ebgames.com.au
@@ -5053,7 +5052,6 @@ Oceania,New Zealand,https://maoridictionary.co.nz
 Oceania,New Zealand,https://www.odt.co.nz
 Oceania,New Zealand,https://practicetest.aa.co.nz
 Oceania,New Zealand,https://www.airnewzealand.co.nz
-Oceania,New Zealand,https://smart.education.govt.nz
 Oceania,New Zealand,https://www.tripadvisor.co.nz
 Oceania,New Zealand,https://www.thetoolshed.co.nz
 Oceania,New Zealand,https://login.kiwibank.co.nz
@@ -5070,14 +5068,12 @@ Oceania,New Zealand,https://taku.nzqa.govt.nz
 Oceania,New Zealand,https://www.onceit.co.nz
 Oceania,New Zealand,https://bol.westpac.co.nz
 Oceania,New Zealand,https://www2.nzqa.govt.nz
-Oceania,New Zealand,https://www.kathmandu.co.nz
 Oceania,New Zealand,https://www.warehousestationery.co.nz
 Oceania,New Zealand,https://www.turners.co.nz
 Oceania,New Zealand,https://flightbookings.airnewzealand.co.nz
 Oceania,New Zealand,https://www.ticketmaster.co.nz
 Oceania,New Zealand,https://moodle.unitec.ac.nz
 Oceania,New Zealand,https://www.2degrees.nz
-Oceania,New Zealand,https://m.jdsports.co.nz
 Oceania,New Zealand,https://www.newworld.co.nz
 Oceania,New Zealand,https://www.doc.govt.nz
 Oceania,New Zealand,https://www.sunlive.co.nz
@@ -5090,7 +5086,6 @@ Oceania,New Zealand,https://www.hoyts.co.nz
 Oceania,New Zealand,https://tradedepot.co.nz
 Oceania,New Zealand,https://www.newstalkzb.co.nz
 Oceania,New Zealand,https://www.huntingandfishing.co.nz
-Oceania,New Zealand,https://shineon.co.nz
 Oceania,New Zealand,https://www.eventcinemas.co.nz
 Oceania,New Zealand,https://www.sporty.co.nz
 Oceania,New Zealand,https://homes.co.nz
@@ -5107,9 +5102,14 @@ Oceania,New Zealand,https://www.interest.co.nz
 Oceania,New Zealand,https://www.rebelsport.co.nz
 Oceania,New Zealand,https://apply.immigration.govt.nz
 Oceania,New Zealand,https://www.macpac.co.nz
+Oceania,New Zealand,https://www.clubplus.co.nz
+Oceania,New Zealand,https://photogear.co.nz
+Oceania,New Zealand,https://www.trivago.co.nz
+Oceania,New Zealand,https://www.qv.co.nz
 Oceania,Samoa,https://missav.ws
 Oceania,Samoa,https://www.javmost.ws
 Oceania,Samoa,https://pinayflix.ws
+Oceania,Samoa,https://sportsurge.ws
 Oceania,Samoa,https://bokeptoket.ws
 Oceania,Samoa,https://wowne.ws
 Oceania,Samoa,https://nobodyhome.ws
@@ -5122,7 +5122,6 @@ Oceania,Samoa,https://raped.ws
 Oceania,Samoa,https://www.islamicbook.ws
 Oceania,Samoa,https://nzbfinder.ws
 Oceania,Samoa,https://x1337x.ws
-Oceania,Samoa,https://rosasidan.ws
 Oceania,Samoa,https://streamex.ws
 Oceania,Samoa,https://oregontrail.ws
 Oceania,Samoa,https://sexvid.ws
@@ -5141,6 +5140,7 @@ Oceania,Samoa,https://hidefporn.ws
 Oceania,Samoa,https://hentaihaven.ws
 Oceania,Samoa,https://tergenit.ws
 Oceania,Samoa,https://www.manhwa18.ws
+Oceania,Samoa,https://www.fanfiction.ws
 Oceania,Samoa,https://soap2day.ws
 Oceania,Samoa,https://www.blueroms.ws
 Oceania,Samoa,https://www.theonewatches.ws
@@ -5170,7 +5170,6 @@ Oceania,Samoa,https://basicstero.ws
 Oceania,Samoa,https://www.samoaobserver.ws
 Oceania,Samoa,https://android-zone.ws
 Oceania,Samoa,https://bunkr.ws
-Oceania,Samoa,https://yourdailypornvideos.ws
 Oceania,Samoa,https://ytmp3.ws
 Oceania,Samoa,https://ev01.ws
 Oceania,Samoa,https://lc99.ws
@@ -5228,6 +5227,7 @@ Oceania,Tonga,https://lewdgames.to
 Oceania,Tonga,https://voir-anime.to
 Oceania,Tonga,https://anikototv.to
 Oceania,Tonga,https://watchporn.to
+Oceania,Tonga,https://avmisohd.to
 Oceania,Tonga,https://shinigami.to
 Oceania,Tonga,https://nhentai.to
 Oceania,Tonga,https://flixtor.to
@@ -5236,6 +5236,7 @@ Oceania,Tonga,https://v5.kiryuu.to
 Oceania,Tonga,https://ext.to
 Oceania,Tonga,https://streamzy.to
 Oceania,Tonga,https://dizifilm.to
+Oceania,Tonga,https://nepu.to
 Oceania,Tonga,https://faplex.to
 Oceania,Tonga,https://xxxbfsex.to
 Oceania,Tonga,https://eztvx.to
@@ -5248,6 +5249,7 @@ Oceania,Tonga,https://flixbd.to
 Oceania,Tonga,https://www6.torrent9.to
 Oceania,Tonga,https://www2.rarbggo.to
 Oceania,Tonga,https://vipergirls.to
+Oceania,Tonga,https://www.1337xx.to
 Oceania,Tonga,https://lc1.cosmicscans.to
 Oceania,Tonga,https://miraculous.to
 Oceania,Tonga,https://www.comix.to
@@ -5304,9 +5306,6 @@ Oceania,Tonga,https://www.mirrored.to
 Oceania,Tonga,https://test.mangafire.to
 Oceania,Tonga,https://animenosub.to
 Oceania,Tonga,https://pt.happymod.to
-Oceania,Tonga,https://fkbae.to
-Oceania,Tonga,https://netprime.to
-Oceania,Tonga,https://pornx.to
 Oceania,Fiji,https://elearn.fnu.ac.fj
 Oceania,Fiji,https://www.damodarcinemas.com.fj
 Oceania,Fiji,https://www.usp.ac.fj
@@ -5337,52 +5336,6 @@ Oceania,Fiji,https://laws.gov.fj
 Oceania,Fiji,https://www.vinodpatel.com.fj
 Oceania,Fiji,https://www.lifecinemas.com.fj
 Oceania,Fiji,https://store.tappoo.com.fj
-Oceania,Niue,https://v3.y2mate.nu
-Oceania,Niue,https://www.vetgirig.nu
-Oceania,Niue,https://v4.y2mate.nu
-Oceania,Niue,https://www.atletiek.nu
-Oceania,Niue,https://puzzel.woordenboek.nu
-Oceania,Niue,https://app.planning.nu
-Oceania,Niue,https://undervisning.ehinger.nu
-Oceania,Niue,https://mp3paw.nu
-Oceania,Niue,https://forum.odla.nu
-Oceania,Niue,https://www.8a.nu
-Oceania,Niue,https://tenat-id.liga.nu
-Oceania,Niue,https://www.rollspel.nu
-Oceania,Niue,https://v1.y2mate.nu
-Oceania,Niue,http://herpy.nu
-Oceania,Niue,https://v2.y2mate.nu
-Oceania,Niue,https://www.goto.nu
-Oceania,Niue,https://dayz.xam.nu
-Oceania,Niue,https://ace.mu.nu
-Oceania,Niue,https://flvto.nu
-Oceania,Niue,https://www.hogskoleprov.nu
-Oceania,Niue,https://pte.nu
-Oceania,Niue,https://bdv-dart.liga.nu
-Oceania,Niue,https://flixtor.nu
-Oceania,Niue,https://www.investidores.nu
-Oceania,Niue,https://erictime.nu
-Oceania,Niue,https://oddsen.nu
-Oceania,Niue,https://mhme.nu
-Oceania,Niue,https://www.lavie.nu
-Oceania,Niue,https://www.vea.nu
-Oceania,Niue,http://forum.northpower.nu
-Oceania,Niue,https://halome.nu
-Oceania,Niue,https://solceller.nu
-Oceania,Niue,https://www.quotum.nu
-Oceania,Niue,https://l8.nu
-Oceania,Niue,https://www.ledlampenkopen.nu
-Oceania,Niue,https://www.rasdata.nu
-Oceania,Niue,https://jarnvagar.nu
-Oceania,Niue,https://www.infosoc.nu
-Oceania,Niue,https://infosoc.nu
-Oceania,Niue,http://www.herpy.nu
-Oceania,Niue,https://www.swish.nu
-Oceania,Niue,https://webmail.ownit.nu
-Oceania,Niue,https://slojdlexikon.nu
-Oceania,Niue,https://tende-id.liga.nu
-Oceania,Niue,https://www.lejeboligen.nu
-Oceania,Niue,https://forum.nakenbad.nu
 Oceania,Papua New Guinea,https://www.ipa.gov.pg
 Oceania,Papua New Guinea,https://ibc.bsp.com.pg
 Oceania,Papua New Guinea,https://www.bsp.com.pg
@@ -5395,7 +5348,6 @@ Oceania,Papua New Guinea,http://apps.education.gov.pg:8081
 Oceania,Papua New Guinea,https://www.kinabank.com.pg
 Oceania,Papua New Guinea,https://elearning.unitech.ac.pg
 Oceania,Papua New Guinea,https://www.vodafone.com.pg
-Oceania,Papua New Guinea,https://elearning.unigoroka.ac.pg
 Oceania,Papua New Guinea,https://learninghub.dwu.ac.pg
 Oceania,Papua New Guinea,https://pngair.com.pg
 Oceania,Papua New Guinea,https://personal.kinabank.com.pg
@@ -5420,582 +5372,630 @@ Oceania,Papua New Guinea,https://www.nasfund.com.pg
 Oceania,Papua New Guinea,https://vodafone.com.pg
 Oceania,Papua New Guinea,https://dxcheckin.airniugini.com.pg
 Oceania,Papua New Guinea,https://www.dwu.ac.pg
-Oceania,Vanuatu,https://www.mydesi2.vu
-Oceania,Vanuatu,https://qq888.vu
-Oceania,Vanuatu,https://elearn.lenakelcollege.edu.vu
-Oceania,Vanuatu,https://www.dailypost.vu
-Oceania,Vanuatu,https://www.nbv.vu
-Oceania,Vanuatu,https://vit.edu.vu
-Oceania,Vanuatu,https://store.cw.vu
-Africa,Senegal,https://recrutement.formationprofessionnelle.sn
-Africa,Senegal,https://esotech.sn
-Africa,Senegal,https://emploijeunes.sn
-Africa,Senegal,https://www.unchk.sn
-Africa,Senegal,https://www.ucad.sn
-Africa,Senegal,https://booking.demdikk.sn
-Africa,Senegal,https://recrutement.unchk.sn
-Africa,Senegal,https://ead.uam.sn
-Africa,Senegal,https://fad.fmpo.ucad.sn
-Africa,Senegal,https://www.fonctionpublique.gouv.sn
-Africa,Senegal,https://www.gamearena.sn
-Africa,Senegal,https://edusphere.sn
-Africa,Senegal,https://orientation.campusen.sn
-Africa,Senegal,https://www.finances.gouv.sn
-Africa,Senegal,https://autoroutesdusenegal.sn
-Africa,Senegal,https://7xhmaster8pt.unchk.sn
-Africa,Senegal,https://6bx8k6o5q6u4.unchk.sn
-Africa,Senegal,https://8p8y4l2wug15.unchk.sn
-Africa,Senegal,https://7bf4kjv910c5.unchk.sn
-Africa,Senegal,https://www.vivagame.sn
-Africa,Senegal,https://sciences.force-n.sn
-Africa,Senegal,https://www.amnesty.sn
-Africa,Senegal,https://eservices2.dgid.sn
-Africa,Senegal,https://61h7d7x4vys5.unchk.sn
-Africa,Senegal,https://www.groupeism.sn
-Africa,Senegal,https://6oeu038yo5u6-1.unchk.sn
-Africa,Senegal,https://u42f52ze5ds7.unchk.sn
-Africa,Senegal,https://7764ujxvrv18.unchk.sn
-Africa,Senegal,https://rhgendarmerie.sn
-Africa,Senegal,https://pedagogie.unchk.sn
-Africa,Senegal,https://superlinguere.sn
-Africa,Senegal,https://sakanal.sn
-Africa,Senegal,http://esogn.gendarmerie.sn
-Africa,Senegal,https://flow.yas.sn
-Africa,Senegal,https://etudiant.univ-thies.sn
-Africa,Senegal,https://www.kfcsenegal.sn
-Africa,Senegal,https://pharmec.sn
-Africa,Senegal,https://masterofficedeco.sn
-Africa,Senegal,https://ucad.sn
-Africa,Senegal,https://sonatel.sn
-North America,Nicaragua,https://siga.ac.ulsa.edu.ni
-North America,Nicaragua,https://par2.ni
-North America,Nicaragua,https://www.ros.uaf.gob.ni
-North America,Nicaragua,https://mitienda.tigo.com.ni
-North America,Nicaragua,https://www.uam.edu.ni
-North America,Nicaragua,https://ayuda.tigo.com.ni
-North America,Nicaragua,https://elearning.ulsa.edu.ni
-North America,Nicaragua,https://www.hispamer.com.ni
-North America,Nicaragua,https://www.premioccn.com.ni
-North America,Nicaragua,https://www.vivanicaragua.com.ni
-North America,Nicaragua,https://aulavirtual.ucyt.edu.ni
-North America,Nicaragua,https://www.bcn.gob.ni
-North America,Nicaragua,https://www.airbnb.com.ni
-North America,Nicaragua,https://mitsubishi-motors.com.ni
-North America,Nicaragua,https://sicsa.com.ni
-North America,Nicaragua,https://horasclases.unanleon.edu.ni
-North America,Nicaragua,https://campusvirtual.ucc.edu.ni
-North America,Nicaragua,https://fotonexcel.com.ni
-North America,Nicaragua,https://www.uni.edu.ni
-North America,Nicaragua,https://unp.edu.ni
-North America,Nicaragua,https://sui.uncsm.edu.ni
-North America,Nicaragua,https://matricula.unanleon.edu.ni
-North America,Nicaragua,https://hispamer.com.ni
-North America,Nicaragua,https://www.uncsm.edu.ni
-North America,Nicaragua,http://sig.mifamilia.gob.ni
-North America,Nicaragua,https://airpak.com.ni
-North America,Nicaragua,https://unm.edu.ni
-North America,Nicaragua,https://tecnacional.edu.ni
-North America,Nicaragua,https://uam.edu.ni
-North America,Nicaragua,https://airbnb.com.ni
-North America,Nicaragua,https://mercadolibre.com.ni
-North America,Nicaragua,https://unanleon.edu.ni
-North America,Nicaragua,https://banpro.com.ni
-North America,Nicaragua,https://uni.edu.ni
-North America,Nicaragua,https://claro.com.ni
-North America,Nicaragua,https://mined.gob.ni
-North America,Nicaragua,https://miclaro.com.ni
-North America,Nicaragua,https://yota.com.ni
-North America,Nicaragua,https://canal4.com.ni
-North America,Nicaragua,https://walmart.com.ni
-North America,Nicaragua,https://canal10.com.ni
-North America,Nicaragua,https://ipsa.gob.ni
-North America,Nicaragua,https://loterianacional.com.ni
-North America,Nicaragua,https://nicaradios.com.ni
-North America,Nicaragua,https://ulsa.edu.ni
-North America,Nicaragua,https://unicit.edu.ni
-North America,Nicaragua,https://visa.co.ni
-North America,Nicaragua,https://launion.com.ni
-North America,Nicaragua,https://vivanicaragua.com.ni
-North America,Nicaragua,https://pedidosyani.com.ni
-North America,Nicaragua,https://kayak.com.ni
-North America,Nicaragua,https://alfa.com.ni
-Oceania,Fiji,https://sso.fnu.ac.fj
-Oceania,Fiji,https://frcs.org.fj
-Oceania,Fiji,https://self-service.fnu.ac.fj
-Oceania,Fiji,https://odrt.usp.ac.fj
-Oceania,Fiji,https://careers.fnu.ac.fj
-Oceania,Fiji,https://apply.tsls.com.fj
-Oceania,Fiji,https://www.baf.com.fj
-Oceania,Fiji,https://tsls.com.fj
-Oceania,Fiji,https://crm-student.fnu.ac.fj
-Oceania,Fiji,https://www.ticketmax.com.fj
-Oceania,Fiji,https://fnu.ac.fj
-Oceania,Fiji,https://fbcnews.com.fj
-Oceania,Fiji,https://connect.com.fj
-Oceania,Fiji,https://vitikart.com.fj
-Oceania,Fiji,https://immigration.gov.fj
-Oceania,Fiji,https://mh.com.fj
-Oceania,Fiji,https://vodafone.com.fj
-Oceania,Fiji,https://pina.com.fj
-Oceania,Fiji,https://bsp.com.fj
-Oceania,Fiji,https://damodarcinemas.com.fj
-Oceania,Fiji,https://tappoo.com.fj
-Oceania,Fiji,https://prouds.com.fj
-Oceania,Fiji,https://rbf.gov.fj
-Oceania,Fiji,https://vinodpatel.com.fj
-Oceania,Fiji,https://fbc.com.fj
-Oceania,Fiji,https://propertyexperts.com.fj
-Oceania,Fiji,https://msaf.com.fj
-Oceania,Fiji,https://ubuy.com.fj
-Oceania,Fiji,https://health.gov.fj
-Oceania,Fiji,https://foreignaffairs.gov.fj
-Oceania,Fiji,https://victoriaapartments.com.fj
-Oceania,Fiji,https://bondwell.com.fj
-Oceania,Fiji,https://brijlal.com.fj
-Oceania,Fiji,https://financehub.com.fj
-Oceania,Fiji,https://lifecinemas.com.fj
-Oceania,Fiji,https://fulcrum.com.fj
-Oceania,Fiji,https://fijionenews.com.fj
-Oceania,Fiji,https://newworld.com.fj
-Oceania,Fiji,https://columban.org.fj
-Oceania,Fiji,https://baf.com.fj
-Oceania,Fiji,https://fijimuseum.org.fj
-Oceania,Fiji,https://fhta.com.fj
-Oceania,Fiji,https://universal.com.fj
-Oceania,Fiji,https://prb.com.fj
-Oceania,Fiji,https://rbpatel.com.fj
-Oceania,Fiji,https://finance.gov.fj
-Oceania,Fiji,https://homemaker.com.fj
-Oceania,Fiji,https://rcmanubhai.com.fj
-Oceania,Fiji,https://telecom.com.fj
-Oceania,Fiji,https://housing.com.fj
-Oceania,Fiji,https://schneider-electric.com.fj
-Oceania,Fiji,https://newman.com.fj
-Oceania,Niue,https://livescoring.bowlit.nu
-Oceania,Niue,https://philippinerevolution.nu
-Oceania,Niue,https://svenskamagasinet.nu
-Oceania,Niue,https://teamplay.nu
-Oceania,Niue,https://tubidy.nu
-Oceania,Niue,https://tycoononline.nu
-Oceania,Niue,https://portal.norte.nu
-Oceania,Niue,https://y2mate.nu
-Oceania,Niue,https://ttde-apps.liga.nu
-Oceania,Niue,https://ohtori.nu
-Oceania,Niue,https://leiden.courant.nu
-Oceania,Niue,https://app.y2mate.nu
-Oceania,Niue,https://app.worker.nu
-Oceania,Niue,https://motorbloggen.nu
-Oceania,Niue,https://mee.nu
-Oceania,Niue,https://marginalia.nu
-Oceania,Niue,https://vetgirig.nu
-Oceania,Niue,https://8a.nu
-Oceania,Niue,https://n.nu
-Oceania,Niue,https://atletiek.nu
-Oceania,Niue,https://woordenboek.nu
-Oceania,Niue,https://mailhet.nu
-Oceania,Niue,https://koral.nu
-Oceania,Niue,https://crux.nu
-Oceania,Niue,https://planning.nu
-Oceania,Niue,https://iaf.nu
-Oceania,Niue,https://swish.nu
-Oceania,Niue,https://linkruil.nu
-Oceania,Niue,https://nu2.nu
-Oceania,Niue,https://isbn.nu
-Oceania,Niue,https://sogo.nu
-Oceania,Niue,https://parabola.nu
-Oceania,Niue,https://iisa.nu
-Oceania,Niue,https://masto.nu
-Oceania,Niue,https://xam.nu
-Oceania,Niue,https://flaunt.nu
-Oceania,Niue,https://quakeworld.nu
-Oceania,Niue,https://mijnwerkplek.nu
-Oceania,Niue,https://skalman.nu
-Oceania,Niue,https://rollspel.nu
-Oceania,Niue,https://rasdata.nu
-Oceania,Niue,https://tube.nu
-Oceania,Niue,https://admiral.nu
-Oceania,Niue,https://blodbanken.nu
-Oceania,Niue,https://validator.nu
-Oceania,Niue,https://webexchange.nu
-Oceania,Niue,https://goosen.nu
-Oceania,Niue,https://goto.nu
-Oceania,Niue,https://builder.nu
-Oceania,Niue,https://cnuc.nu
-Oceania,Niue,https://ytmp3.nu
-Oceania,Niue,https://feddit.nu
-Oceania,Niue,https://nudomain.nu
-Oceania,Niue,https://ndi.nu
-Oceania,Papua New Guinea,https://bilum.uog.ac.pg
-Oceania,Papua New Guinea,https://dlpp.gov.pg
-Oceania,Papua New Guinea,https://www.unigoroka.ac.pg
-Oceania,Papua New Guinea,https://www.nbc.com.pg
-Oceania,Papua New Guinea,https://ocmoodle.upng.ac.pg
-Oceania,Papua New Guinea,https://www.mintt.com.pg
-Oceania,Papua New Guinea,https://www.education.gov.pg
-Oceania,Papua New Guinea,https://www.airniugini.com.pg
-Oceania,Papua New Guinea,https://www.nambawansuper.com.pg
-Oceania,Papua New Guinea,https://www.nslonline.com.pg
-Oceania,Papua New Guinea,https://www.hausples.com.pg
-Oceania,Papua New Guinea,https://student.unitech.ac.pg
-Oceania,Papua New Guinea,https://tvwan.com.pg
-Oceania,Papua New Guinea,https://www.creditbank.com.pg
-Oceania,Papua New Guinea,https://postcourier.com.pg
-Oceania,Papua New Guinea,https://bsp.com.pg
-Oceania,Papua New Guinea,https://thenational.com.pg
-Oceania,Papua New Guinea,https://airniugini.com.pg
-Oceania,Papua New Guinea,https://ipa.gov.pg
-Oceania,Papua New Guinea,https://global.net.pg
-Oceania,Papua New Guinea,https://kinabank.com.pg
-Oceania,Papua New Guinea,https://pnguotdtc.edu.pg
-Oceania,Papua New Guinea,https://upng.ac.pg
-Oceania,Papua New Guinea,https://unigoroka.ac.pg
-Oceania,Papua New Guinea,https://education.gov.pg
-Oceania,Papua New Guinea,https://ibsu.ac.pg
-Oceania,Papua New Guinea,https://bankpng.gov.pg
-Oceania,Papua New Guinea,https://dherst.gov.pg
-Oceania,Papua New Guinea,https://wpu.ac.pg
-Oceania,Papua New Guinea,https://mra.gov.pg
-Oceania,Papua New Guinea,https://kpmg.com.pg
-Oceania,Papua New Guinea,https://emtv.com.pg
-Oceania,Papua New Guinea,https://nasfund.com.pg
-Oceania,Papua New Guinea,https://iti.ac.pg
-Oceania,Papua New Guinea,https://nbc.com.pg
-Oceania,Papua New Guinea,https://judiciary.gov.pg
-Oceania,Papua New Guinea,https://nambawansuper.com.pg
-Oceania,Papua New Guinea,https://pnguot.ac.pg
-Oceania,Papua New Guinea,https://customs.gov.pg
-Oceania,Papua New Guinea,https://able.com.pg
-Oceania,Papua New Guinea,https://uog.ac.pg
-Oceania,Papua New Guinea,https://dulux.com.pg
-Oceania,Papua New Guinea,https://hausples.com.pg
-Oceania,Papua New Guinea,https://green.com.pg
-Oceania,Papua New Guinea,https://mintt.com.pg
-Oceania,Papua New Guinea,https://wnb.gov.pg
-Oceania,Papua New Guinea,https://caterersclubpng.com.pg
-Oceania,Papua New Guinea,https://casapng.gov.pg
-Oceania,Papua New Guinea,https://finance.gov.pg
-Oceania,Papua New Guinea,https://iccc.gov.pg
-Oceania,Papua New Guinea,https://irc.gov.pg
-Oceania,Papua New Guinea,https://pmnec.gov.pg
-Oceania,Vanuatu,https://www.filmywap.vu
-Oceania,Vanuatu,https://www.isaimini.vu
-Oceania,Vanuatu,https://m.filmywap.vu
-Oceania,Vanuatu,https://www.inhousepharmacy.vu
-Oceania,Vanuatu,https://www.filmyzilla.vu
-Oceania,Vanuatu,https://pinayflix.vu
-Oceania,Vanuatu,https://themoviesflix.vu
-Oceania,Vanuatu,https://www.iproperty.vu
-Oceania,Vanuatu,https://mydesi2.vu
-Oceania,Vanuatu,https://k.vu
-Oceania,Vanuatu,https://dailypost.vu
-Oceania,Vanuatu,https://dot.vu
-Oceania,Vanuatu,https://internet.org.vu
-Oceania,Vanuatu,https://gov.vu
-Oceania,Vanuatu,https://re.vu
-Oceania,Vanuatu,https://cb.vu
-Oceania,Vanuatu,https://vfsc.vu
-Oceania,Vanuatu,https://ebs-cloud.vu
-Oceania,Vanuatu,https://whois.vu
-Oceania,Vanuatu,https://wantok.vu
-Oceania,Vanuatu,https://cw.vu
-Oceania,Vanuatu,https://ubuy.vu
-Oceania,Vanuatu,https://desertcart.vu
-Oceania,Vanuatu,https://inhousepharmacy.vu
-Oceania,Vanuatu,https://nbv.vu
-Oceania,Vanuatu,https://repoy.vu
-Oceania,Vanuatu,https://coolmoviez.vu
-Oceania,Vanuatu,https://gasanenterpriserzoslimited.vu
-Oceania,Vanuatu,https://hubbi.vu
-Oceania,Vanuatu,https://serflrvicestationltd.vu
-Oceania,Vanuatu,https://mellstroygme.vu
-Oceania,Vanuatu,https://vmhub.vu
-Oceania,Vanuatu,https://mellstroy.vu
-Oceania,Vanuatu,https://mellstroygame.vu
-Oceania,Vanuatu,https://multitechdevelopmenupvt.vu
-Oceania,Vanuatu,https://alqiacaredki.vu
-Oceania,Vanuatu,https://raporkmsoplsticos.vu
-Oceania,Vanuatu,https://aircalin.vu
-Oceania,Vanuatu,https://suqqtelmatsa.vu
-Oceania,Vanuatu,https://tridkrdentsystems.vu
-Oceania,Vanuatu,https://trwcreditgrouxqrpllp.vu
-Oceania,Vanuatu,https://vid.vu
-Oceania,Vanuatu,https://mellstroygmes.vu
-Oceania,Vanuatu,https://todo.vu
-Oceania,Vanuatu,https://shiva.vu
-Oceania,Vanuatu,https://fma.vu
-Oceania,Vanuatu,https://finnbusinetttsssalesptyltd.vu
-Oceania,Vanuatu,https://readpacific.vu
-Oceania,Fiji,https://www.femis.edu.gov.fj
-Oceania,Fiji,https://digital.bsp.com.fj
-Oceania,Fiji,https://www.courts.com.fj
-Oceania,Fiji,https://employeeportal.mcs.gov.fj
-Oceania,Fiji,https://www.recruitmentportal.gov.fj
-Oceania,Fiji,https://www.education.gov.fj
-Oceania,Fiji,https://my.courts.com.fj
-Oceania,Fiji,https://portal.financehub.com.fj
-Oceania,Fiji,https://roc.digital.gov.fj
-Oceania,Fiji,https://www.lta.com.fj
-Oceania,Fiji,https://www.unifiji.ac.fj
-Oceania,Fiji,http://www.examresults.gov.fj
-Oceania,Fiji,https://www.property.com.fj
-Oceania,Fiji,https://google.com.fj
-Oceania,Fiji,https://usp.ac.fj
-Oceania,Fiji,https://vodafone.net.fj
-Oceania,Fiji,https://tfl.com.fj
-Oceania,Fiji,https://unwired.com.fj
-Oceania,Papua New Guinea,https://dx-flights.airniugini.com.pg
-Oceania,Papua New Guinea,https://digital.kinabank.com.pg
-Oceania,Papua New Guinea,https://learn.ibsu.ac.pg
-Oceania,Papua New Guinea,https://booking.pngair.com.pg
-Oceania,Papua New Guinea,https://moodle.dbti.ac.pg:4444
-Oceania,Papua New Guinea,https://sals.nambawansuper.com.pg
-Oceania,Papua New Guinea,https://digibankr.kinabank.com.pg
-Oceania,Papua New Guinea,https://uis.upng.ac.pg
-Oceania,Papua New Guinea,https://www.dci.gov.pg
-Oceania,Papua New Guinea,https://www.fonehaus.com.pg
-Oceania,Papua New Guinea,https://google.com.pg
-Oceania,Vanuatu,https://crot.vu
-Oceania,Vanuatu,https://debet.vu
-Oceania,Vanuatu,https://sulasok.vu
-Oceania,Vanuatu,https://learn.vit.edu.vu
-Oceania,Vanuatu,https://hamtamovie.vu
-Oceania,Vanuatu,https://sv88.vu
-Oceania,Vanuatu,https://may88.vu
-Oceania,Vanuatu,https://bokepindoh.vu
-Oceania,Vanuatu,https://motphimtv.vu
-Oceania,Vanuatu,https://openvemis.gov.vu
-Oceania,Vanuatu,https://streamcorner.vu
-Oceania,Vanuatu,https://www.mkvcinemas.vu
-Oceania,Vanuatu,https://www.rojadirectatv.vu
-Oceania,Vanuatu,https://www.rojadirecta.vu
-Oceania,Vanuatu,https://www.rojadirectatvhd.vu
-Oceania,Vanuatu,https://rojadirecta.vu
-Oceania,Vanuatu,https://hdmovie2.vu
-Oceania,Vanuatu,https://google.vu
-Oceania,Vanuatu,https://de.vu
-Oceania,Vanuatu,https://tldns.vu
-Oceania,Vanuatu,https://ch.vu
-Oceania,Vanuatu,https://vanuatu.com.vu
-Oceania,Vanuatu,https://spectrum.vu
-Oceania,Vanuatu,https://pt.vu
-Oceania,Vanuatu,https://2.vu
-Oceania,Vanuatu,https://diginet.vu
-Oceania,Vanuatu,https://lenakelcollege.edu.vu
-Oceania,Vanuatu,https://ag.vu
-Oceania,Vanuatu,https://rhserv.vu
-Oceania,Vanuatu,https://ntvplus.vu
-Oceania,Vanuatu,https://prava.vu
-Oceania,Vanuatu,https://lordfilmaav.vu
-Oceania,Vanuatu,https://lordfilmi.vu
-Oceania,Vanuatu,https://lordfilmaab.vu
-Oceania,Vanuatu,https://lordfilmaaj.vu
-Oceania,Vanuatu,https://lordfilmaae.vu
-Oceania,Vanuatu,https://lordz.vu
-Oceania,Vanuatu,https://lordfilmh.vu
-Oceania,Vanuatu,https://lordfilmaaf.vu
-Oceania,Vanuatu,https://sysoon.vu
-Oceania,Vanuatu,https://lordfilmq.vu
-Oceania,Vanuatu,https://at.vu
-Oceania,Vanuatu,https://wg.vu
-Oceania,Vanuatu,https://lordfilml.vu
-Oceania,Vanuatu,https://lordfilmu.vu
 Oceania,French Polynesia,https://secure.mararapaiement.pf
-Oceania,French Polynesia,https://nati.pf
-Oceania,French Polynesia,https://www.airtahiti.pf
 Oceania,French Polynesia,https://www.sg-bdp.pf
 Oceania,French Polynesia,https://petitesannonces.pf
-Oceania,French Polynesia,https://www.petites-annonces.pf
-Oceania,French Polynesia,https://meteo.pf
-Oceania,French Polynesia,https://connect.cps.pf
-Oceania,French Polynesia,https://www.socredo.pf
-Oceania,French Polynesia,https://wml.vini.pf
 Oceania,French Polynesia,https://www.vini.pf
-Oceania,French Polynesia,https://services.sefi.pf
+Oceania,French Polynesia,https://www.socredo.pf
 Oceania,French Polynesia,https://mon.vodafone.pf
 Oceania,French Polynesia,https://tiarenet.banque-tahiti.pf
-Oceania,French Polynesia,https://moncompte.niupay.pf
+Oceania,French Polynesia,https://meteo.pf
+Oceania,French Polynesia,https://www.petites-annonces.pf
+Oceania,French Polynesia,https://services.sefi.pf
 Oceania,French Polynesia,https://www.aravihi.gov.pf
-Oceania,French Polynesia,https://www.tntvnews.pf
-Oceania,French Polynesia,https://www.carrefour.pf
-Oceania,French Polynesia,https://www.mes-demarches.gov.pf
-Oceania,French Polynesia,https://www.farevanaa.pf
-Oceania,French Polynesia,https://www.cps.pf
-Oceania,French Polynesia,https://www.pdj.pf
-Oceania,French Polynesia,https://motorbikecenter.pf
-Oceania,French Polynesia,https://www.radio1.pf
 Oceania,French Polynesia,https://www.tahitipascher.pf
-Oceania,French Polynesia,https://secure.osb.pf
-Oceania,French Polynesia,https://hyperbrico.pf
-Oceania,French Polynesia,https://polyweb.sg-bdp.pf
-Oceania,French Polynesia,https://www.edt.pf
+Oceania,French Polynesia,https://www.cps.pf
 Oceania,French Polynesia,https://www.vodafone.pf
 Oceania,French Polynesia,https://www.service-public.pf
-Oceania,French Polynesia,https://espadon.upf.pf
-Oceania,French Polynesia,https://lexpol.cloud.pf
-Oceania,French Polynesia,https://map.teretahiti.pf
-Oceania,French Polynesia,https://tps.ftf.pf
-Oceania,French Polynesia,https://sefi.pf
-Oceania,French Polynesia,https://mana.pf
-Oceania,French Polynesia,https://vini.pf
-Oceania,French Polynesia,https://mararapaiement.pf
-Oceania,French Polynesia,https://upf.pf
-Oceania,French Polynesia,https://pmt.pf
-Oceania,French Polynesia,https://ns03.pf
-Oceania,French Polynesia,https://radio1.pf
-Oceania,French Polynesia,https://service-public.pf
-Oceania,French Polynesia,https://tntvnews.pf
-Oceania,French Polynesia,https://airtahiti.pf
-Oceania,French Polynesia,https://cps.pf
-Oceania,French Polynesia,https://banque-tahiti.pf
-Oceania,French Polynesia,https://gov.pf
-Oceania,French Polynesia,https://petites-annonces.pf
-Oceania,French Polynesia,https://sg-bdp.pf
-Oceania,French Polynesia,https://socredo.pf
-Oceania,French Polynesia,https://vodafone.pf
-Oceania,French Polynesia,https://prolan.pf
-Oceania,French Polynesia,https://viti.pf
-Oceania,French Polynesia,https://tntv.pf
-Oceania,French Polynesia,https://education.pf
-Oceania,French Polynesia,https://osb.pf
-Oceania,French Polynesia,https://cloud.pf
-Oceania,French Polynesia,https://presidence.pf
-Oceania,French Polynesia,https://tnfortress.pf
-Oceania,French Polynesia,https://pdj.pf
-Oceania,French Polynesia,https://tahititourisme.pf
-Oceania,French Polynesia,https://criobe.pf
-Oceania,French Polynesia,https://edt.pf
-Oceania,French Polynesia,https://farevanaa.pf
-Oceania,French Polynesia,https://niupay.pf
-Oceania,French Polynesia,https://tahitipascher.pf
-Oceania,French Polynesia,https://ispf.pf
-Oceania,French Polynesia,https://tahitiheritage.pf
-Oceania,French Polynesia,https://ladepeche.pf
-Oceania,French Polynesia,https://passeportgourmand.pf
-Oceania,French Polynesia,https://redbull.pf
-Oceania,French Polynesia,https://carrefour.pf
-Oceania,French Polynesia,https://portdepapeete.pf
-Oceania,French Polynesia,https://tahiti-aeroport.pf
-Oceania,French Polynesia,https://lapiscinedetahiti.pf
-Oceania,French Polynesia,https://axa.pf
-Oceania,French Polynesia,https://catherinealoi.pf
-Oceania,French Polynesia,https://assemblee.pf
-Oceania,French Polynesia,https://tahitipresse.pf
-Oceania,French Polynesia,https://mail.pf
-Oceania,French Polynesia,https://fpj.pf
-Oceania,French Polynesia,https://google.pf
-Oceania,French Polynesia,https://infomic.pf
-Oceania,French Polynesia,https://artcuisine.pf
-Oceania,French Polynesia,https://codim.pf
-Oceania,French Polynesia,https://tnf.pf
-Oceania,French Polynesia,https://registry.pf
-Oceania,French Polynesia,https://idt.pf
-Oceania,New Caledonia,https://annonces.nc
-Oceania,New Caledonia,https://www.province-sud.nc
+Oceania,French Polynesia,https://www.mes-demarches.gov.pf
+Oceania,French Polynesia,https://hyperbrico.pf
+Oceania,French Polynesia,https://www.tntvnews.pf
+Oceania,French Polynesia,https://www.farevanaa.pf
+Oceania,Micronesia,https://mobcup.fm
+Oceania,Micronesia,https://www.last.fm
+Oceania,Micronesia,https://www.setlist.fm
+Oceania,Micronesia,https://www.gayporno.fm
+Oceania,Micronesia,https://raag.fm
+Oceania,Micronesia,https://zeno.fm
+Oceania,Micronesia,https://www.gayporn.fm
+Oceania,Micronesia,https://www.mexc.fm
+Oceania,Micronesia,https://files.fm
+Oceania,Micronesia,https://www.openai.fm
+Oceania,Micronesia,https://dice.fm
+Oceania,Micronesia,https://www.sakura.fm
+Oceania,Micronesia,https://volt.fm
+Oceania,Micronesia,https://radiocut.fm
+Oceania,Micronesia,https://castbox.fm
+Oceania,Micronesia,https://ru.files.fm
+Oceania,Micronesia,https://gig.seevl.fm
+Oceania,Micronesia,https://stash.reaper.fm
+Oceania,Micronesia,https://podbay.fm
+Oceania,Micronesia,https://pages.fm
+Oceania,Micronesia,https://www.vocalize.fm
+Oceania,Micronesia,https://kinokong.fm
+Oceania,Micronesia,https://rym.fm
+Oceania,Micronesia,https://porno.fm
+Oceania,Micronesia,https://push.fm
+Oceania,Micronesia,https://swap.fm
+Oceania,Micronesia,https://jda.facilit.fm
+Oceania,Micronesia,https://www.three.fm
+Oceania,Micronesia,https://reader.z-lib.fm
+Oceania,Micronesia,https://omny.fm
+Oceania,Micronesia,https://styl.fm
+Oceania,Micronesia,https://my.brain.fm
+Oceania,Micronesia,https://www.clare.fm
+Oceania,Micronesia,https://mgm.netplay.fm
+Oceania,Micronesia,https://hitster.fm
+Oceania,Micronesia,https://rythm.fm
+Oceania,Micronesia,https://www.reaper.fm
+Oceania,Micronesia,https://playback.fm
+Oceania,Micronesia,https://poll.fm
+Oceania,Micronesia,https://thoreau.facilit.fm
+Oceania,Micronesia,https://forum.chorus.fm
+Oceania,Micronesia,https://moskva.fm
+Oceania,Micronesia,https://mio.dice.fm
+Oceania,Micronesia,https://stats.fm
+Oceania,Micronesia,https://www.brain.fm
+Oceania,Micronesia,https://www.wesa.fm
+Oceania,Micronesia,https://listen.streamon.fm
+Oceania,Micronesia,https://tools.zeno.fm
+Oceania,Micronesia,https://radiostationusa.fm
+Oceania,Micronesia,https://entradas.baila.fm
+Oceania,Micronesia,https://ditto.fm
+Oceania,Micronesia,https://m.88vv.fm
+Oceania,Micronesia,https://radiopark.fm
+Oceania,Micronesia,https://cms.megaphone.fm
+Oceania,Micronesia,https://maximum.fm
+Oceania,Micronesia,https://iono.fm
+Oceania,Micronesia,https://mcfradio2018.caster.fm
+Oceania,Micronesia,https://www.hornetradio.fm
+Oceania,Micronesia,https://concerto.bellrock.fm
+Oceania,Micronesia,https://www.acquired.fm
+Oceania,Micronesia,https://overcast.fm
+Oceania,Micronesia,https://www.di.fm
+Oceania,Micronesia,https://palette.fm
+Oceania,Micronesia,https://my.captivate.fm
+Oceania,Micronesia,https://bestradio.fm
+Oceania,Micronesia,https://znaki.fm
+Oceania,Micronesia,https://www.giant.fm
+Oceania,Micronesia,https://rsm.facilit.fm
+Oceania,Micronesia,https://www.radio47.fm
+Oceania,Micronesia,https://login.feature.fm
+Oceania,Micronesia,https://airable.fm
+Oceania,Micronesia,https://cp.caster.fm
+Oceania,Micronesia,https://manage.feature.fm
+Oceania,Micronesia,https://www.netplay.fm
+Oceania,Micronesia,https://cloud.caster.fm
+Oceania,Micronesia,https://matchmx.fm
+Oceania,Micronesia,http://www.sextube.fm
+Oceania,Micronesia,https://kinobar.fm
+Oceania,Micronesia,https://pi.fm
+Oceania,Micronesia,https://qr.fm
+Oceania,Micronesia,https://podscan.fm
+Oceania,Micronesia,https://www.nigeriainfo.fm
+Oceania,Micronesia,https://phimmoir.fm
+Oceania,Micronesia,https://t2.intuner.fm
+Oceania,Micronesia,https://jumper.fm
+Oceania,Micronesia,https://rates.fm
+Oceania,Micronesia,https://drft.fm
+Oceania,Micronesia,https://baskino.fm
+Oceania,Micronesia,https://radio.1cloud.fm
+Oceania,Micronesia,https://musicat.fm
+Oceania,Micronesia,https://sesh.fm
+Oceania,Micronesia,https://tickets.baila.fm
+Oceania,Micronesia,https://www.prague.fm
+Oceania,Micronesia,https://pos.pages.fm
+Oceania,Micronesia,https://too.fm
+Oceania,Micronesia,https://news.awa.fm
+Oceania,Micronesia,https://kinogo-films.fm
+Oceania,Micronesia,https://www.honeyfeed.fm
+Oceania,Micronesia,https://www.pushkin.fm
+Oceania,Micronesia,https://omegle.fm
+Oceania,Palau,https://animepahe.pw
+Oceania,Palau,https://porn4days.pw
+Oceania,Palau,https://www.faselplus.pw
+Oceania,Palau,https://www.mtzfile.pw
+Oceania,Palau,https://jjwin.pw
+Oceania,Palau,https://1agame.pw
+Oceania,Palau,https://m.88vv.pw
+Oceania,Palau,https://9bm.pw
+Oceania,Palau,https://sangetube.pw
+Oceania,Palau,https://1gabba.pw
+Oceania,Palau,https://copro.pw
+Oceania,Palau,https://usenet-4all.pw
+Oceania,Palau,https://freexxx.pw
+Oceania,Palau,https://rule34.pw
+Oceania,Palau,https://primewire.pw
+Oceania,Palau,https://notepad.pw
+Oceania,Palau,https://mcc888.pw
+Oceania,Palau,https://pandamovies.pw
+Oceania,Palau,https://aa123.pw
+Oceania,Palau,https://moviesjoy.pw
+Oceania,Palau,https://pdfdrive.pw
+Oceania,Palau,https://cosplay.jav.pw
+Oceania,Palau,https://sexphotos.pw
+Oceania,Palau,https://oran.pw
+Oceania,Palau,https://mii.nxw.pw
+Oceania,Palau,https://forum.plutonium.pw
+Oceania,Palau,https://2u.pw
+Oceania,Palau,https://zela.pw
+Oceania,Palau,https://snep.pw
+Oceania,Palau,https://gaystream.pw
+Oceania,Palau,https://a188.pw
+Oceania,Palau,https://www.fzm.pw
+Oceania,Palau,https://privatekeys.pw
+Oceania,Palau,https://mr8.pw
+Oceania,Palau,https://www.habboon.pw
+Oceania,Palau,https://fogo777.pw
+Oceania,Palau,https://cin.pw
+Oceania,Palau,https://m.nohu.pw
+Oceania,Palau,https://dollaruz.pw
+Oceania,Palau,https://hdiflix.pw
+Oceania,Palau,https://www.asmr.pw
+Oceania,Palau,https://xak5qe.movielinkbd.pw
+Oceania,Palau,https://novel.7748.pw
+Oceania,Palau,https://10win.pw
+Oceania,Palau,https://bvrrmk.movielinkbd.pw
+Oceania,Palau,https://h858.pw
+Oceania,Palau,https://gatto.pw
+Oceania,Palau,https://www.animepahe.pw
+Oceania,Palau,https://g877.pw
+Oceania,Palau,https://xor.pw
+Oceania,Palau,https://4ox.pw
+Oceania,Palau,https://mr7.pw
+Oceania,Palau,https://www.g877.pw
+Oceania,Palau,https://recode.pw
+Oceania,Palau,https://y3qk7r.movielinkbd.pw
+Oceania,Palau,https://mr3.pw
+Oceania,Palau,https://xy55um.movielinkbd.pw
+Oceania,Palau,https://www.10win.pw
+Oceania,Palau,https://7fuwub.movielinkbd.pw
+Oceania,Palau,https://07br.pw
+Oceania,Palau,https://bokepindoh.pw
+Oceania,Palau,https://dirty-pink.ers.pw
+Oceania,Palau,https://x7pz3m.movielinkbd.pw
+Oceania,Palau,https://surga200m.pw
+Oceania,Palau,https://www.lvslot.pw
+Oceania,Palau,https://tme5zq.movielinkbd.pw
+Oceania,Palau,https://dl.mlhbd.pw
+Oceania,Palau,https://varunmultimedia.pw
+Oceania,Palau,https://zmmxza.movielinkbd.pw
+Oceania,Palau,https://wckckb.movielinkbd.pw
+Oceania,Palau,https://bet-30.pw
+Oceania,Palau,https://5movies.pw
+Oceania,Palau,https://ewukey.movielinkbd.pw
+Oceania,Palau,https://dg88.pw
+Oceania,Palau,https://www1.gogoanime.pw
+Oceania,Palau,https://dytqmr.movielinkbd.pw
+Oceania,Palau,https://pornxp.pw
+Oceania,Palau,https://webgl.greenhost.pw
+Oceania,Palau,https://mqs.pw
+Oceania,Palau,https://cin.cin.pw
+Oceania,Palau,https://jira.getcom.pw
+Oceania,Palau,https://linksame.pw
+Oceania,Palau,https://02468.pw
+Oceania,Palau,https://ausd33.movielinkbd.pw
+Oceania,Palau,https://plutonium.pw
+Oceania,Palau,https://zavat.pw
+Oceania,Palau,https://a299.pw
+Oceania,Palau,https://epg.pw
+Oceania,Palau,https://sharer.pw
+Oceania,Palau,https://3eg4g5.movielinkbd.pw
+Oceania,Palau,https://3vh7j8.movielinkbd.pw
+Oceania,Palau,https://sitenable.pw
 Oceania,New Caledonia,https://www.impots.nc
-Oceania,New Caledonia,https://meteo.nc
-Oceania,New Caledonia,https://ccp.opt.nc
-Oceania,New Caledonia,https://www.1012.nc
-Oceania,New Caledonia,https://www.annonces.nc
+Oceania,New Caledonia,https://www.province-sud.nc
+Oceania,New Caledonia,https://annonces.nc
 Oceania,New Caledonia,https://moodle.unc.nc
+Oceania,New Caledonia,https://meteo.nc
+Oceania,New Caledonia,https://www.annonces.nc
+Oceania,New Caledonia,https://www.bcinet.nc
 Oceania,New Caledonia,https://www.lnc.nc
 Oceania,New Caledonia,https://www.taneo.nc
 Oceania,New Caledonia,https://connect.gouv.nc
-Oceania,New Caledonia,https://epaync.nc
-Oceania,New Caledonia,https://www.bcinet.nc
-Oceania,New Caledonia,https://mail.mls.nc
-Oceania,New Caledonia,https://www.asdetrefle.nc
-Oceania,New Caledonia,https://espace-client.bnc.nc
-Oceania,New Caledonia,https://ent.unc.nc
 Oceania,New Caledonia,https://www.eticket.nc
-Oceania,New Caledonia,https://portail.mdf.nc
-Oceania,New Caledonia,https://www.opt.nc
-Oceania,New Caledonia,https://ent.province-sud.nc
-Oceania,New Caledonia,https://www.rrb.nc
 Oceania,New Caledonia,https://www.ac-noumea.nc
-Oceania,New Caledonia,https://one.tice.nc
 Oceania,New Caledonia,https://www.betico.nc
+Oceania,New Caledonia,https://espace-client.bnc.nc
+Oceania,New Caledonia,https://www.asdetrefle.nc
+Oceania,New Caledonia,https://www.opt.nc
+Oceania,New Caledonia,https://portail.mdf.nc
+Oceania,New Caledonia,https://www.job.nc
 Oceania,New Caledonia,https://rechargetonmob.nc
+Oceania,New Caledonia,https://rai.nc
+Oceania,New Caledonia,https://www.helia.nc
+Oceania,New Caledonia,https://drhfpnc.gouv.nc
 Oceania,New Caledonia,https://societegenerale.nc
-Oceania,New Caledonia,https://www.allosante.nc
-Oceania,New Caledonia,https://moncompte.eec-engie.nc
-Oceania,New Caledonia,https://www.aircalin.nc
 Oceania,New Caledonia,https://www.cafat.nc
 Oceania,New Caledonia,https://assures.cafat.nc
+Oceania,New Caledonia,https://www.allosante.nc
+Oceania,New Caledonia,https://www.aircalin.nc
+Oceania,New Caledonia,https://moncompte.eec-engie.nc
 Oceania,New Caledonia,https://dsf.gouv.nc
-Oceania,New Caledonia,https://www.job.nc
-Oceania,New Caledonia,https://drhfpnc.gouv.nc
-Oceania,New Caledonia,https://www.helia.nc
-Oceania,New Caledonia,https://rai.nc
-Oceania,New Caledonia,https://www.meteo.nc
-Oceania,New Caledonia,https://voixducaillou.nc
-Oceania,New Caledonia,https://survey.quidnovi.nc
-Oceania,New Caledonia,https://cde.toutsurmoneau.nc
-Oceania,New Caledonia,https://shop.nc
-Oceania,New Caledonia,https://id.ac-noumea.nc
-Oceania,New Caledonia,https://www.noumea.nc
-Oceania,New Caledonia,https://www.sudtourisme.nc
-Oceania,New Caledonia,https://www.air-caledonie.nc
-Oceania,New Caledonia,https://www.bureau-vallee.nc
-Oceania,New Caledonia,https://www.bnc.nc
-Oceania,New Caledonia,https://lagoon.nc
-Oceania,New Caledonia,https://gouv.nc
-Oceania,New Caledonia,https://mls.nc
-Oceania,New Caledonia,https://province-sud.nc
-Oceania,New Caledonia,https://xlnet.nc
-Oceania,New Caledonia,https://opt.nc
-Oceania,New Caledonia,https://canl.nc
-Oceania,New Caledonia,https://unc.nc
-Oceania,New Caledonia,https://nautile.nc
-Oceania,New Caledonia,https://impots.nc
-Oceania,New Caledonia,https://any-ns1.nc
-Oceania,New Caledonia,https://ns1.nc
-Oceania,New Caledonia,https://ns2.nc
-Oceania,New Caledonia,https://lnc.nc
-Oceania,New Caledonia,https://ac-noumea.nc
-Oceania,New Caledonia,https://skazy.nc
-Oceania,New Caledonia,https://dsp.nc
-Oceania,New Caledonia,https://miniso.nc
-Oceania,New Caledonia,https://endemia.nc
-Oceania,New Caledonia,https://1012.nc
-Oceania,New Caledonia,https://bcinet.nc
-Oceania,New Caledonia,https://taneo.nc
-Oceania,New Caledonia,https://webcom.nc
-Oceania,New Caledonia,https://axa.nc
-Oceania,New Caledonia,https://recre.nc
-Oceania,New Caledonia,https://edge.nc
-Oceania,New Caledonia,https://isi.nc
-Oceania,New Caledonia,https://aircalin.nc
-Oceania,New Caledonia,https://seisme.nc
-Oceania,New Caledonia,https://bnc.nc
-Oceania,New Caledonia,https://ird.nc
-Oceania,New Caledonia,https://air-caledonie.nc
-Oceania,New Caledonia,https://asdetrefle.nc
-Oceania,New Caledonia,https://esquare.nc
-Oceania,New Caledonia,https://cci.nc
-Oceania,New Caledonia,https://cafat.nc
-Oceania,New Caledonia,https://becom.nc
-Oceania,New Caledonia,https://allosante.nc
-Oceania,New Caledonia,https://eec-engie.nc
-Oceania,New Caledonia,https://eticket.nc
-Oceania,New Caledonia,https://helia.nc
-Oceania,New Caledonia,https://job.nc
-Oceania,New Caledonia,https://mdf.nc
-Oceania,New Caledonia,https://rrb.nc
-Oceania,New Caledonia,https://tice.nc
-Oceania,New Caledonia,https://bienmeloger.nc
-Oceania,New Caledonia,https://isee.nc
-Oceania,New Caledonia,https://bbs.nc
-Oceania,New Caledonia,https://noumea.nc
-Oceania,New Caledonia,https://betico.nc
-Oceania,New Caledonia,https://biopac.nc
-Oceania,New Caledonia,https://rya.nc
+Oceania,New Caledonia,https://www.rrb.nc
+Africa,Senegal,https://orientation.campusen.sn
+Africa,Senegal,https://esp.sn
+Africa,Senegal,https://fad.fmpo.ucad.sn
+Africa,Senegal,https://www.kaynoo.sn
+Africa,Senegal,https://totalenergies.sn
+Africa,Senegal,https://www.helloprice.sn
+Africa,Senegal,https://www.ugb.sn
+Africa,Senegal,https://www.uidt.sn
+Africa,Senegal,https://urashop.sn
+Africa,Senegal,https://www.assemblee.sn
+Africa,Senegal,https://www.toyota.sn
+Africa,Senegal,https://www.seneau.sn
+Africa,Senegal,https://www.gms.sn
+Africa,Senegal,https://autoroutesdusenegal.sn
+Africa,Senegal,https://capital-humain.cnscl.sn
+Africa,Senegal,https://bem.sn
+Africa,Senegal,https://bringme.sn
+Africa,Senegal,https://ageroute.sn
+Africa,Senegal,https://ent.supdeco.sn
+Africa,Senegal,https://maternita.sn
+Africa,Senegal,https://www.afrety.sn
+Africa,Senegal,https://guindima.sn
+Africa,Senegal,https://www.guichetjeunesse.sn
+Africa,Senegal,https://www.labanqueagricole.sn
+Africa,Senegal,https://www.gamearena.sn
+Africa,Senegal,https://bluebazar.sn
+Africa,Senegal,https://www.fongip.sn
+Africa,Senegal,https://entpersonnel.ucad.sn
+Africa,Senegal,https://www.unchk.sn
+Africa,Senegal,https://www.finances.gouv.sn
+Africa,Senegal,https://www.groupeism.sn
+Africa,Senegal,https://www.askanwishop.sn
+Africa,Senegal,https://www.osiris.sn
+Africa,Senegal,https://www.senelec.sn
+Africa,Senegal,https://www.ericfavrestore.sn
+Africa,Senegal,https://arp.sn
+Africa,Senegal,https://www.katyshop.sn
+Africa,Senegal,https://www.douanes.sn
+Africa,Senegal,https://ipm.senelec.sn
+Africa,Senegal,https://boutique.orange.sn
+Africa,Senegal,https://www.esmt.sn
+North America,Nicaragua,https://avmedic.unanleon.edu.ni
+North America,Nicaragua,https://listado.mercadolibre.com.ni
+North America,Nicaragua,https://mitsubishi-motors.com.ni
+North America,Nicaragua,https://flowerscenter.com.ni
+North America,Nicaragua,https://www.siboif.gob.ni
+North America,Nicaragua,https://www.hyundai.com.ni
+North America,Nicaragua,https://www.vivanicaragua.com.ni
+North America,Nicaragua,https://www.tecnosol.com.ni
+North America,Nicaragua,https://unp.edu.ni
+North America,Nicaragua,https://www.laboratorioinmaculada.com.ni
+North America,Nicaragua,https://avodonto.unanleon.edu.ni
+North America,Nicaragua,https://activate.tigo.com.ni
+North America,Nicaragua,https://www.superintendencia.gob.ni
+North America,Nicaragua,http://digesto.asamblea.gob.ni
+North America,Nicaragua,https://airpak.com.ni
+North America,Nicaragua,https://avcuresteli.unan.edu.ni
+North America,Nicaragua,https://cruzlorena.com.ni
+North America,Nicaragua,https://elearning.ulsa.edu.ni
+North America,Nicaragua,https://www.joyeriagarzon.com.ni
+North America,Nicaragua,https://hackathonicaragua.com.ni
+North America,Nicaragua,https://didelsa.com.ni
+North America,Nicaragua,https://canal6.com.ni
+North America,Nicaragua,https://fitshop.com.ni
+North America,Nicaragua,https://servipro.com.ni
+North America,Nicaragua,https://portales.unicit.edu.ni
+North America,Nicaragua,https://portaltec.tecnacional.edu.ni
+North America,Nicaragua,https://reclutamiento.hospitalmilitar.com.ni
+North America,Nicaragua,https://posgrado.uni.edu.ni
+North America,Nicaragua,https://www.opcionempleo.com.ni
+North America,Nicaragua,https://www.llantas.com.ni
+North America,Nicaragua,https://www.uncsm.edu.ni
+North America,Nicaragua,https://www.mific.gob.ni
+North America,Nicaragua,https://www.ros.uaf.gob.ni
+North America,Nicaragua,https://www.mercadolibre.com.ni
+North America,Nicaragua,https://www.inide.gob.ni
+North America,Nicaragua,https://papajohns.ni
+North America,Nicaragua,https://portal.mapfre.com.ni
+North America,Nicaragua,https://www.enterprise.ni
+North America,Nicaragua,https://www.enacal.com.ni
+North America,Nicaragua,https://fdl.com.ni
+North America,Nicaragua,https://elhalcon.com.ni
+North America,Nicaragua,https://yota.com.ni
+North America,Nicaragua,https://enel.gob.ni
+North America,Nicaragua,https://radionicaragua.com.ni
+North America,Nicaragua,https://vento.com.ni
+North America,Nicaragua,https://www.uni.edu.ni
+North America,Nicaragua,https://horasclases.unanleon.edu.ni
+North America,Nicaragua,https://siga.ac.ulsa.edu.ni
+North America,Nicaragua,https://www.smartfleet.com.ni
+North America,Nicaragua,https://fogel.com.ni
+North America,Nicaragua,https://ribuni.uni.edu.ni
+North America,Nicaragua,https://revistas.unan.edu.ni
+Oceania,Fiji,https://www.rbf.gov.fj
+Oceania,Fiji,https://connect.bred.com.fj
+Oceania,Fiji,https://www.rhooker.com.fj
+Oceania,Fiji,https://www.car4sale.com.fj
+Oceania,Fiji,https://bunningspacific.com.fj
+Oceania,Fiji,https://recruitment.usp.ac.fj
+Oceania,Fiji,https://lolomarewards.com.fj
+Oceania,Fiji,https://fccc.gov.fj
+Oceania,Fiji,https://elearn.kbei.ac.fj
+Oceania,Fiji,https://judiciary.gov.fj
+Oceania,Fiji,https://rcmanubhai.com.fj
+Oceania,Fiji,https://insure.bsplife.com.fj
+Oceania,Fiji,https://www.telecom.com.fj
+Oceania,Fiji,https://www.ubuy.com.fj
+Oceania,Fiji,https://www.fdb.com.fj
+Oceania,Fiji,https://www.financehub.com.fj
+Oceania,Fiji,https://www.justice.gov.fj
+Oceania,Fiji,https://apply.tsls.com.fj
+Oceania,Fiji,https://mis.usp.ac.fj
+Oceania,Fiji,https://uniportal.usp.ac.fj
+Oceania,Fiji,https://eport.usp.ac.fj
+Oceania,Fiji,https://books.google.com.fj
+Oceania,Fiji,https://directory.digital.gov.fj
+Oceania,Fiji,https://crm-student.fnu.ac.fj
+Oceania,Fiji,https://fijionenews.com.fj
+Oceania,Fiji,https://fastfind.com.fj
+Oceania,Fiji,https://my.telecom.com.fj
+Oceania,Fiji,https://sso.fnu.ac.fj
+Oceania,Fiji,https://eport.fnu.ac.fj
+Oceania,Fiji,https://ems.com.fj
+Oceania,Fiji,https://tsls.com.fj
+Oceania,Fiji,https://superstore.com.fj
+Oceania,Fiji,https://mh.com.fj
+Oceania,Fiji,https://sols.usp.ac.fj
+Oceania,Fiji,https://www.hfc.com.fj
+Oceania,Fiji,https://frcs.org.fj
+Oceania,Fiji,https://yellowpages.com.fj
+Oceania,Fiji,https://www.spx.com.fj
+Oceania,Fiji,https://eservice.rbf.gov.fj
+Oceania,Fiji,https://ces.usp.ac.fj
+Oceania,Fiji,https://www.ticketmax.com.fj
+Oceania,Fiji,https://www.gmr.com.fj
+Oceania,Fiji,https://jobs.feo.org.fj
+Oceania,Fiji,https://rbpatel.com.fj
+Oceania,Fiji,https://tap.vms.frcs.org.fj
+Oceania,Fiji,https://myfnpf.com.fj
+Oceania,Fiji,https://self-service.fnu.ac.fj
+Oceania,Fiji,https://www.ats.com.fj
+Oceania,Fiji,https://vms.frcs.org.fj
+Oceania,Fiji,https://fjvlectures.usp.ac.fj
+Oceania,Fiji,https://inkk.com.fj
+Oceania,Fiji,https://www.health.gov.fj
+Oceania,Fiji,https://clearance.tsls.com.fj
+Oceania,Fiji,https://bred.com.fj
+Oceania,Fiji,https://careers.fnu.ac.fj
+Oceania,Fiji,http://cadastral.lands.gov.fj
+Oceania,Fiji,https://aspenmedical.com.fj
+Oceania,Fiji,https://elearn.sit.ac.fj
+Oceania,Fiji,https://ars.northernair.com.fj
+Oceania,Fiji,https://www.universal.com.fj
+Oceania,Fiji,https://www.bsplife.com.fj
+Oceania,Fiji,https://bhikhabhai.com.fj
+Oceania,Fiji,https://cms.tsls.com.fj
+Oceania,Fiji,https://bulabuses.com.fj
+Oceania,Fiji,https://careers.telecom.com.fj
+Oceania,Fiji,https://dominionfinance.com.fj
+Oceania,Fiji,https://ftu.com.fj
+Oceania,Fiji,https://bas.com.fj
+Oceania,Fiji,https://pina.com.fj
+Oceania,Fiji,https://totalenergies.com.fj
+Oceania,French Polynesia,https://www.papeete.pf
+Oceania,French Polynesia,https://www.punaauia.pf
+Oceania,French Polynesia,https://farehiti.pf
+Oceania,French Polynesia,https://catalogue.vodafone.pf
+Oceania,French Polynesia,https://www.otia.gov.pf
+Oceania,French Polynesia,https://employeurs.cps.pf
+Oceania,French Polynesia,https://www.anset.pf
 Oceania,French Polynesia,https://www.banque-tahiti.pf
-Oceania,French Polynesia,https://shop.carrefour.pf
-Oceania,French Polynesia,https://cas.upf.pf
-Oceania,French Polynesia,https://www.sta.pf
+Oceania,French Polynesia,https://www.big-ce.pf
+Oceania,French Polynesia,https://tikivillage.pf
+Oceania,French Polynesia,https://www.asdetrefle.pf
+Oceania,French Polynesia,https://www.ora.pf
+Oceania,French Polynesia,https://www.sipa.pf
+Oceania,French Polynesia,https://www.portdepapeete.pf
+Oceania,French Polynesia,https://www.upf.pf
+Oceania,French Polynesia,https://www.pacificfilms.pf
+Oceania,French Polynesia,https://www.tefenua.gov.pf
+Oceania,French Polynesia,https://www.polynesienne-des-eaux.pf
+Oceania,French Polynesia,https://www.tikitea.pf
+Oceania,French Polynesia,https://www.ispf.pf
+Oceania,French Polynesia,https://www.ftvaa.pf
+Oceania,French Polynesia,https://mesimpots.gov.pf
+Oceania,French Polynesia,https://www.magasins-u.pf
+Oceania,French Polynesia,https://www.immobilier.pf
+Oceania,French Polynesia,https://www.hertz.pf
+Oceania,French Polynesia,https://labo.lam.pf
+Oceania,French Polynesia,https://boursesup.education.pf
+Oceania,French Polynesia,https://espaceclient.ora.pf
+Oceania,French Polynesia,https://app.clickandglowtahiti.pf
+Oceania,French Polynesia,https://ent.upf.pf
+Oceania,French Polynesia,https://www.ccism.pf
+Oceania,French Polynesia,https://lexpol.cloud.pf
+Oceania,French Polynesia,https://www.airnewzealand.pf
+Oceania,French Polynesia,https://www.farerata.pf
+Oceania,French Polynesia,https://www.dsp.aravihi.gov.pf
+Oceania,French Polynesia,https://farevanaa.pf
+Oceania,French Polynesia,https://rendez-vous.pf
+Oceania,French Polynesia,https://employeur.cps.pf
+Oceania,French Polynesia,https://www.tahitiheritage.pf
+Oceania,French Polynesia,https://www.oph.pf
+Oceania,French Polynesia,https://sefi.pf
+Oceania,French Polynesia,https://www.cgf.pf
+Oceania,French Polynesia,https://www.sipac.pf
 Oceania,French Polynesia,https://www.petitesannonces.pf
-Oceania,French Polynesia,https://www.sopadep.pf
-Oceania,French Polynesia,https://www.tntv.pf
-Oceania,French Polynesia,https://extranet.ac-polynesie.pf
-Oceania,French Polynesia,https://www.ac-polynesie.pf
-Oceania,French Polynesia,https://apetahiexpress.pf
+Oceania,French Polynesia,https://www.sta.pf
+Oceania,French Polynesia,https://www.ticket-pacific.pf
+Oceania,French Polynesia,https://www.tiki.pf
+Oceania,French Polynesia,https://espace-client.vini.pf
+Oceania,French Polynesia,https://www.aming.pf
+Oceania,French Polynesia,https://catherinealoi.pf
+Oceania,French Polynesia,https://cas.upf.pf
+Oceania,French Polynesia,https://espadon.upf.pf
+Oceania,French Polynesia,https://billetterie.maisondelaculture.pf
+Oceania,French Polynesia,https://www.fonction-publique.gov.pf
+Oceania,French Polynesia,https://tahititourisme.pf
+Oceania,French Polynesia,https://petites-annonces.pf
+Oceania,French Polynesia,https://www.cfpa.pf
+Oceania,French Polynesia,https://www.education.pf
+Oceania,French Polynesia,https://www.tahitiauto.pf
+Oceania,French Polynesia,https://www.ofina.pf
+Oceania,French Polynesia,https://www.archives.pf
+Oceania,French Polynesia,https://www.maisondelaculture.pf
+Oceania,French Polynesia,https://www.mararapaiement.pf
+Oceania,French Polynesia,https://www.tahitimenager.pf
+Oceania,French Polynesia,https://moodle-clm.ddec.pf
+Oceania,French Polynesia,https://www.sogequip.pf
+Oceania,French Polynesia,https://fenuacreations.pf
+Oceania,French Polynesia,https://odyssey.pf
+Oceania,French Polynesia,https://groupe.opt.pf
+Oceania,French Polynesia,https://morganvernex.pf
+Oceania,French Polynesia,https://id.vini.pf
+Oceania,French Polynesia,https://www.commune-mahina.pf
+Oceania,French Polynesia,https://www.hotel-hibiscus.pf
+Oceania,French Polynesia,https://blog.edt.pf
+Oceania,French Polynesia,https://www.faretropical.pf
+Oceania,French Polynesia,https://www.capl.pf
+Oceania,French Polynesia,https://www.poecharter.pf
+Oceania,French Polynesia,https://www.ebooks.education.pf
+Oceania,French Polynesia,https://www.ma-billetterie.pf
+Oceania,French Polynesia,https://www.tsp.pf
+Oceania,French Polynesia,https://www.ftf.pf
+Oceania,Palau,https://palaucourts.gov.pw
+Oceania,Palau,https://www.palaugov.pw
+Oceania,Palau,https://palautravel.pw
+Oceania,Palau,https://www.palautravel.pw
+Oceania,Palau,https://bcbp.pw
+Oceania,Palau,https://www.palaulaw.gov.pw
+Oceania,New Caledonia,https://weblgn.ac-noumea.nc
+Oceania,New Caledonia,https://www.pages.nc
+Oceania,New Caledonia,https://www.aideaulogement.nc
+Oceania,New Caledonia,https://toyota.nc
+Oceania,New Caledonia,https://reprex.nc
+Oceania,New Caledonia,https://niaouli.nc
+Oceania,New Caledonia,https://bebe9.nc
+Oceania,New Caledonia,https://noumeapost.nc
+Oceania,New Caledonia,https://cinecity.nc
+Oceania,New Caledonia,https://demarches-simplifiees.gouv.nc
+Oceania,New Caledonia,https://mcdonalds.nc
+Oceania,New Caledonia,https://webmagenta.ac-noumea.nc
+Oceania,New Caledonia,https://www.bureau-vallee.nc
+Oceania,New Caledonia,https://ypareo.cci-formation.nc
+Oceania,New Caledonia,https://www.eec-engie.nc
+Oceania,New Caledonia,https://www.ccp.nc
+Oceania,New Caledonia,https://www.gautier.nc
+Oceania,New Caledonia,https://www.assoava.nc
+Oceania,New Caledonia,https://www.lemploi.nc
+Oceania,New Caledonia,https://www.sic.nc
+Oceania,New Caledonia,https://www.enercal.nc
+Oceania,New Caledonia,https://repco.nc
+Oceania,New Caledonia,https://malistecadeau.nc
+Oceania,New Caledonia,https://espace-employeur.smit.nc
+Oceania,New Caledonia,https://espaceclient.lagoon.nc
+Oceania,New Caledonia,https://laperouse.ac-noumea.nc
+Oceania,New Caledonia,https://gouv.nc
+Oceania,New Caledonia,https://haudra.ac-noumea.nc
+Oceania,New Caledonia,https://erotik.nc
+Oceania,New Caledonia,https://premiumsecurite.nc
+Oceania,New Caledonia,https://autofast.nc
+Oceania,New Caledonia,https://ozonesport.nc
+Oceania,New Caledonia,https://mobiplus.nc
+Oceania,New Caledonia,https://lmichel.ac-noumea.nc
+Oceania,New Caledonia,https://douane.gouv.nc
+Oceania,New Caledonia,https://mutuelleducommerce.nc
+Oceania,New Caledonia,https://cde.nc
+Oceania,New Caledonia,https://neocarte.nc
+Oceania,New Caledonia,https://edt.unc.nc
+Oceania,New Caledonia,https://webgarnier.ac-noumea.nc
+Oceania,New Caledonia,https://idefix.nc
+Oceania,New Caledonia,https://service-public.nc
+Oceania,New Caledonia,https://services.cafat.nc
+Oceania,New Caledonia,https://portail.marchespublics.nc
+Oceania,New Caledonia,https://emploi.nc
+Oceania,New Caledonia,https://serrurerie.nc
+Oceania,New Caledonia,https://ipweb.unc.nc
+Oceania,New Caledonia,https://job.nc
+Oceania,New Caledonia,https://ondemia.ac-noumea.nc
+Oceania,New Caledonia,https://canl.nc
+Oceania,New Caledonia,https://kingsports.nc
+Oceania,New Caledonia,https://oceane.nc
+Oceania,New Caledonia,https://id.ac-noumea.nc
+Oceania,New Caledonia,https://www.cht.nc
+Oceania,New Caledonia,https://www.jeux-concours.nc
+Oceania,New Caledonia,https://monespace.opt.nc
+Oceania,New Caledonia,https://dtenc.gouv.nc
+Oceania,New Caledonia,https://www.noumea.nc
+Oceania,New Caledonia,https://www.quincaillerie.nc
+Oceania,New Caledonia,https://marinecorail.nc
+Oceania,New Caledonia,https://www.petites-annonces.nc
+Oceania,New Caledonia,https://simulateur-ir.gouv.nc
+Oceania,New Caledonia,https://denc.gouv.nc
+Oceania,New Caledonia,https://webplum.ac-noumea.nc
+Oceania,New Caledonia,https://www.aboro.nc
+Oceania,New Caledonia,https://www.cci.nc
+Oceania,New Caledonia,https://www.fsh.nc
+Oceania,New Caledonia,https://www.micromedia.nc
+Oceania,New Caledonia,https://www.aquarium.nc
+Oceania,New Caledonia,https://plan.nc
+Oceania,Papua New Guinea,https://bilum.uog.ac.pg
+Oceania,Papua New Guinea,https://www.tisabank.com.pg
+Oceania,Papua New Guinea,https://lms.iue.ac.pg
+Oceania,Papua New Guinea,https://ocmoodle.upng.ac.pg
+Oceania,Papua New Guinea,https://www.mintt.com.pg
+Oceania,Papua New Guinea,https://www.education.gov.pg
+Oceania,Papua New Guinea,https://ppcsl.fesalos.org.pg
+Oceania,Papua New Guinea,https://ppssl.fesalos.org.pg
+Oceania,Papua New Guinea,https://www.creditbank.com.pg
+Oceania,Papua New Guinea,https://www.nslonline.com.pg
+Oceania,Papua New Guinea,https://forums.sil.org.pg
+Oceania,Papua New Guinea,https://www.hausples.com.pg
+Oceania,Papua New Guinea,https://www.pngx.com.pg
+Oceania,Papua New Guinea,https://emtv.com.pg
+Oceania,Papua New Guinea,https://irc.gov.pg
+Oceania,Papua New Guinea,https://pngcir.gov.pg
+Oceania,Papua New Guinea,https://nbcpng.com.pg
+Oceania,Papua New Guinea,https://www.westpac.com.pg
+Oceania,Papua New Guinea,https://www.bankpng.gov.pg
+Oceania,Papua New Guinea,https://status.ica.gov.pg
+Oceania,Papua New Guinea,https://www.able.com.pg
+Oceania,Papua New Guinea,https://education.gov.pg
+Oceania,Papua New Guinea,https://www.nbc.com.pg
+Oceania,Papua New Guinea,https://tvwan.com.pg
+Oceania,Papua New Guinea,https://dlpp.gov.pg
+Oceania,Papua New Guinea,https://digital.nbcpng.com.pg
+Oceania,Papua New Guinea,https://www.unigoroka.ac.pg
+Oceania,Papua New Guinea,https://www.nambawansuper.com.pg
+Oceania,Papua New Guinea,https://321lotto.com.pg
+Oceania,Papua New Guinea,http://ipng.dherst.gov.pg
+Oceania,Papua New Guinea,https://www.mariestopespng.org.pg
+Oceania,Papua New Guinea,https://www.kch.com.pg
+Oceania,Papua New Guinea,https://courts.com.pg
+Oceania,Papua New Guinea,https://www.icac.gov.pg
+Oceania,Papua New Guinea,https://iwise.pmis.iea.ac.pg
+Oceania,Papua New Guinea,https://www.pngmet.gov.pg
+Oceania,Papua New Guinea,https://www.nso.gov.pg
+Oceania,Papua New Guinea,https://www.ppssls.com.pg
+Oceania,Papua New Guinea,https://www.tininga.com.pg
+Oceania,Papua New Guinea,https://www.nari.gov.pg
+Oceania,Papua New Guinea,https://www.treasury.gov.pg
+Oceania,Papua New Guinea,https://www.mibank.com.pg
+Oceania,Papua New Guinea,https://casapng.gov.pg
+Oceania,Papua New Guinea,https://aspen.glorygroup.com.pg
+Oceania,Papua New Guinea,https://www.fincorp.com.pg
+Oceania,Papua New Guinea,https://www.gavman.gov.pg
+Oceania,Papua New Guinea,https://www.iue.ac.pg
+Oceania,Papua New Guinea,https://www.milum.com.pg
+Oceania,Papua New Guinea,https://chemicals.brianbell.com.pg
+Oceania,Papua New Guinea,https://www.finance.gov.pg
+Oceania,Papua New Guinea,https://www.dulux.com.pg
+Oceania,Papua New Guinea,https://www.ict.gov.pg
+Oceania,Papua New Guinea,https://cdb.com.pg
+Oceania,Papua New Guinea,https://cbosl.fesalos.org.pg
+Oceania,Papua New Guinea,https://coralseahotels.com.pg
+Oceania,Papua New Guinea,https://digital.creditbank.com.pg
+Oceania,Papua New Guinea,https://www.ncdc.gov.pg
+Oceania,Papua New Guinea,https://www.ombudsman.gov.pg
+Oceania,Papua New Guinea,https://www.dpm.gov.pg
+Oceania,Papua New Guinea,https://www.consort.com.pg
+Oceania,Papua New Guinea,https://www.tsc.gov.pg
+Oceania,Papua New Guinea,https://www.chemcaregroup.com.pg
+Oceania,Papua New Guinea,https://tradeelectrical.brianbell.com.pg
+Oceania,Papua New Guinea,https://wcmoodle.dwu.ac.pg
+Oceania,Palau,https://vidley.pw
+Oceania,Palau,https://fzm.pw
