@@ -14,7 +14,7 @@ warnings.filterwarnings(
 # Dateien
 COUNTRIES_FILE = "../countries/country_selection.csv"
 CRUX_FILE = "../crux/202605.csv"
-OUTPUT_FILE = "../websites/top100_websites2.csv"
+OUTPUT_FILE = "../websites/top100_websites.csv"
 
 # Anzahl der Webseiten pro Land
 TOP_N = 100

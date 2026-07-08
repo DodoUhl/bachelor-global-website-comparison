@@ -13,22 +13,14 @@ EXISTING_FILE = "../websites/top100_websites.csv"
 OUTPUT_FILE = "../websites/top100_websites.csv"
 
 CRUX_FILES = [
-    "../crux/202605.csv",
-    "../crux/202604.csv",
-    "../crux/202603.csv",
-    "../crux/202602.csv",
-    "../crux/202601.csv",
-    "../crux/202512.csv",
-    "../crux/202511.csv",
-    "../crux/202510.csv",
-    "../crux/202509.csv",
-    "../crux/202508.csv",
-    "../crux/202507.csv",
-    "../crux/202506.csv",
-    "../crux/202505.csv",
-    "../crux/202504.csv",
+    "../crux/202605_fj.csv",
+    "../crux/202605_pf.csv",
+    "../crux/202605_nc.csv",
+    "../crux/202605_ni.csv",
+    "../crux/202605_pw.csv",
+    "../crux/202605_pg.csv",
+    "../crux/202605_sn.csv",
 ]
-TRANCO_FILE = "../tranco/tranco_GQ2WK.csv.gz"
 
 # Anzahl der Webseiten pro Land
 TOP_N = 100
@@ -55,13 +47,11 @@ def detect_language(origin):
 
         # 1. Prüfen, ob die Sprache im HTML-Tag angegeben ist
         if html and html.get("lang"):
-            print(f"  detected language from HTML tag: {html['lang']}")
             return html["lang"].split("-")[0].lower()
     
         # 2. Prüfen, ob genügend Text vorhanden ist, um die Sprache zu erkennen
         text = soup.get_text(" ", strip=True)
         if len(text) > 200:
-            print(f"  detected language from text: {detect(text)}")
             return detect(text)
 
     except Exception:
@@ -79,7 +69,7 @@ def normalize_language(language):
     return language.split("-")[0]
 
 
-countries = pd.read_csv(COUNTRIES_FILE, sep=None, engine="python")
+countries = pd.read_csv(COUNTRIES_FILE, sep=None, engine="python", encoding="utf-8-sig")
 existing = pd.read_csv(EXISTING_FILE)
 
 results = existing.to_dict("records")
@@ -113,7 +103,8 @@ for _, country_row in countries.iterrows():
     for crux_file in CRUX_FILES:
         if needed <= 0:
             break
-
+        if f"_{cctld[1:]}" not in os.path.basename(crux_file):
+            continue
         print(f"  checking {crux_file}")
 
         crux = pd.read_csv(crux_file, usecols=["origin", "rank"])
@@ -133,59 +124,10 @@ for _, country_row in countries.iterrows():
 
             if origin in global_existing_websites:
                 continue
-
-            # Außer in Ozeanien Sprache prüfen
-            if continent != "Oceania":
-                language = normalize_language(detect_language(origin))
-                if language not in languages:
-                    continue
-
-            item = {
-                "continent": continent,
-                "country": country,
-                "website": origin,
-            }
-
-            results.append(item)
-            country_added.append(item)
-            global_existing_websites.add(origin)
-
-            needed -= 1
-
-        print(f"    added so far for {country}: {len(country_added)}")
-
-    for tranco_file in [TRANCO_FILE]:
-        if needed <= 0:
-            break
-
-        print(f"  checking {tranco_file}")
-
-        tranco = pd.read_csv(tranco_file, compression="gzip", header=None, names=["rank", "domain"])
-        tranco["domain"] = "https://" + tranco["domain"]
-
-        candidates = tranco[
-            tranco["domain"].apply(get_cctld) == cctld
-        ].copy()
-
-        candidates = candidates.sort_values("rank")
-
-        print(f"    ccTLD candidates: {len(candidates)}")
-
-        for _, row in candidates.iterrows():
-            if needed <= 0:
-                break
-
-            origin = row["domain"]
-
-            if origin in global_existing_websites:
+            
+            language = normalize_language(detect_language(origin))
+            if language not in languages:
                 continue
-
-            # Außer in Ozeanien Sprache prüfen
-            if continent != "Oceania":
-                language = normalize_language(detect_language(origin))
-
-                if language not in languages:
-                    continue
 
             item = {
                 "continent": continent,
