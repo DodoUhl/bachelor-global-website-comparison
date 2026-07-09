@@ -7,31 +7,32 @@ from langdetect import detect
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
+# Warnungen für BeautifulSoup unterdrücken
 warnings.filterwarnings("ignore", category=XMLParsedAsHTMLWarning)
 
+# Dateien
 COUNTRIES_FILE = "../countries/country_selection.csv"
 CRUX_FILE = "../crux/202605.csv"
-
 LANGUAGE_CACHE_FILE = "../websites/website_languages.csv"
 OUTPUT_FILE = "../websites/language_percentage_by_country.csv"
 
 MAX_WORKERS = 30
 TIMEOUT = 6
 
-
+# TLD extrahieren
 def get_cctld(origin):
     ext = tldextract.extract(origin)
     if not ext.suffix:
         return ""
     return "." + ext.suffix.split(".")[-1].lower()
 
-
+# Sprache normalisieren
 def normalize_language(lang):
     if not isinstance(lang, str) or not lang.strip():
         return None
     return lang.lower().split("-")[0].strip()
 
-
+# Sprache erkennen
 def detect_language(origin):
     try:
         response = requests.get(
@@ -42,22 +43,22 @@ def detect_language(origin):
 
         soup = BeautifulSoup(response.text, "html.parser")
 
+        # 1. Prüfen, ob die Sprache im HTML-Tag angegeben ist
         html_tag = soup.find("html")
         if html_tag and html_tag.get("lang"):
             return normalize_language(html_tag.get("lang"))
 
+        # 2. Prüfen, ob genügend Text vorhanden ist, um die Sprache zu erkennen
         text = soup.get_text(" ", strip=True)
         text = text[:5000]
-
         if len(text) < 100:
             return None
-
         return normalize_language(detect(text))
 
     except Exception:
         return None
 
-
+# Cache laden
 def load_language_cache():
     path = Path(LANGUAGE_CACHE_FILE)
 
@@ -66,12 +67,12 @@ def load_language_cache():
 
     return pd.DataFrame(columns=["origin", "detected_language"])
 
-
+# Cache speichern
 def save_language_cache(cache_df):
     Path(LANGUAGE_CACHE_FILE).parent.mkdir(parents=True, exist_ok=True)
     cache_df.to_csv(LANGUAGE_CACHE_FILE, index=False)
 
-
+# Update des Caches mit neuen Webseiten
 def update_language_cache(origins):
     cache_df = load_language_cache()
 
@@ -118,80 +119,80 @@ def update_language_cache(origins):
 
     return cache_df
 
+# CSV-Dateien einlesen und vorbereiten
+countries = pd.read_csv(COUNTRIES_FILE, sep=None, engine="python")
+crux = pd.read_csv(CRUX_FILE)
+countries["cctld"] = countries["cctld"].str.lower().str.strip()
+countries["languages"] = countries["languages"].apply(normalize_language)
+crux["ccTLD"] = crux["origin"].apply(get_cctld)
 
-def main():
-    countries = pd.read_csv(COUNTRIES_FILE, sep=None, engine="python")
-    crux = pd.read_csv(CRUX_FILE)
+relevant_cctlds = set(countries["cctld"])
+relevant_origins = crux.loc[
+    crux["ccTLD"].isin(relevant_cctlds),
+    "origin"
+].drop_duplicates().tolist()
 
-    countries["cctld"] = countries["cctld"].str.lower().str.strip()
-    countries["languages"] = countries["languages"].apply(normalize_language)
+print(f"Relevante Webseiten insgesamt: {len(relevant_origins)}")
 
-    crux["ccTLD"] = crux["origin"].apply(get_cctld)
+language_cache = update_language_cache(relevant_origins)
 
-    relevant_cctlds = set(countries["cctld"])
-    relevant_origins = crux.loc[
-        crux["ccTLD"].isin(relevant_cctlds),
-        "origin"
-    ].drop_duplicates().tolist()
+crux_with_lang = crux.merge(language_cache, on="origin", how="left")
 
-    print(f"Relevante Webseiten insgesamt: {len(relevant_origins)}")
+results = []
 
-    language_cache = update_language_cache(relevant_origins)
+# Alle Länder durchgehen
+for _, row in countries.iterrows():
+    continent = row["continent"]
+    country = row["country"]
+    cctld = row["cctld"]
+    expected_language = row["languages"]
 
-    crux_with_lang = crux.merge(language_cache, on="origin", how="left")
+    subset = crux_with_lang[crux_with_lang["ccTLD"] == cctld]
 
-    results = []
+    # Anzahl aller Webseiten
+    total_websites = len(subset)
 
-    for _, row in countries.iterrows():
-        continent = row["continent"]
-        country = row["country"]
-        cctld = row["cctld"]
-        expected_language = row["languages"]
+    # Anzahl der Webseiten, bei denen eine Sprache erkannt wurde
+    detected_websites = subset["detected_language"].notna().sum()
+    language_matches = (
+        subset["detected_language"] == expected_language
+    ).sum()
 
-        subset = crux_with_lang[crux_with_lang["ccTLD"] == cctld]
+    # Anzahl der Webseiten, bei denen keine Sprache erkannt wurde
+    failed = total_websites - detected_websites
 
-        total_websites = len(subset)
-        detected_websites = subset["detected_language"].notna().sum()
-        language_matches = (
-            subset["detected_language"] == expected_language
-        ).sum()
-        failed = total_websites - detected_websites
+    # Prozentwerte berechnen
+    percent_of_all = (
+        language_matches / total_websites * 100
+        if total_websites > 0 else 0
+    )
 
-        percent_of_all = (
-            language_matches / total_websites * 100
-            if total_websites > 0 else 0
-        )
+    percent_of_detected = (
+        language_matches / detected_websites * 100
+        if detected_websites > 0 else 0
+    )
 
-        percent_of_detected = (
-            language_matches / detected_websites * 100
-            if detected_websites > 0 else 0
-        )
+    results.append({
+        "continent": continent,
+        "country": country,
+        "cctld": cctld,
+        "expected_language": expected_language,
+        "total_websites": total_websites,
+        "detected_websites": detected_websites,
+        "failed_websites": failed,
+        "language_matches": language_matches,
+        "percent_of_all": round(percent_of_all, 2),
+        "percent_of_detected": round(percent_of_detected, 2)
+    })
 
-        results.append({
-            "continent": continent,
-            "country": country,
-            "cctld": cctld,
-            "expected_language": expected_language,
-            "total_websites": total_websites,
-            "detected_websites": detected_websites,
-            "failed_websites": failed,
-            "language_matches": language_matches,
-            "percent_of_all": round(percent_of_all, 2),
-            "percent_of_detected": round(percent_of_detected, 2)
-        })
+    print(
+        f"{country}: {language_matches}/{total_websites} "
+        f"({round(percent_of_all, 2)}%)"
+    )
 
-        print(
-            f"{country}: {language_matches}/{total_websites} "
-            f"({round(percent_of_all, 2)}%)"
-        )
+# Ergebnisse speichern
+output_df = pd.DataFrame(results)
+Path(OUTPUT_FILE).parent.mkdir(parents=True, exist_ok=True)
+output_df.to_csv(OUTPUT_FILE, index=False)
 
-    output_df = pd.DataFrame(results)
-
-    Path(OUTPUT_FILE).parent.mkdir(parents=True, exist_ok=True)
-    output_df.to_csv(OUTPUT_FILE, index=False)
-
-    print(f"Fertig: {OUTPUT_FILE}")
-
-
-if __name__ == "__main__":
-    main()
+print(f"Fertig: {OUTPUT_FILE}")

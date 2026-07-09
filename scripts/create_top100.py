@@ -4,8 +4,8 @@ import tldextract
 from bs4 import BeautifulSoup, XMLParsedAsHTMLWarning
 from langdetect import detect
 import warnings
-import os
 
+# Warnungen für BeautifulSoup unterdrücken
 warnings.filterwarnings(
     "ignore",
     category=XMLParsedAsHTMLWarning
@@ -62,11 +62,13 @@ def normalize_language(language):
     
     return language.split("-")[0]
 
+# CSv-Dateien einlesen
 countries = pd.read_csv(COUNTRIES_FILE, sep=None, engine="python")
 crux = pd.read_csv(CRUX_FILE)
 
 results = []
 
+# Alle Länder durchgehen
 for _, country_row in countries.iterrows():
     continent = country_row["continent"]
     country = country_row["country"]
@@ -81,7 +83,7 @@ for _, country_row in countries.iterrows():
 
     print(f"  ccTLD candidates: {len(candidates)}")
 
-    # 2. Top 100 nach CrUX-Rank
+    # 2. Sortieren nach CrUX-Rank
     candidates = candidates.sort_values("rank")
 
     # 3. Sprache prüfen
@@ -107,6 +109,7 @@ for _, country_row in countries.iterrows():
 
     results.extend(valid_websites)
 
+# Ergebnisse in DataFrame umwandeln und speichern
 output = pd.DataFrame(results)
 
 output = output[[

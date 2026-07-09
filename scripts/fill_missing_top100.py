@@ -6,8 +6,10 @@ import tldextract
 from bs4 import BeautifulSoup, XMLParsedAsHTMLWarning
 from langdetect import detect
 
+# Warnungen für BeautifulSoup unterdrücken
 warnings.filterwarnings("ignore", category=XMLParsedAsHTMLWarning)
 
+# Dateien
 COUNTRIES_FILE = "../countries/country_selection.csv"
 EXISTING_FILE = "../websites/top100_websites.csv"
 OUTPUT_FILE = "../websites/top100_websites.csv"
@@ -68,7 +70,7 @@ def normalize_language(language):
     
     return language.split("-")[0]
 
-
+# CSV-Dateien einlesen
 countries = pd.read_csv(COUNTRIES_FILE, sep=None, engine="python", encoding="utf-8-sig")
 existing = pd.read_csv(EXISTING_FILE)
 
@@ -76,6 +78,7 @@ results = existing.to_dict("records")
 
 global_existing_websites = set(existing["website"])
 
+# Alle Länder durchgehen
 for _, country_row in countries.iterrows():
     continent = country_row["continent"]
     country = country_row["country"]
@@ -92,6 +95,7 @@ for _, country_row in countries.iterrows():
     print(f"\nProcessing {country}")
     print(f"  current websites: {current_count}")
 
+    # Wenn bereits genügend Webseiten vorhanden sind, überspringen
     if current_count >= TOP_N:
         print("  already complete")
         continue
@@ -100,9 +104,11 @@ for _, country_row in countries.iterrows():
 
     country_added = []
 
+    # Alle CrUX-Dateien durchgehen
     for crux_file in CRUX_FILES:
         if needed <= 0:
             break
+        # Nur die CrUX-Dateien prüfen, die zur ccTLD passen
         if f"_{cctld[1:]}" not in os.path.basename(crux_file):
             continue
         print(f"  checking {crux_file}")
@@ -116,6 +122,7 @@ for _, country_row in countries.iterrows():
 
         print(f"    ccTLD candidates: {len(candidates)}")
 
+        # Sprache prüfen und hinzufügen
         for _, row in candidates.iterrows():
             if needed <= 0:
                 break
@@ -146,7 +153,7 @@ for _, country_row in countries.iterrows():
     print(f"  final added: {len(country_added)}")
     print(f"  final count: {current_count + len(country_added)}")
 
-
+# Ergebnisse in DataFrame umwandeln und speichern
 output = pd.DataFrame(results)
 output = output[["continent", "country", "website"]]
 
