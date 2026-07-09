@@ -51,6 +51,7 @@ def find_crawl_id(url):
     FROM "browser-crawler"."crawls"
     WHERE url = '{url}'
     AND dom_size != -1
+    ORDER BY created_at DESC
     LIMIT 1
     """
 
@@ -63,10 +64,21 @@ def find_crawl_id(url):
     return None
 
 # Dateiname aus URL und crawl_id bauen
-def build_object_name(url, crawl_id):
+def build_object_names(url, crawl_id):
     scheme, domain = normalize_url(url)
+    names = []
+    if crawl_id is not None:
+        names.append(f"crawls/{crawl_id}/https/{domain}.html")
+        names.append(f"crawls/{crawl_id}/http/{domain}.html")
+        names.append(f"crawls/{crawl_id}/https/www.{domain}.html")
+        names.append(f"crawls/{crawl_id}/http/www.{domain}.html")
 
-    return f"crawls/{crawl_id}/{scheme}/{domain}.html"
+    names.append(f"crawls/https/www.{domain}.html")
+    names.append(f"crawls/https/{domain}.html")
+    names.append(f"crawls/http/www.{domain}.html")
+    names.append(f"crawls/http/{domain}.html")
+
+    return list(dict.fromkeys(names))
 
 #HTML aus Minio laden
 def read_html_from_minio(object_name):
@@ -152,32 +164,24 @@ for index, row in df.iterrows():
     # 1. crawl_id suchen
     crawl_id = find_crawl_id(website)
 
-    # Falls keine crawl_id gefunden wurde, die Webseite als nicht gefunden markieren
-    if crawl_id is None:
-
-        print("  Keine crawl_id gefunden")
-
-        results.append({
-            "continent": continent,
-            "country": country,
-            "website": website,
-            "found": False
-        })
-        continue
-
     # 2. Object Name bauen
-    object_name = build_object_name(website, crawl_id)
+    object_names = build_object_names(website, crawl_id)
 
-    print(f"  Object: {object_name}")
+    print(f"  Object: {object_names}")
 
     # 3. HTML holen
-    try:
-        html = read_html_from_minio(object_name)
-
-    except Exception as e:
-
-        print(f"  HTML nicht gefunden: {e}")
-
+    html = None
+    for object_name in object_names:
+        print(f"  Versuche: {object_name}")
+        try:
+            html = read_html_from_minio(object_name)
+            print(f"  HTML gefunden: {object_name}")
+            break
+        except Exception:
+            pass
+    
+    if html is None:
+        print(f"  HTML nicht gefunden für: {website}")
         results.append({
             "continent": continent,
             "country": country,
