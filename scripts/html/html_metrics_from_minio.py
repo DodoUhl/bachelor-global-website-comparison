@@ -7,8 +7,8 @@ from collections import deque
 import clickhouse_connect
 
 # Dateien
-INPUT_FILE = "../websites/top100_websites.csv"
-OUTPUT_FILE = "../websites/html_metrics.csv"
+INPUT_FILE = "../../websites/top100_websites.csv"
+OUTPUT_FILE = "../../websites/html_metrics.csv"
 
 # Minio-Client
 BUCKET_NAME = "crawler-dom"

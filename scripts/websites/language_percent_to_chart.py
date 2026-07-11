@@ -3,8 +3,8 @@ import matplotlib.pyplot as plt
 from pathlib import Path
 
 # Dateien
-INPUT_FILE = "../websites/language_percentage_by_country.csv"
-OUTPUT_FILE = "../charts/language_percentage_chart.png"
+INPUT_FILE = "../../websites/language_percentage_by_country.csv"
+OUTPUT_FILE = "../../charts/language_percentage_chart.png"
 PERCENT_COLUMN = "percent_of_detected"
 
 # Daten einlesen und vorbereiten

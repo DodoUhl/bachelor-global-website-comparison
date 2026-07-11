@@ -10,8 +10,8 @@ from urllib.parse import urlparse
 import clickhouse_connect
 
 # Dateien
-INPUT_FILE = "../websites/top100_websites.csv"
-OUTPUT_FILE = "../websites/visually_metrics.csv"
+INPUT_FILE = "../../websites/top100_websites.csv"
+OUTPUT_FILE = "../../websites/visually_metrics.csv"
 
 # Minio
 BUCKET_NAME = "crawler-screenshots"

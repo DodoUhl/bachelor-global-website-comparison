@@ -2,8 +2,8 @@ import pandas as pd
 import clickhouse_connect
 
 # Dateien
-INPUT_FILE = "../websites/top100_websites.csv"
-OUTPUT_FILE = "../websites/network_metrics.csv"
+INPUT_FILE = "../../websites/top100_websites.csv"
+OUTPUT_FILE = "../../websites/har_metrics.csv"
 
 # ClickHouse-Client
 CLICKHOUSE_CLIENT = clickhouse_connect.get_client(

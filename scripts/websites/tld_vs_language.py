@@ -11,10 +11,10 @@ from pathlib import Path
 warnings.filterwarnings("ignore", category=XMLParsedAsHTMLWarning)
 
 # Dateien
-COUNTRIES_FILE = "../countries/country_selection.csv"
-CRUX_FILE = "../crux/202605.csv"
-LANGUAGE_CACHE_FILE = "../websites/website_languages.csv"
-OUTPUT_FILE = "../websites/language_percentage_by_country.csv"
+COUNTRIES_FILE = "../../countries/country_selection.csv"
+CRUX_FILE = "../../crux/202605.csv"
+LANGUAGE_CACHE_FILE = "../../websites/website_languages.csv"
+OUTPUT_FILE = "../../websites/language_percentage_by_country.csv"
 
 MAX_WORKERS = 30
 TIMEOUT = 6

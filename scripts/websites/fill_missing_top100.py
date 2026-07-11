@@ -10,18 +10,18 @@ from langdetect import detect
 warnings.filterwarnings("ignore", category=XMLParsedAsHTMLWarning)
 
 # Dateien
-COUNTRIES_FILE = "../countries/country_selection.csv"
-EXISTING_FILE = "../websites/top100_websites.csv"
-OUTPUT_FILE = "../websites/top100_websites.csv"
+COUNTRIES_FILE = "../../countries/country_selection.csv"
+EXISTING_FILE = "../../websites/top100_websites.csv"
+OUTPUT_FILE = "../../websites/top100_websites.csv"
 
 CRUX_FILES = [
-    "../crux/202605_fj.csv",
-    "../crux/202605_pf.csv",
-    "../crux/202605_nc.csv",
-    "../crux/202605_ni.csv",
-    "../crux/202605_pw.csv",
-    "../crux/202605_pg.csv",
-    "../crux/202605_sn.csv",
+    "../../crux/202605_fj.csv",
+    "../../crux/202605_pf.csv",
+    "../../crux/202605_nc.csv",
+    "../../crux/202605_ni.csv",
+    "../../crux/202605_pw.csv",
+    "../../crux/202605_pg.csv",
+    "../../crux/202605_sn.csv",
 ]
 
 # Anzahl der Webseiten pro Land
