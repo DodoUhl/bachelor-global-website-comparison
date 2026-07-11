@@ -1,4 +1,8 @@
 import io
+import cv2
+import numpy as np
+from sklearn.cluster import KMeans
+from scipy.stats import entropy
 import pandas as pd
 from PIL import Image
 from minio import Minio
@@ -86,23 +90,82 @@ def read_screenshot(object_name):
     response = MINIO_CLIENT.get_object(BUCKET_NAME, object_name)
 
     try:
-        image = Image.open(io.BytesIO(response.read()))
-        image.load()
+        data = response.read()
     finally:
         response.close()
         response.release_conn()
 
-    return image
+    image = Image.open(io.BytesIO(data)).convert("RGB")
+
+    return image, len(data)
 
 # Screenshotmetriken
-def calculate_metrics(image):
-    width, height = image.size
+def calculate_metrics(image, file_size):
+
+    rgb = np.array(image)
+
+    height, width = rgb.shape[:2]
+
+    # Screenshot-Höhe
+    screenshot_height = height
+
+    # Unique Colors
+    unique_colors = len(np.unique(rgb.reshape(-1, 3), axis=0))
+
+    # HSV
+    hsv = cv2.cvtColor(rgb, cv2.COLOR_RGB2HSV)
+
+    saturation = hsv[:, :, 1]
+    brightness = hsv[:, :, 2]
+
+    avg_saturation = float(np.mean(saturation))
+    avg_brightness = float(np.mean(brightness))
+
+    # Weißraum, Pixel mit sehr hoher Helligkeit und geringer Sättigung
+    white_pixels = np.logical_and(
+        brightness > 245,
+        saturation < 15
+    )
+
+    whitespace_ratio = white_pixels.mean()
+
+    # Color Entropy
+    pixels = rgb.reshape(-1, 3)
+
+    _, counts = np.unique(pixels, axis=0, return_counts=True)
+
+    probabilities = counts / counts.sum()
+
+    color_entropy = entropy(probabilities, base=2)
+
+    # Dominante Farben (KMeans)
+    sample_size = min(10000, len(pixels))
+
+    idx = np.random.choice(len(pixels), sample_size, replace=False)
+
+    sample = pixels[idx]
+
+    kmeans = KMeans(
+        n_clusters=5,
+        random_state=42,
+        n_init="auto"
+    ).fit(sample)
+
+    dominant_colors = kmeans.cluster_centers_.astype(int)
 
     metrics = {
-        "width": width,
-        "height": height,
-        "pixel_count": width * height,
-        "aspect_ratio": round(width / height, 4) if height else None
+        "dominant_color_1": tuple(dominant_colors[0]),
+        "dominant_color_2": tuple(dominant_colors[1]),
+        "dominant_color_3": tuple(dominant_colors[2]),
+        "dominant_color_4": tuple(dominant_colors[3]),
+        "dominant_color_5": tuple(dominant_colors[4]),
+        "unique_colors": unique_colors,
+        "color_entropy": color_entropy,
+        "average_saturation": avg_saturation,
+        "average_brightness": avg_brightness,
+        "whitespace_ratio": whitespace_ratio,
+        "screenshot_height": screenshot_height,
+        "screenshot_file_size": file_size
     }
 
     return metrics
@@ -129,7 +192,7 @@ for index, row in df.iterrows():
     for object_name in object_names:
         print(f"  Versuche: {object_name}")
         try:
-            image = read_screenshot(object_name)
+            image, file_size = read_screenshot(object_name)
             print(f"  Screenshot gefunden")
             break
         except Exception:
@@ -147,7 +210,7 @@ for index, row in df.iterrows():
 
         continue
 
-    metrics = calculate_metrics(image)
+    metrics = calculate_metrics(image, file_size)
 
     results.append({
         "continent": continent,
