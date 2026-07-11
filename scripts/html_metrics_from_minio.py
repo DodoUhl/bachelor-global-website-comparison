@@ -1,4 +1,3 @@
-import os
 import re
 import pandas as pd
 from minio import Minio
@@ -9,7 +8,7 @@ import clickhouse_connect
 
 # Dateien
 INPUT_FILE = "../websites/top100_websites.csv"
-OUTPUT_FILE = "../websites/top100_websites_metrics.csv"
+OUTPUT_FILE = "../websites/html_metrics.csv"
 
 # Minio-Client
 BUCKET_NAME = "crawler-dom"
