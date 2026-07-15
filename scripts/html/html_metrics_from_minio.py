@@ -72,10 +72,10 @@ def build_object_names(url, crawl_id):
         names.append(f"crawls/{crawl_id}/https/www.{domain}.html")
         names.append(f"crawls/{crawl_id}/http/www.{domain}.html")
 
-    names.append(f"crawls/https/www.{domain}.html")
-    names.append(f"crawls/https/{domain}.html")
-    names.append(f"crawls/http/www.{domain}.html")
-    names.append(f"crawls/http/{domain}.html")
+    names.append(f"https/www.{domain}.html")
+    names.append(f"https/{domain}.html")
+    names.append(f"http/www.{domain}.html")
+    names.append(f"http/{domain}.html")
 
     return list(dict.fromkeys(names))
 
