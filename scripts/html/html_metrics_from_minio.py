@@ -5,6 +5,7 @@ from minio.error import S3Error
 from bs4 import BeautifulSoup
 from urllib.parse import urlparse
 import clickhouse_connect
+import os
 
 # Dateien
 INPUT_FILE = "../../websites/top100_websites.csv"
@@ -12,6 +13,7 @@ OUTPUT_FILE = "../../csv/html_metrics.csv"
 
 # MinIO-Client
 BUCKET_NAME = "crawler-dom"
+
 MINIO_CLIENT = Minio(
     "s3.vs.uni-kassel.de",
     access_key="duhl",
@@ -19,7 +21,7 @@ MINIO_CLIENT = Minio(
     secure=True
 )
 
-# ClickHouse-Client
+# ClickHouse
 CLICKHOUSE_CLIENT = clickhouse_connect.get_client(
     host="bithouse1.vs.uni-kassel.de",
     port=443,
@@ -39,8 +41,7 @@ def normalize_url(url):
 
     return domain
 
-
-# Neuste passende Crawl-ID aus ClickHouse suchen
+# Crawl-ID suchen
 def find_crawl_id(url):
     query = """
     SELECT crawl_id
@@ -73,7 +74,7 @@ def build_versioned_object_names(url):
     ]
 
 
-# Metadatum unabhängig von Groß-/Kleinschreibung lesen
+# Metadatenwert aus Dictionary holen
 def get_metadata_value(metadata, searched_key):
     searched_key = searched_key.lower()
 
@@ -84,19 +85,31 @@ def get_metadata_value(metadata, searched_key):
     return None
 
 
-# HTML aus einer bestimmten Objektversion laden
+# HTML laden
 def read_html_from_minio(object_name, version_id=None):
     response = MINIO_CLIENT.get_object(BUCKET_NAME, object_name, version_id=version_id)
 
     try:
-        content = response.read()
-        return content.decode("utf-8", errors="ignore"), len(content)
+        data = response.read()
     finally:
         response.close()
         response.release_conn()
 
+    return data.decode("utf-8", errors="ignore"), len(data)
 
-# Bei alten Pfaden die Version mit passender Crawl-ID suchen
+# Alle alten Objektpfade prüfen
+def find_html(url, crawl_id):
+    object_names = build_versioned_object_names(url)
+
+    for object_name in object_names:
+        result = find_matching_version(object_name, crawl_id)
+
+        if result is not None:
+            return result
+
+    return None
+
+# Die Version mit passender Crawl-ID suchen
 def find_matching_version(object_name, crawl_id):
     print(f"  Durchsuche Versionen von: {object_name}")
 
@@ -171,18 +184,18 @@ def find_matching_version(object_name, crawl_id):
 
     return None
 
+# Ergebnisse speichern
+def save_result(result):
+    result_df = pd.DataFrame([result])
 
-# Alle alten Objektpfade prüfen
-def find_html(url, crawl_id):
-    object_names = build_versioned_object_names(url)
+    file_exists = os.path.exists(OUTPUT_FILE)
 
-    for object_name in object_names:
-        result = find_matching_version(object_name, crawl_id)
-
-        if result is not None:
-            return result
-
-    return None
+    result_df.to_csv(
+        OUTPUT_FILE,
+        mode="a",
+        header=not file_exists,
+        index=False
+    )
 
 # Textblöcke zählen
 def count_text_blocks(soup):
@@ -201,8 +214,7 @@ def count_text_blocks(soup):
 
     return count
 
-
-# Metriken berechnen
+# HTML Metriken berechnen
 def calculate_metrics(html, html_size):
     soup = BeautifulSoup(html, "html.parser")
 
@@ -225,9 +237,20 @@ def calculate_metrics(html, html_size):
         "text_blocks": count_text_blocks(soup),
     }
 
+# CSV einlesen
 df = pd.read_csv(INPUT_FILE, sep=None, engine="python")
 
-results = []
+processed_websites = set()
+
+if os.path.exists(OUTPUT_FILE):
+    existing_df = pd.read_csv(OUTPUT_FILE)
+
+    if "website" in existing_df.columns:
+        processed_websites = set(
+            existing_df["website"]
+            .dropna()
+            .astype(str)
+        )
 
 for index, row in df.iterrows():
     continent = row["continent"]
@@ -237,17 +260,24 @@ for index, row in df.iterrows():
     print("\n" + "=" * 80)
     print(f"[{index + 1}/{len(df)}] {website}")
 
+    # Bereits gespeicherte Webseite überspringen
+    if website in processed_websites:
+        print("  Bereits bearbeitet. Wird übersprungen.")
+        continue
+
     # 1. Crawl-ID aus ClickHouse
     crawl_id = find_crawl_id(website)
 
     if crawl_id is None:
-        results.append({
+        result ={
             "continent": continent,
             "country": country,
             "website": website,
             "crawl_id": None,
             "found": False
-        })
+        }
+        save_result(result)
+        processed_websites.add(website)
         continue
 
     # 2. Passendes HTML suchen
@@ -256,13 +286,15 @@ for index, row in df.iterrows():
     if found_object is None:
         print(f"  Kein passendes HTML für Crawl-ID {crawl_id} gefunden.")
 
-        results.append({
+        result = {
             "continent": continent,
             "country": country,
             "website": website,
             "crawl_id": crawl_id,
             "found": False
-        })
+        }
+        save_result(result)
+        processed_websites.add(website)
         continue
 
     html = found_object["html"]
@@ -271,17 +303,16 @@ for index, row in df.iterrows():
     # 3. Metriken berechnen
     metrics = calculate_metrics(html, html_size)
 
-    results.append({
+    result = {
         "continent": continent,
         "country": country,
         "website": website,
         "crawl_id": crawl_id,
         "found": True,
         **metrics
-    })
+    }
+    save_result(result)
+    processed_websites.add(website)
     print(f"  Metriken berechnet: {metrics}")
-output_df = pd.DataFrame(results)
-output_df.to_csv(OUTPUT_FILE, index=False)
 
-print("\n" + "=" * 80)
 print(f"Fertig: {OUTPUT_FILE}")

@@ -1,11 +1,12 @@
 import pandas as pd
 import clickhouse_connect
+import os
 
 # Dateien
 INPUT_FILE = "../../websites/top100_websites.csv"
-OUTPUT_FILE = "../../websites/har_metrics.csv"
+OUTPUT_FILE = "../../csv/har_metrics.csv"
 
-# ClickHouse-Client
+# ClickHouse
 CLICKHOUSE_CLIENT = clickhouse_connect.get_client(
     host="bithouse1.vs.uni-kassel.de",
     port=443,
@@ -15,32 +16,35 @@ CLICKHOUSE_CLIENT = clickhouse_connect.get_client(
     verify=False
 )
 
-
-def get_latest_crawl_id(url):
+# Crawl-ID suchen
+def find_crawl_id(url):
     query = f"""
     SELECT crawl_id
     FROM "browser-crawler"."crawls"
     WHERE url = '{url}'
-      AND dom_size != -1
+    AND has(tags, 'ba-dominik-uhl')
     ORDER BY created_at DESC
     LIMIT 1
     """
 
     result = CLICKHOUSE_CLIENT.query(query)
 
-    if len(result.result_rows) == 0:
-        return None
+    if result.result_rows:
+        crawl_id = str(result.result_rows[0][0])
+        print(f"  Crawl-ID gefunden: {crawl_id}")
+        return crawl_id
 
-    return result.result_rows[0][0]
+    print("  Keine passende Crawl-ID gefunden.")
+    return None
 
-
+# Metriken aus HAR-Einträgen berechnen
 def analyze_har(crawl_id):
     query = f"""
     SELECT
-        entry_id,
-        request_url,
-        response_content_type,
-        response_content_size
+    entry_id,
+    request_url,
+    response_content_type,
+    response_content_size
     FROM "browser-crawler"."har_entries"
     WHERE crawl_id = '{crawl_id}'
     """
@@ -92,34 +96,88 @@ def analyze_har(crawl_id):
 
     return metrics
 
-websites = pd.read_csv(INPUT_FILE)
+# Ergebnisse speichern
+def save_result(result):
+    result_df = pd.DataFrame([result])
 
-results = []
+    file_exists = os.path.exists(OUTPUT_FILE)
 
-for _, row in websites.iterrows():
-    url = row["website"]
+    result_df.to_csv(
+        OUTPUT_FILE,
+        mode="a",
+        header=not file_exists,
+        index=False
+    )
 
-    print(url)
+# CSV einlesen
+df = pd.read_csv(INPUT_FILE, sep=None, engine="python")
 
-    crawl_id = get_latest_crawl_id(url)
+processed_websites = set()
 
-    if crawl_id is None:
-        print("  -> Kein Crawl gefunden")
+if os.path.exists(OUTPUT_FILE):
+    existing_df = pd.read_csv(OUTPUT_FILE)
+
+    if "website" in existing_df.columns:
+        processed_websites = set(
+            existing_df["website"]
+            .dropna()
+            .astype(str)
+        )
+
+for index, row in df.iterrows():
+    continent = row["continent"]
+    country = row["country"]
+    website = row["website"]
+
+    print("\n" + "=" * 80)
+    print(f"[{index+1}/{len(df)}] {website}")
+
+    # Bereits gespeicherte Webseite überspringen
+    if website in processed_websites:
+        print("  Bereits bearbeitet. Wird übersprungen.")
         continue
 
+    # 1. Crawl-ID aus ClickHouse
+    crawl_id = find_crawl_id(website)
+
+    if crawl_id is None:
+        result = {
+            "continent": continent,
+            "country": country,
+            "website": website,
+            "crawl_id": None,
+            "found": False
+        }
+        save_result(result)
+        processed_websites.add(website)
+        continue
+
+    # 2. Metriken berechnen
     metrics = analyze_har(crawl_id)
 
     if metrics is None:
         print("  -> Keine HAR-Einträge gefunden")
+        result = {
+            "continent": continent,
+            "country": country,
+            "website": website,
+            "crawl_id": crawl_id,
+            "found": False
+        }
+        save_result(result)
+        processed_websites.add(website)
         continue
 
-    results.append({
-        "continent": row["continent"],
-        "country": row["country"],
-        "website": url,
+    result = {
+        "continent": continent,
+        "country": country,
+        "website": website,
+        "crawl_id": crawl_id,
+        "found": True,
         **metrics
-    })
+    }
+    save_result(result)
+    processed_websites.add(website)
+    print(f"  Metriken berechnet: {metrics}")
 
-pd.DataFrame(results).to_csv(OUTPUT_FILE, index=False)
-
-print(f"Gespeichert unter {OUTPUT_FILE}")
+print(f"\nFertig: {OUTPUT_FILE}")

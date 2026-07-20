@@ -9,10 +9,11 @@ from PIL import Image
 from minio import Minio
 from urllib.parse import urlparse
 import clickhouse_connect
+import os
 
 # Dateien
 INPUT_FILE = "../../websites/top100_websites.csv"
-OUTPUT_FILE = "../../websites/visually_metrics.csv"
+OUTPUT_FILE = "../../csv/visually_metrics.csv"
 
 # Minio
 BUCKET_NAME = "crawler-screenshots"
@@ -51,6 +52,7 @@ def find_crawl_id(url):
     FROM "browser-crawler"."crawls"
     WHERE url = '{url}'
     AND screenshot_full_size != -1
+    AND has(tags, 'ba-dominik-uhl')
     ORDER BY created_at DESC
     LIMIT 1
     """
@@ -75,7 +77,7 @@ def build_versioned_object_names(url):
         f"http/{domain}.full.png",
     ]
 
-# Metadatum unabhängig von Groß-/Kleinschreibung lesen
+# Metadatenwert aus Dictionary holen
 def get_metadata_value(metadata, searched_key):
     searched_key = searched_key.lower()
 
@@ -186,6 +188,19 @@ def find_matching_version(object_name, crawl_id):
 
     return None
 
+# Ergebnisse speichern
+def save_result(result):
+    result_df = pd.DataFrame([result])
+
+    file_exists = os.path.exists(OUTPUT_FILE)
+
+    result_df.to_csv(
+        OUTPUT_FILE,
+        mode="a",
+        header=not file_exists,
+        index=False
+    )
+
 # Screenshotmetriken
 def calculate_metrics(image, file_size):
 
@@ -260,7 +275,18 @@ def calculate_metrics(image, file_size):
 # CSV einlesen
 df = pd.read_csv(INPUT_FILE, sep=None, engine="python")
 
-results = []
+processed_websites = set()
+
+if os.path.exists(OUTPUT_FILE):
+    existing_df = pd.read_csv(OUTPUT_FILE)
+
+    if "website" in existing_df.columns:
+        processed_websites = set(
+            existing_df["website"]
+            .dropna()
+            .astype(str)
+        )
+
 
 for index, row in df.iterrows():
 
@@ -270,18 +296,25 @@ for index, row in df.iterrows():
 
     print("\n" + "=" * 80)
     print(f"[{index+1}/{len(df)}] {website}")
+    
+    # Bereits gespeicherte Webseite überspringen
+    if website in processed_websites:
+        print("  Bereits bearbeitet. Wird übersprungen.")
+        continue
 
     # 1. Crawl-ID aus ClickHouse
     crawl_id = find_crawl_id(website)
 
     if crawl_id is None:
-        results.append({
+        result = {
             "continent": continent,
             "country": country,
             "website": website,
             "crawl_id": None,
             "found": False
-        })
+        }
+        save_result(result)
+        processed_websites.add(website)
         continue
 
     # 2. Passendes Screenshot suchen
@@ -290,14 +323,17 @@ for index, row in df.iterrows():
     if found_object is None:
         print(f"  Kein passendes Screenshot für Crawl-ID {crawl_id} gefunden.")
 
-        results.append({
+        result = {
             "continent": continent,
             "country": country,
             "website": website,
             "crawl_id": crawl_id,
             "found": False
-        })
-        continue
+        }
+        save_result(result)
+        processed_websites.add(website)
+        continue    
+  
 
     image = found_object["image"]
     image_size = found_object["image_size"]
@@ -305,17 +341,16 @@ for index, row in df.iterrows():
     # 3. Metriken berechnen
     metrics = calculate_metrics(image, image_size)
 
-    results.append({
+    result = {
         "continent": continent,
         "country": country,
         "website": website,
         "crawl_id": crawl_id,
         "found": True,
         **metrics
-    })
+    }
+    save_result(result)
+    processed_websites.add(website)
     print(f"  Metriken berechnet: {metrics}")
-
-output_df = pd.DataFrame(results)
-output_df.to_csv(OUTPUT_FILE, index=False)
 
 print(f"\nFertig: {OUTPUT_FILE}")
