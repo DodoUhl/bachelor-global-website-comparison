@@ -1,4 +1,5 @@
 import io
+from minio.error import S3Error
 import cv2
 import numpy as np
 from sklearn.cluster import KMeans
@@ -36,16 +37,12 @@ CLICKHOUSE_CLIENT = clickhouse_connect.get_client(
 # URL normalisieren
 def normalize_url(url):
     url = str(url).strip().rstrip("/")
-
     parsed = urlparse(url)
 
     scheme = parsed.scheme.lower()
     domain = parsed.netloc.lower()
 
-    if domain.startswith("www."):
-        domain = domain[4:]
-
-    return scheme, domain
+    return domain
 
 # Crawl-ID suchen
 def find_crawl_id(url):
@@ -53,7 +50,7 @@ def find_crawl_id(url):
     SELECT crawl_id
     FROM "browser-crawler"."crawls"
     WHERE url = '{url}'
-    AND dom_size != -1
+    AND screenshot_full_size != -1
     ORDER BY created_at DESC
     LIMIT 1
     """
@@ -61,33 +58,36 @@ def find_crawl_id(url):
     result = CLICKHOUSE_CLIENT.query(query)
 
     if result.result_rows:
-        print(f"  Crawl ID gefunden: {result.result_rows[0][0]}")
-        return result.result_rows[0][0]
+        crawl_id = str(result.result_rows[0][0])
+        print(f"  Crawl-ID gefunden: {crawl_id}")
+        return crawl_id
 
+    print("  Keine passende Crawl-ID gefunden.")
     return None
 
 # Dateinamen erzeugen
-def build_object_names(url, crawl_id):
-    scheme, domain = normalize_url(url)
+def build_versioned_object_names(url):
+    print(f"  Suche nach Pfaden für: {url}")
+    domain = normalize_url(url)
 
-    names = []
+    return [
+        f"https/{domain}.full.png",
+        f"http/{domain}.full.png",
+    ]
 
-    if crawl_id is not None:
-        names.append(f"crawls/{crawl_id}/https/{domain}.png")
-        names.append(f"crawls/{crawl_id}/http/{domain}.png")
-        names.append(f"crawls/{crawl_id}/https/www.{domain}.png")
-        names.append(f"crawls/{crawl_id}/http/www.{domain}.png")
+# Metadatum unabhängig von Groß-/Kleinschreibung lesen
+def get_metadata_value(metadata, searched_key):
+    searched_key = searched_key.lower()
 
-    names.append(f"crawls/https/www.{domain}.png")
-    names.append(f"crawls/https/{domain}.png")
-    names.append(f"crawls/http/www.{domain}.png")
-    names.append(f"crawls/http/{domain}.png")
+    for key, value in metadata.items():
+        if key.lower() == searched_key:
+            return value
 
-    return list(dict.fromkeys(names))
+    return None
 
 # Screenshot laden
-def read_screenshot(object_name):
-    response = MINIO_CLIENT.get_object(BUCKET_NAME, object_name)
+def read_screenshot_from_minio(object_name, version_id=None):
+    response = MINIO_CLIENT.get_object(BUCKET_NAME, object_name, version_id=version_id)
 
     try:
         data = response.read()
@@ -98,6 +98,93 @@ def read_screenshot(object_name):
     image = Image.open(io.BytesIO(data)).convert("RGB")
 
     return image, len(data)
+
+# Alle alten Objektpfade prüfen
+def find_screenshot(url, crawl_id):
+    object_names = build_versioned_object_names(url)
+
+    for object_name in object_names:
+        result = find_matching_version(object_name, crawl_id)
+
+        if result is not None:
+            return result
+
+    return None
+
+# Die Version mit passender Crawl-ID suchen
+def find_matching_version(object_name, crawl_id):
+    print(f"  Durchsuche Versionen von: {object_name}")
+
+    try:
+        versions = MINIO_CLIENT.list_objects(
+            BUCKET_NAME,
+            prefix=object_name,
+            recursive=True,
+            include_version=True
+        )
+
+        for version in versions:
+            # Prefix-Suche kann auch andere Objekte liefern
+            if version.object_name != object_name:
+                continue
+
+            # Delete Marker überspringen
+            if getattr(version, "is_delete_marker", False):
+                continue
+
+            try:
+                stat = MINIO_CLIENT.stat_object(
+                    BUCKET_NAME,
+                    object_name,
+                    version_id=version.version_id
+                )
+
+                metadata_crawl_id = get_metadata_value(
+                    stat.metadata,
+                    "x-amz-meta-crawl-id"
+                )
+
+                print(
+                    f"    Version: {version.version_id} | "
+                    f"Datum: {version.last_modified} | "
+                    f"Crawl-ID: {metadata_crawl_id}"
+                )
+
+                if (
+                    metadata_crawl_id is not None
+                    and str(metadata_crawl_id) == str(crawl_id)
+                ):
+                    image, image_size = read_screenshot_from_minio(
+                        object_name,
+                        version_id=version.version_id
+                    )
+                    image_size = stat.size
+                    print("  Passende MinIO-Version gefunden.")
+
+                    return {
+                        "image": image,
+                        "image_size": image_size
+                    }
+
+            except S3Error as error:
+                print(
+                    f"    Version {version.version_id} "
+                    f"konnte nicht geprüft werden: {error}"
+                )
+
+            except Exception as error:
+                print(
+                    f"    Fehler bei Version {version.version_id}: {error}"
+                )
+
+    except S3Error as error:
+        if error.code not in {"NoSuchKey", "NoSuchObject"}:
+            print(f"  Fehler beim Auflisten der Versionen: {error}")
+
+    except Exception as error:
+        print(f"  Fehler beim Auflisten der Versionen: {error}")
+
+    return None
 
 # Screenshotmetriken
 def calculate_metrics(image, file_size):
@@ -181,44 +268,52 @@ for index, row in df.iterrows():
     country = row["country"]
     website = row["website"]
 
+    print("\n" + "=" * 80)
     print(f"[{index+1}/{len(df)}] {website}")
 
+    # 1. Crawl-ID aus ClickHouse
     crawl_id = find_crawl_id(website)
 
-    object_names = build_object_names(website, crawl_id)
+    if crawl_id is None:
+        results.append({
+            "continent": continent,
+            "country": country,
+            "website": website,
+            "crawl_id": None,
+            "found": False
+        })
+        continue
 
-    image = None
+    # 2. Passendes Screenshot suchen
+    found_object = find_screenshot(website, crawl_id)
 
-    for object_name in object_names:
-        print(f"  Versuche: {object_name}")
-        try:
-            image, file_size = read_screenshot(object_name)
-            print(f"  Screenshot gefunden")
-            break
-        except Exception:
-            pass
-
-    if image is None:
-        print("  Screenshot nicht gefunden")
+    if found_object is None:
+        print(f"  Kein passendes Screenshot für Crawl-ID {crawl_id} gefunden.")
 
         results.append({
             "continent": continent,
             "country": country,
             "website": website,
+            "crawl_id": crawl_id,
             "found": False
         })
-
         continue
 
-    metrics = calculate_metrics(image, file_size)
+    image = found_object["image"]
+    image_size = found_object["image_size"]
+
+    # 3. Metriken berechnen
+    metrics = calculate_metrics(image, image_size)
 
     results.append({
         "continent": continent,
         "country": country,
         "website": website,
+        "crawl_id": crawl_id,
         "found": True,
         **metrics
     })
+    print(f"  Metriken berechnet: {metrics}")
 
 output_df = pd.DataFrame(results)
 output_df.to_csv(OUTPUT_FILE, index=False)

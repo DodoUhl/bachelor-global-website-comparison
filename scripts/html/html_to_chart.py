@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Dateien
-INPUT_FILE = "../../websites/top100_websites_metrics.csv"
+INPUT_FILE = "../../csv/html_metrics.csv"
 OUTPUT_DIR = "../../charts/html"
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
