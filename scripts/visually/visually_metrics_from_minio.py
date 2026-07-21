@@ -203,7 +203,6 @@ def save_result(result):
 
 # Screenshotmetriken
 def calculate_metrics(image, file_size):
-
     rgb = np.array(image)
 
     height, width = rgb.shape[:2]
@@ -211,8 +210,17 @@ def calculate_metrics(image, file_size):
     # Screenshot-Höhe
     screenshot_height = height
 
+    # Color Entropy
+    pixels = rgb.reshape(-1, 3)
+
+    unique_pixel_values, counts = np.unique(pixels, axis=0, return_counts=True)
+
+    probabilities = counts / counts.sum()
+
+    color_entropy = entropy(probabilities, base=2)
+
     # Unique Colors
-    unique_colors = len(np.unique(rgb.reshape(-1, 3), axis=0))
+    unique_colors = len(unique_pixel_values)
 
     # HSV
     hsv = cv2.cvtColor(rgb, cv2.COLOR_RGB2HSV)
@@ -230,15 +238,6 @@ def calculate_metrics(image, file_size):
     )
 
     whitespace_ratio = white_pixels.mean()
-
-    # Color Entropy
-    pixels = rgb.reshape(-1, 3)
-
-    _, counts = np.unique(pixels, axis=0, return_counts=True)
-
-    probabilities = counts / counts.sum()
-
-    color_entropy = entropy(probabilities, base=2)
 
     # Dominante Farben (KMeans)
     sample_size = min(10000, len(pixels))
@@ -269,7 +268,6 @@ def calculate_metrics(image, file_size):
         "screenshot_height": screenshot_height,
         "screenshot_file_size": file_size
     }
-
     return metrics
 
 # CSV einlesen

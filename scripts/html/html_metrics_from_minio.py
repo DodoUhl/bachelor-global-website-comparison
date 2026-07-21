@@ -224,7 +224,7 @@ def calculate_metrics(html, html_size):
     return {
         "dom_size": html_size,
         "links": len(soup.find_all("a")),
-        "images": len(soup.find_all("img")), # Oder response_content_type LIKE 'image/%'
+        "images": len(soup.find_all("img")),
         "forms": len(soup.find_all("form")),
         "tables": len(soup.find_all("table")),
         "buttons": (
