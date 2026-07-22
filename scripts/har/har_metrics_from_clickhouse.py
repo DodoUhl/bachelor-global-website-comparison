@@ -37,6 +37,30 @@ def find_crawl_id(url):
     print("  Keine passende Crawl-ID gefunden.")
     return None
 
+# Alle Crawl-IDs mit BA- oder CrUX-Tag suchen
+def find_all_crawl_ids(url):
+
+    query = f"""
+    SELECT crawl_id
+    FROM "browser-crawler"."crawls"
+    WHERE url = '{url}'
+      AND (
+          has(tags, 'ba-dominik-uhl')
+          OR has(tags, 'crux'))
+    ORDER BY created_at DESC
+    """
+
+    result = CLICKHOUSE_CLIENT.query(query)
+
+    crawl_ids = []
+
+    for crawl_id in result.result_rows:
+        crawl_ids.append(str(crawl_id[0]))
+
+    print(f"  {len(crawl_ids)} mögliche Crawl-IDs gefunden.")
+
+    return crawl_ids
+
 # Metriken aus HAR-Einträgen berechnen
 def analyze_har(crawl_id):
     query = f"""
@@ -109,6 +133,29 @@ def save_result(result):
         index=False
     )
 
+# Vorhandenen CSV-Eintrag aktualisieren
+def update_result(result):
+    output_df = pd.read_csv(OUTPUT_FILE)
+
+    website = str(result["website"])
+
+    website_mask = (
+        output_df["website"]
+        .astype(str)
+        .eq(website)
+    )
+
+    if website_mask.any():
+        for column, value in result.items():
+            output_df.loc[website_mask, column] = value
+    else:
+        output_df = pd.concat(
+            [output_df, pd.DataFrame([result])],
+            ignore_index=True
+        )
+    # Nach jeder bearbeiteten Webseite speichern
+    output_df.to_csv(OUTPUT_FILE, index=False)
+
 # CSV einlesen
 df = pd.read_csv(INPUT_FILE, sep=None, engine="python")
 
@@ -179,5 +226,75 @@ for index, row in df.iterrows():
     save_result(result)
     processed_websites.add(website)
     print(f"  Metriken berechnet: {metrics}")
+
+if os.path.exists(OUTPUT_FILE):
+    output_df = pd.read_csv(OUTPUT_FILE)
+    not_found_df = output_df[output_df["found"] == False].copy()
+
+    print(not_found_df)
+    total_not_found = len(not_found_df)
+
+    print(
+        f"{total_not_found} nicht gefundene Webseiten werden erneut geprüft."
+    )
+
+    for position, (_, row) in enumerate(not_found_df.iterrows(),start=1):
+        continent = row["continent"]
+        country = row["country"]
+        website = row["website"]
+
+        old_crawl_id = row.get("crawl_id")
+
+        print("\n" + "=" * 80)
+        print(
+            f"[Nachsuche {position}/{total_not_found}] "
+            f"{website}"
+        )
+
+        # Alle Crawls abrufen
+        crawl_ids = find_all_crawl_ids(website)
+
+        if not crawl_ids:
+            print("  Keine weiteren Crawls gefunden.")
+            continue
+
+        matching_object = None
+        matching_crawl_id = None
+
+        # Crawls vom neuesten zum ältesten prüfen
+        for crawl_id in crawl_ids:
+            # Die bereits erfolglos geprüfte Crawl-ID überspringen
+            if (
+                pd.notna(old_crawl_id)
+                and str(old_crawl_id) == str(crawl_id)
+            ):
+                print(
+                    f"Crawl {crawl_id} wurde bereits geprüft."
+                )
+                continue
+
+            # Metriken berechnen
+            metrics = analyze_har(crawl_id)
+
+            if metrics is not None:
+                matching_crawl_id = crawl_id
+                result = {
+                "continent": continent,
+                "country": country,
+                "website": website,
+                "crawl_id": matching_crawl_id,
+                "found": True,
+                **metrics
+                }
+                
+                update_result(result)
+                print(f"  Erfolgreich mit Crawl-ID {matching_crawl_id}.")
+                print(f"  Metriken berechnet: {metrics}")
+                break
+
+            print(
+                f"  Kein HAR-Datensatz für Crawl-ID "
+                f"{crawl_id} gefunden."
+            )
 
 print(f"\nFertig: {OUTPUT_FILE}")
