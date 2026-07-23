@@ -59,7 +59,7 @@ for metric in numeric_columns:
     plt.savefig(
         os.path.join(
             OUTPUT_DIR,
-            f"{metric}_countries.png"
+            f"html_{metric}_countries.png"
         ),
         dpi=300
     )
@@ -99,7 +99,7 @@ for metric in numeric_columns:
     plt.savefig(
         os.path.join(
             OUTPUT_DIR,
-            f"{metric}_continents.png"
+            f"html_{metric}_continents.png"
         ),
         dpi=300
     )

@@ -2,7 +2,7 @@ import os
 import pandas as pd
 import matplotlib.pyplot as plt
 
-INPUT_FILE = "../../websites/har_metrics.csv"
+INPUT_FILE = "../../csv/har_metrics.csv"
 OUTPUT_DIR = "../../charts/har"
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
@@ -52,7 +52,7 @@ for metric in numeric_columns:
     plt.savefig(
         os.path.join(
             OUTPUT_DIR,
-            f"{metric}_countries.png"
+            f"har_{metric}_countries.png"
         )
     )
 
@@ -91,7 +91,7 @@ for metric in numeric_columns:
     plt.savefig(
         os.path.join(
             OUTPUT_DIR,
-            f"{metric}_continents.png"
+            f"har_{metric}_continents.png"
         )
     )
 

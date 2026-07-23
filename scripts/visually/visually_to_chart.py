@@ -4,7 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Dateien
-INPUT_FILE = "../../websites/screenshot_metrics.csv"
+INPUT_FILE = "../../csv/visually_metrics.csv"
 OUTPUT_DIR = "../../charts/visually"
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
@@ -54,7 +54,7 @@ for metric in numeric_columns:
     plt.savefig(
         os.path.join(
             OUTPUT_DIR,
-            f"{metric}_countries.png"
+            f"visually_{metric}_countries.png"
         ),
         dpi=300
     )
@@ -94,7 +94,7 @@ for metric in numeric_columns:
     plt.savefig(
         os.path.join(
             OUTPUT_DIR,
-            f"{metric}_continents.png"
+            f"visually_{metric}_continents.png"
         ),
         dpi=300
     )
