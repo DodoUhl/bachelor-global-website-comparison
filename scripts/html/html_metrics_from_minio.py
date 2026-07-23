@@ -10,6 +10,10 @@ import os
 # Dateien
 INPUT_FILE = "../../websites/top100_websites.csv"
 OUTPUT_FILE = "../../csv/html_metrics.csv"
+DATABASE = os.getenv("CLICKHOUSE_DATABASE", 'browser-crawler')
+TABLE_CRAWLS = os.getenv("CLICKHOUSE_TABLE_CRAWLS", 'crawls')
+CRAWL_TAG = os.getenv("CRAWL_TAG", "ba-dominik-uhl")
+CRAWL_TAGS = os.getenv("CRAWL_TAGS", "ba-dominik-uhl,crux").split(",")
 
 # MinIO-Client
 BUCKET_NAME = "crawler-dom"
@@ -43,17 +47,22 @@ def normalize_url(url):
 
 # Crawl-ID suchen
 def find_crawl_id(url):
-    query = f"""
+    query = """
     SELECT crawl_id
-    FROM "browser-crawler"."crawls"
-    WHERE url = '{url}'
-    AND has(tags, 'ba-dominik-uhl')
+    FROM {database:Identifier}.{table:Identifier}
+    WHERE url = {url:String}
+    AND (has(tags, {tag:String}))
     AND dom_size != -1
     ORDER BY created_at DESC
     LIMIT 1
     """
 
-    result = CLICKHOUSE_CLIENT.query(query)
+    result = CLICKHOUSE_CLIENT.query(query, parameters={
+        "url": url,
+        "database": DATABASE,
+        "table": TABLE_CRAWLS,
+        "tag": CRAWL_TAG
+    })
 
     if result.result_rows:
         crawl_id = str(result.result_rows[0][0])
@@ -63,21 +72,24 @@ def find_crawl_id(url):
     print("  Keine passende Crawl-ID gefunden.")
     return None
 
-# Alle Crawl-IDs mit BA- oder CrUX-Tag suchen
+# Alle Crawl-IDs suchen
 def find_all_crawl_ids(url):
 
-    query = f"""
+    query = """
     SELECT crawl_id
-    FROM "browser-crawler"."crawls"
-    WHERE url = '{url}'
-      AND (
-          has(tags, 'ba-dominik-uhl')
-          OR has(tags, 'crux'))
+    FROM {database:Identifier}.{table:Identifier}
+    WHERE url = {url:String}
+    AND (hasAny(tags, {tags:Array(String)}))
     AND dom_size != -1
     ORDER BY created_at DESC
     """
 
-    result = CLICKHOUSE_CLIENT.query(query)
+    result = CLICKHOUSE_CLIENT.query(query,parameters={
+        "url": url,
+        "tags": CRAWL_TAGS,
+        "database": DATABASE,
+        "table": TABLE_CRAWLS
+    })
 
     crawl_ids = []
 
@@ -162,6 +174,7 @@ def find_matching_version(object_name, crawl_id):
                     version_id=version.version_id
                 )
 
+                # Crawl-ID aus den Metadaten abrufen
                 metadata_crawl_id = get_metadata_value(
                     stat.metadata,
                     "x-amz-meta-crawl-id"
@@ -177,6 +190,7 @@ def find_matching_version(object_name, crawl_id):
                     metadata_crawl_id is not None
                     and str(metadata_crawl_id) == str(crawl_id)
                 ):
+                    # Passende Version gefunden
                     html, html_size = read_html_from_minio(
                         object_name,
                         version_id=version.version_id
@@ -367,11 +381,11 @@ for index, row in df.iterrows():
     processed_websites.add(website)
     print(f"  Metriken berechnet: {metrics}")
 
+# Nachsuche für nicht gefundene Webseiten
 if os.path.exists(OUTPUT_FILE):
     output_df = pd.read_csv(OUTPUT_FILE)
     not_found_df = output_df[output_df["found"] == False].copy()
 
-    print(not_found_df)
     total_not_found = len(not_found_df)
 
     print(
@@ -412,7 +426,7 @@ if os.path.exists(OUTPUT_FILE):
                     f"Crawl {crawl_id} wurde bereits geprüft."
                 )
                 continue
-
+            # Passendes HTML suchen
             found_object = find_html(
                 website,
                 crawl_id

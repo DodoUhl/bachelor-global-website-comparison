@@ -5,6 +5,11 @@ import os
 # Dateien
 INPUT_FILE = "../../websites/top100_websites.csv"
 OUTPUT_FILE = "../../csv/har_metrics.csv"
+DATABASE = os.getenv("CLICKHOUSE_DATABASE", 'browser-crawler')
+TABLE_CRAWLS = os.getenv("CLICKHOUSE_TABLE_CRAWLS", 'crawls')
+TABLE_HAR_ENTRIES = os.getenv("CLICKHOUSE_TABLE_HAR", "har_entries")
+CRAWL_TAG = os.getenv("CRAWL_TAG", "ba-dominik-uhl")
+CRAWL_TAGS = os.getenv("CRAWL_TAGS", "ba-dominik-uhl,crux").split(",")
 
 # ClickHouse
 CLICKHOUSE_CLIENT = clickhouse_connect.get_client(
@@ -18,16 +23,21 @@ CLICKHOUSE_CLIENT = clickhouse_connect.get_client(
 
 # Crawl-ID suchen
 def find_crawl_id(url):
-    query = f"""
+    query = """
     SELECT crawl_id
-    FROM "browser-crawler"."crawls"
-    WHERE url = '{url}'
-    AND has(tags, 'ba-dominik-uhl')
+    FROM {database:Identifier}.{table:Identifier}
+    WHERE url = {url:String}
+    AND (has(tags, {tag:String}))
     ORDER BY created_at DESC
     LIMIT 1
     """
 
-    result = CLICKHOUSE_CLIENT.query(query)
+    result = CLICKHOUSE_CLIENT.query(query, parameters={
+        "url": url,
+        "database": DATABASE,
+        "table": TABLE_CRAWLS,
+        "tag": CRAWL_TAG
+    })
 
     if result.result_rows:
         crawl_id = str(result.result_rows[0][0])
@@ -40,17 +50,20 @@ def find_crawl_id(url):
 # Alle Crawl-IDs mit BA- oder CrUX-Tag suchen
 def find_all_crawl_ids(url):
 
-    query = f"""
+    query = """
     SELECT crawl_id
-    FROM "browser-crawler"."crawls"
-    WHERE url = '{url}'
-      AND (
-          has(tags, 'ba-dominik-uhl')
-          OR has(tags, 'crux'))
+    FROM {database:Identifier}.{table:Identifier}
+    WHERE url = {url:String}
+    AND (hasAny(tags, {tags:Array(String)}))
     ORDER BY created_at DESC
     """
 
-    result = CLICKHOUSE_CLIENT.query(query)
+    result = CLICKHOUSE_CLIENT.query(query,parameters={
+        "url": url,
+        "tags": CRAWL_TAGS,
+        "database": DATABASE,
+        "table": TABLE_CRAWLS
+    })
 
     crawl_ids = []
 
@@ -63,17 +76,20 @@ def find_all_crawl_ids(url):
 
 # Metriken aus HAR-Einträgen berechnen
 def analyze_har(crawl_id):
-    query = f"""
+    query = """
     SELECT
     entry_id,
     request_url,
     response_content_type,
     response_content_size
-    FROM "browser-crawler"."har_entries"
-    WHERE crawl_id = '{crawl_id}'
+    FROM {database:Identifier}.{table:Identifier}
+    WHERE crawl_id = {crawl_id:String}
     """
-
-    result = CLICKHOUSE_CLIENT.query(query)
+    result = CLICKHOUSE_CLIENT.query(query, parameters={
+        "crawl_id": crawl_id,
+        "database": DATABASE,
+        "table": TABLE_HAR_ENTRIES
+    })
 
     if len(result.result_rows) == 0:
         return None
@@ -91,6 +107,7 @@ def analyze_har(crawl_id):
     # Negative Größen auf 0 setzen
     df["content_size"] = df["content_size"].clip(lower=0)
 
+    # Metriken initialisieren
     metrics = {
         "num_requests": len(df),
         "html": 0,
@@ -103,6 +120,7 @@ def analyze_har(crawl_id):
 
     for ct in df["content_type"].fillna("").str.lower():
 
+        # HTML, CSS, JavaScript, Bilder und Schriftarten zählen
         if "text/html" in ct:
             metrics["html"] += 1
 
@@ -227,11 +245,11 @@ for index, row in df.iterrows():
     processed_websites.add(website)
     print(f"  Metriken berechnet: {metrics}")
 
+# Nachsuche für nicht gefundene Webseiten
 if os.path.exists(OUTPUT_FILE):
     output_df = pd.read_csv(OUTPUT_FILE)
     not_found_df = output_df[output_df["found"] == False].copy()
 
-    print(not_found_df)
     total_not_found = len(not_found_df)
 
     print(
@@ -286,7 +304,8 @@ if os.path.exists(OUTPUT_FILE):
                 "found": True,
                 **metrics
                 }
-                
+
+                # Bestehenden False-Eintrag aktualisieren
                 update_result(result)
                 print(f"  Erfolgreich mit Crawl-ID {matching_crawl_id}.")
                 print(f"  Metriken berechnet: {metrics}")
