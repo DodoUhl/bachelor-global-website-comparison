@@ -269,31 +269,38 @@ def update_result(result):
 
 # Screenshotmetriken
 def calculate_metrics(image, file_size):
+    # RGB-Array aus Bild erzeugen
     rgb = np.array(image)
 
+    # Höhe und Breite des Arrays
     height, width = rgb.shape[:2]
 
     # Screenshot-Höhe
     screenshot_height = height
 
     # Color Entropy
+    # Alle Pixel als Liste in RGB
     pixels = rgb.reshape(-1, 3)
 
+    # Alle unterschiedlichen RGB-Farben + Wie häufig jede Farbe vorkommt
     unique_pixel_values, counts = np.unique(pixels, axis=0, return_counts=True)
 
+    # Häufigkeit pro Farbe 
     probabilities = counts / counts.sum()
 
+    # Niedrige Entropie: wenige Farben, Hohe Entropie: viele Farben
     color_entropy = entropy(probabilities, base=2)
 
-    # Unique Colors
+    # Anzahl Farben
     unique_colors = len(unique_pixel_values)
 
-    # HSV
+    # HSV (Hue – Farbton, Saturation – Sättigung, Value – Helligkeit)
     hsv = cv2.cvtColor(rgb, cv2.COLOR_RGB2HSV)
 
     saturation = hsv[:, :, 1]
     brightness = hsv[:, :, 2]
 
+    # Mittelwert
     avg_saturation = float(np.mean(saturation))
     avg_brightness = float(np.mean(brightness))
 
@@ -306,18 +313,21 @@ def calculate_metrics(image, file_size):
     whitespace_ratio = white_pixels.mean()
 
     # Dominante Farben (KMeans)
+    # Stichprobenauswahl von 10 000 Pixeln statt ganzes Bild
     sample_size = min(10000, len(pixels))
 
     idx = np.random.choice(len(pixels), sample_size, replace=False)
 
     sample = pixels[idx]
 
+    # In 5 Farbgruppen aufteilen
     kmeans = KMeans(
         n_clusters=5,
         random_state=42,
         n_init="auto"
     ).fit(sample)
 
+    # RGB-Farben aus den 5 Clustern erstellen
     dominant_colors = kmeans.cluster_centers_.astype(int)
 
     metrics = {
