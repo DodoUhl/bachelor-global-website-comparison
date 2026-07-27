@@ -17,12 +17,10 @@ df = df[df["found"] == True]
 # Numerische Spalten bestimmen
 numeric_columns = df.select_dtypes(include="number").columns
 
-# "found" (0/1 bzw. bool) ausschließen
-numeric_columns = [col for col in numeric_columns if col != "found"]
-
 for metric in numeric_columns:
 
     # Länder
+    # Nach Länder sortieren -> Mittelwert, Median und Standardabweichung berechenen -> Nach Mittelwert sortieren
     country_stats = (
         df.groupby("country")[metric]
         .agg(["mean", "median", "std"])
@@ -31,6 +29,7 @@ for metric in numeric_columns:
 
     plt.figure(figsize=(10, 10))
 
+    # Balken für Mittelwert und Standardabweichung einzeichnen
     plt.bar(
         country_stats.index,
         country_stats["mean"],
@@ -38,6 +37,7 @@ for metric in numeric_columns:
         capsize=5
     )
 
+    # Median als roten Punkt einzeichnen
     plt.scatter(
         range(len(country_stats)),
         country_stats["median"],
@@ -60,13 +60,13 @@ for metric in numeric_columns:
         os.path.join(
             OUTPUT_DIR,
             f"html_{metric}_countries.png"
-        ),
-        dpi=300
+        )
     )
 
     plt.close()
 
     # Kontinente
+    # Nach Länder sortieren -> Mittelwert und Median berechenen -> Nach Mittelwert sortieren
     continent_stats = (
         df.groupby("continent")[metric]
         .agg(["mean", "median"])
@@ -75,11 +75,13 @@ for metric in numeric_columns:
 
     plt.figure(figsize=(10, 10))
 
+    # Balken für Mittelwert einzeichnen
     plt.bar(
         continent_stats.index,
         continent_stats["mean"]
     )
 
+    # Median als roten Punkt einzeichnen
     plt.scatter(
         range(len(continent_stats)),
         continent_stats["median"],
@@ -100,8 +102,7 @@ for metric in numeric_columns:
         os.path.join(
             OUTPUT_DIR,
             f"html_{metric}_continents.png"
-        ),
-        dpi=300
+        )
     )
 
     plt.close()

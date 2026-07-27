@@ -7,50 +7,71 @@ from matplotlib.patches import Rectangle
 from sklearn.cluster import KMeans  
 
 # Dateien
-INPUT_FILE = "../../csv/visually_metrics.csv"
+INPUT_FILE = "../../csv/visually_metrics Kopie.csv"
 OUTPUT_DIR = "../../charts/visually"
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+COLOR_COLUMNS = [
+    "dominant_color_1",
+    "dominant_color_2",
+    "dominant_color_3",
+    "dominant_color_4",
+    "dominant_color_5"
+]
+
+RATIO_COLUMNS = [
+    "dominant_color_1_ratio",
+    "dominant_color_2_ratio",
+    "dominant_color_3_ratio",
+    "dominant_color_4_ratio",
+    "dominant_color_5_ratio"
+]
 
 def parse_rgb(value):
     if pd.isna(value):
         return None
 
-    # NumPy-Datentypen aus dem Text entfernen
-    cleaned_value = re.sub(r"np\.\w+", "", str(value))
+    cleaned_value = re.sub(
+        r"np\.\w+",
+        "",
+        str(value)
+    )
 
-    numbers = re.findall(r"-?\d+", cleaned_value)
+    numbers = re.findall(
+        r"-?\d+",
+        cleaned_value
+    )
 
     if len(numbers) < 3:
         return None
 
-    rgb = tuple(
+    return tuple(
         max(0, min(255, int(number)))
         for number in numbers[:3]
     )
 
-    return rgb
-
-
-def calculate_representative_palette(group, color_columns, number_of_colors=5):
-    """
-    Berechnet für eine Gruppe fünf repräsentative Farben.
-    Die Farben werden nach der Größe ihres Clusters sortiert.
-    """
+# Gemeinsame Farbe für 5 Gruppen erstellen
+def calculate_representative_palette(group, color_columns, ratio_columns, number_of_colors=5):
     colors = []
+    color_weights = []
 
-    for column in color_columns:
-        parsed_colors = group[column].apply(parse_rgb)
-        colors.extend(
-            color for color in parsed_colors
-            if color is not None
-        )
+    # Nur gültige Farben in colors speichern
+    for color_column, ratio_column in zip(color_columns,ratio_columns):
+        parsed_colors = group[color_column].apply(parse_rgb)
+        ratios = pd.to_numeric(group[ratio_column])
+
+        for color, weight in zip(parsed_colors,ratios):
+            if (color is not None and pd.notna(weight) and weight > 0 ):
+                colors.append(color)
+                color_weights.append(float(weight))
 
     if not colors:
         return []
 
-    colors = np.array(colors, dtype=float)
-
+    colors = np.asarray(colors, dtype=float)
+    color_weights = np.asarray(color_weights, dtype=float)
+    
     # Doppelte Farben entfernen, um K-Means-Warnungen zu vermeiden
     unique_colors = np.unique(colors, axis=0)
 
@@ -68,15 +89,19 @@ def calculate_representative_palette(group, color_columns, number_of_colors=5):
         n_init=10
     )
 
-    cluster_labels = kmeans.fit_predict(colors)
+    kmeans.fit(colors, sample_weight=color_weights)
 
-    cluster_sizes = np.bincount(
+    cluster_labels = kmeans.labels_
+
+
+    cluster_weights = np.bincount(
         cluster_labels,
+        weights=color_weights,
         minlength=number_of_clusters
     )
 
     # Häufigstes Farbcluster zuerst
-    cluster_order = np.argsort(cluster_sizes)[::-1]
+    cluster_order = np.argsort(cluster_weights)[::-1]
 
     palette = (
         kmeans.cluster_centers_[cluster_order]
@@ -84,20 +109,20 @@ def calculate_representative_palette(group, color_columns, number_of_colors=5):
         .clip(0, 255)
         .astype(int)
     )
-
-    return [tuple(color) for color in palette]
-
+    print([tuple(int(value) for value in color) for color in palette])
+    return [tuple(int(value) for value in color) for color in palette]
 
 def create_palette_chart(
     dataframe,
     group_column,
     color_columns,
+    ratio_columns,
     title,
     output_file
 ):
     """
     Erstellt für jedes Land beziehungsweise jeden Kontinent
-    eine Zeile mit fünf Farbfeldern.
+    eine Zeile mit fünf repräsentativen Farbfeldern.
     """
     groups = sorted(
         dataframe[group_column]
@@ -105,28 +130,31 @@ def create_palette_chart(
         .unique()
     )
 
-    # Bei vielen Ländern wird die Abbildung automatisch höher
-    figure_height = max(6, len(groups) * 0.35)
+    figure_height = max(
+        6,
+        len(groups) * 0.35
+    )
 
     fig, ax = plt.subplots(
         figsize=(10, figure_height)
     )
 
     for row, group_name in enumerate(groups):
-
         group_data = dataframe[
             dataframe[group_column] == group_name
         ]
 
         palette = calculate_representative_palette(
-            group_data,
-            color_columns,
+            group=group_data,
+            color_columns=color_columns,
+            ratio_columns=ratio_columns,
             number_of_colors=5
         )
 
         for column, color in enumerate(palette):
-
-            normalized_color = np.array(color) / 255
+            normalized_color = (
+                np.asarray(color) / 255
+            )
 
             rectangle = Rectangle(
                 (column, row - 0.4),
@@ -140,7 +168,10 @@ def create_palette_chart(
             ax.add_patch(rectangle)
 
     ax.set_xlim(0, 5)
-    ax.set_ylim(-0.5, len(groups) - 0.5)
+    ax.set_ylim(
+        -0.5,
+        len(groups) - 0.5
+    )
 
     ax.set_xticks(
         np.arange(5) + 0.5
@@ -154,23 +185,32 @@ def create_palette_chart(
         "Farbe 5"
     ])
 
-    ax.set_yticks(range(len(groups)))
+    ax.set_yticks(
+        range(len(groups))
+    )
+
     ax.set_yticklabels(groups)
 
-    # Erster Eintrag soll oben stehen
+    # Alphabetisch erster Eintrag oben
     ax.invert_yaxis()
 
     ax.set_title(title)
+
     ax.set_xlabel(
-        "Repräsentative Farben, nach Häufigkeit sortiert"
+        "Repräsentative Farben, "
+        "nach gewichtetem Anteil sortiert"
     )
+
     ax.set_ylabel(
-        "Land" if group_column == "country"
+        "Land"
+        if group_column == "country"
         else "Kontinent"
     )
 
-    # Rahmen und Gitter entfernen
-    ax.tick_params(axis="both", length=0)
+    ax.tick_params(
+        axis="both",
+        length=0
+    )
 
     for spine in ax.spines.values():
         spine.set_visible(False)
@@ -188,12 +228,16 @@ def create_palette_chart(
 # CSV laden
 df = pd.read_csv(INPUT_FILE)
 
+# Nur erfolgreich gefundene Webseiten verwenden
+df = df[df["found"] == True]
+
 # Alle numerischen Spalten bestimmen
 numeric_columns = df.select_dtypes(include="number").columns
 
 for metric in numeric_columns:
 
     # Länder
+    # Nach Länder sortieren -> Mittelwert, Median und Standardabweichung berechenen -> Nach Mittelwert sortieren
     country_stats = (
         df.groupby("country")[metric]
         .agg(["mean", "median", "std"])
@@ -202,6 +246,7 @@ for metric in numeric_columns:
 
     plt.figure(figsize=(10, 10))
 
+    # Balken für Mittelwert und Standardabweichung einzeichnen
     plt.bar(
         country_stats.index,
         country_stats["mean"],
@@ -209,6 +254,7 @@ for metric in numeric_columns:
         capsize=5
     )
 
+    # Median als roten Punkt einzeichnen
     plt.scatter(
         range(len(country_stats)),
         country_stats["median"],
@@ -231,13 +277,13 @@ for metric in numeric_columns:
         os.path.join(
             OUTPUT_DIR,
             f"visually_{metric}_countries.png"
-        ),
-        dpi=300
+        )
     )
 
     plt.close()
 
     # Kontinente
+    # Nach Länder sortieren -> Mittelwert und Median berechenen -> Nach Mittelwert sortieren
     continent_stats = (
         df.groupby("continent")[metric]
         .agg(["mean", "median"])
@@ -246,11 +292,13 @@ for metric in numeric_columns:
 
     plt.figure(figsize=(10, 10))
 
+    # Balken für Mittelwert einzeichnen
     plt.bar(
         continent_stats.index,
         continent_stats["mean"]
     )
 
+    # Median als roten Punkt einzeichnen
     plt.scatter(
         range(len(continent_stats)),
         continent_stats["median"],
@@ -271,26 +319,18 @@ for metric in numeric_columns:
         os.path.join(
             OUTPUT_DIR,
             f"visually_{metric}_continents.png"
-        ),
-        dpi=300
+        )
     )
 
     plt.close()
 
-color_columns = [
-    "dominant_color_1",
-    "dominant_color_2",
-    "dominant_color_3",
-    "dominant_color_4",
-    "dominant_color_5"
-]
-
-if color_columns:
+if COLOR_COLUMNS:
 
     create_palette_chart(
         dataframe=df,
         group_column="country",
-        color_columns=color_columns,
+        color_columns=COLOR_COLUMNS,
+        ratio_columns=RATIO_COLUMNS,
         title="Dominante Farben nach Land",
         output_file=os.path.join(
             OUTPUT_DIR,
@@ -301,7 +341,8 @@ if color_columns:
     create_palette_chart(
         dataframe=df,
         group_column="continent",
-        color_columns=color_columns,
+        color_columns=COLOR_COLUMNS,
+        ratio_columns=RATIO_COLUMNS,
         title="Dominante Farben nach Kontinent",
         output_file=os.path.join(
             OUTPUT_DIR,
@@ -309,4 +350,4 @@ if color_columns:
         )
     )
 
-print("Alle Diagramme wurden erstellt.")
+print("Alle Visuell-Metrik-Diagramme wurden erstellt.")
