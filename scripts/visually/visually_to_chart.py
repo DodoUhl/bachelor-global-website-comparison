@@ -7,7 +7,7 @@ from matplotlib.patches import Rectangle
 from sklearn.cluster import KMeans  
 
 # Dateien
-INPUT_FILE = "../../csv/visually_metrics Kopie.csv"
+INPUT_FILE = "../../csv/visually_metrics.csv"
 OUTPUT_DIR = "../../charts/visually"
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
