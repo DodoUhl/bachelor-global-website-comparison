@@ -542,5 +542,159 @@ create_palette_chart(
         "visually_dominant_colors_continents.png"
     )
 )
+# 2 Metriken zusammen plotten
+SCATTER_PLOTS = [
+    {
+        "x_metric": "screenshot_height",
+        "y_metric": "screenshot_file_size_mb",
+        "x_label": "Screenshot-Höhe in Pixeln",
+        "y_label": "Screenshot-Dateigröße in MB",
+        "title": (
+            "Zusammenhang zwischen Screenshot-Höhe "
+            "und Dateigröße"
+        ),
+        "output_filename": (
+            "visually_screenshot_height_file_size.png"
+        )
+    },
+    {
+        "x_metric": "unique_colors",
+        "y_metric": "color_entropy",
+        "x_label": "Anzahl einzigartiger Farben",
+        "y_label": "Farbenentropie",
+        "title": (
+            "Zusammenhang zwischen Farbanzahl "
+            "und Farbenentropie"
+        ),
+        "output_filename": (
+            "visually_unique_colors_color_entropy.png"
+        )
+    },
+    {
+        "x_metric": "average_brightness",
+        "y_metric": "whitespace_ratio",
+        "x_label": "Durchschnittliche Helligkeit",
+        "y_label": "Weißraumanteil",
+        "title": (
+            "Zusammenhang zwischen Helligkeit "
+            "und Weißraumanteil"
+        ),
+        "output_filename": (
+            "visually_brightness_whitespace.png"
+        )
+    },
+    {
+        "x_metric": "unique_colors",
+        "y_metric": "screenshot_file_size_mb",
+        "x_label": "Anzahl einzigartiger Farben",
+        "y_label": "Screenshot-Dateigröße in MB",
+        "title": (
+            "Zusammenhang zwischen Farbanzahl "
+            "und Screenshot-Dateigröße"
+        ),
+        "output_filename": (
+            "visually_unique_colors_file_size.png"
+        )
+    },
+    {
+        "x_metric": "screenshot_height",
+        "y_metric": "whitespace_ratio",
+        "x_label": "Screenshot-Höhe in Pixeln",
+        "y_label": "Weißraumanteil",
+        "title": (
+            "Zusammenhang zwischen Screenshot-Höhe "
+            "und Weißraumanteil"
+        ),
+        "output_filename": (
+            "visually_screenshot_height_whitespace.png"
+        )
+    }
+]
+
+# Größe in MB umrechnen
+df["screenshot_file_size_mb"] = (df["screenshot_file_size"] / (1024 ** 2))
+
+for plot in SCATTER_PLOTS:
+    x_metric = plot["x_metric"]
+    y_metric = plot["y_metric"]
+
+    # Daten für das Diagramm aus 2 Metriken
+    scatter_data = df.dropna(
+        subset=[
+            x_metric,
+            y_metric,
+            "continent"
+        ]
+    )
+
+    # Korrelation aus beiden Metriken berechnen
+    correlation = scatter_data[
+        [x_metric, y_metric]
+    ].corr(method="spearman").iloc[0, 1]
+
+    # Größe des Diagramms
+    fig, ax = plt.subplots(figsize=(10, 10))
+
+    # Streu-Diagramm erstellen
+    sns.scatterplot(
+        data=scatter_data,
+        x=x_metric,
+        y=y_metric,
+        hue="continent",
+        palette=CONTINENT_COLORS,
+        alpha=0.7,
+        s=55,
+        edgecolor="white",
+        linewidth=0.5,
+        ax=ax
+    )
+
+    # Korrelation Text hinzufügen
+    ax.text(
+        0.02,
+        0.98,
+        f"Spearman-Korrelation: r = {correlation:.2f}",
+        transform=ax.transAxes,
+        ha="left",
+        va="top",
+        fontsize=11,
+        bbox={
+            "facecolor": "white",
+            "edgecolor": "#999999",
+            "alpha": 0.9
+        }
+    )
+
+    # Titel setzen
+    ax.set_title(plot["title"], fontsize=16)
+
+    # X- und Y-Achsen Beschriftung
+    ax.set_xlabel(plot["x_label"], fontsize=13)
+    ax.set_ylabel(plot["y_label"], fontsize=13)
+
+    # Nur vertikale Hilfslinien
+    ax.grid(
+        color="#CCCCCC",
+        linewidth=1
+    )
+
+    # Legende erstellen
+    ax.legend(
+        title="Kontinent",
+        frameon=True
+    )
+
+    sns.despine(ax=ax)
+
+    plt.tight_layout()
+    plt.savefig(
+        os.path.join(
+            OUTPUT_DIR,
+            plot["output_filename"]
+        ),
+        bbox_inches="tight"
+    )
+
+    plt.close()
 
 print("Alle Visuell-Metrik-Diagramme wurden erstellt.")
