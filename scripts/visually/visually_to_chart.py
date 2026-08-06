@@ -546,9 +546,9 @@ create_palette_chart(
 SCATTER_PLOTS = [
     {
         "x_metric": "screenshot_height",
-        "y_metric": "screenshot_file_size_mb",
+        "y_metric": "screenshot_file_size_mib",
         "x_label": "Screenshot-Höhe in Pixeln",
-        "y_label": "Screenshot-Dateigröße in MB",
+        "y_label": "Screenshot-Dateigröße in MiB",
         "title": (
             "Zusammenhang zwischen Screenshot-Höhe "
             "und Dateigröße"
@@ -585,9 +585,9 @@ SCATTER_PLOTS = [
     },
     {
         "x_metric": "unique_colors",
-        "y_metric": "screenshot_file_size_mb",
+        "y_metric": "screenshot_file_size_mib",
         "x_label": "Anzahl einzigartiger Farben",
-        "y_label": "Screenshot-Dateigröße in MB",
+        "y_label": "Screenshot-Dateigröße in MiB",
         "title": (
             "Zusammenhang zwischen Farbanzahl "
             "und Screenshot-Dateigröße"
@@ -611,8 +611,8 @@ SCATTER_PLOTS = [
     }
 ]
 
-# Größe in MB umrechnen
-df["screenshot_file_size_mb"] = (df["screenshot_file_size"] / (1024 ** 2))
+# Größe in MiB umrechnen
+df["screenshot_file_size_mib"] = (df["screenshot_file_size"] / (1024 ** 2))
 
 for plot in SCATTER_PLOTS:
     x_metric = plot["x_metric"]
