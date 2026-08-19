@@ -397,7 +397,7 @@ for metric in PLOT_METRICS:
     ]
 
     # Größe des Diagramms
-    fig, ax = plt.subplots(figsize=(10, 4))
+    fig, ax = plt.subplots(figsize=(10, 2))
 
     #Boxplot Diagramm erstellen
     sns.boxplot(
