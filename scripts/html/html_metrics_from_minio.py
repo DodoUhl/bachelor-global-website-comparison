@@ -10,6 +10,10 @@ import os
 # Dateien
 INPUT_FILE = "../../websites/top100_websites.csv"
 OUTPUT_FILE = "../../csv/html_metrics.csv"
+C_USERNAME = os.getenv("CLICKHOUSE_USERNAME")
+C_PASSWORD = os.getenv("CLICKHOUSE_PASSWORD")
+M_USERNAME = os.getenv("MINIO_ACCESS_KEY")
+M_PASSWORD = os.getenv("MINIO_SECRET_KEY")
 DATABASE = os.getenv("CLICKHOUSE_DATABASE", 'browser-crawler')
 TABLE_CRAWLS = os.getenv("CLICKHOUSE_TABLE_CRAWLS", 'crawls')
 CRAWL_TAG = os.getenv("CRAWL_TAG", "ba-dominik-uhl")
@@ -20,8 +24,8 @@ BUCKET_NAME = "crawler-dom"
 
 MINIO_CLIENT = Minio(
     "s3.vs.uni-kassel.de",
-    access_key="duhl",
-    secret_key="norxot-Xypva6-byrguc",
+    access_key=M_USERNAME,
+    secret_key=M_PASSWORD,
     secure=True
 )
 
@@ -29,8 +33,8 @@ MINIO_CLIENT = Minio(
 CLICKHOUSE_CLIENT = clickhouse_connect.get_client(
     host="bithouse1.vs.uni-kassel.de",
     port=443,
-    username="duhl",
-    password="CvJg2Ac6cHxwucKz",
+    username=C_USERNAME,
+    password=C_PASSWORD,
     secure=True,
     verify=False
 )

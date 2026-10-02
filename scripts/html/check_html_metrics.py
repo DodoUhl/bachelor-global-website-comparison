@@ -6,15 +6,7 @@ METRICS_FILE = "../../csv/html_metrics.csv"
 KEY_COLUMNS = ["country", "website"]
 
 METRIC_COLUMNS = [
-    "dom_size",
-    "links",
-    "images",
-    "forms",
-    "tables",
-    "buttons",
-    "text_chars",
-    "text_words",
-    "text_blocks"
+    "dom_size", "links", "images", "forms", "tables", "buttons", "text_chars", "text_words", "text_blocks"
 ]
 
 

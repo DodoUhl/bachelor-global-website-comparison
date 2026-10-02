@@ -5,6 +5,8 @@ import os
 # Dateien
 INPUT_FILE = "../../websites/top100_websites.csv"
 OUTPUT_FILE = "../../csv/har_metrics.csv"
+USERNAME = os.getenv("CLICKHOUSE_USERNAME")
+PASSWORD = os.getenv("CLICKHOUSE_PASSWORD")
 DATABASE = os.getenv("CLICKHOUSE_DATABASE", 'browser-crawler')
 TABLE_CRAWLS = os.getenv("CLICKHOUSE_TABLE_CRAWLS", 'crawls')
 TABLE_HAR_ENTRIES = os.getenv("CLICKHOUSE_TABLE_HAR", "har_entries")
@@ -15,8 +17,8 @@ CRAWL_TAGS = os.getenv("CRAWL_TAGS", "ba-dominik-uhl,crux").split(",")
 CLICKHOUSE_CLIENT = clickhouse_connect.get_client(
     host="bithouse1.vs.uni-kassel.de",
     port=443,
-    username="duhl",
-    password="CvJg2Ac6cHxwucKz",
+    username=USERNAME,
+    password=PASSWORD,
     secure=True,
     verify=False
 )
