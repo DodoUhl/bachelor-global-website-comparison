@@ -152,7 +152,7 @@ Berechnet werden:
 - `average_brightness` – durchschnittliche Helligkeit
 - `whitespace_ratio` – Anteil weißer beziehungsweise nahezu weißer Pixel
 - `screenshot_height` – Höhe des Full-Page-Screenshots in Pixeln
- -`screenshot_file_size` – Dateigröße des Screenshots in Bytes
+- `screenshot_file_size` – Dateigröße des Screenshots in Bytes
 
 ---
 
