@@ -94,7 +94,7 @@ Aus dem HTML-Dokument werden anschließend folgende Metriken berechnet:
 
 ---
 
-# 2. Technische Analyse
+## 2. Technische Analyse
 
 ### `scripts/har/har_metrics_from_clickhouse.py`
 
@@ -124,7 +124,7 @@ Für jede Webseite werden folgende Metriken berechnet:
 
 ---
 
-# 3. Visuelle Analyse
+## 3. Visuelle Analyse
 
 ### `scripts/visually/visually_metrics_from_minio.py`
 
